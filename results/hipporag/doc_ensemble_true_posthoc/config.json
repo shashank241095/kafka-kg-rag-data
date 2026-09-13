@@ -1,0 +1,27 @@
+{
+  "doc_ensemble": true,
+  "dpr_only": false,
+  "sim_threshold": 0.8,
+  "damping": 0.5,
+  "graph_alg": "ppr",
+  "node_specificity": true,
+  "recognition_threshold": 0.9,
+  "linking_retriever": "colbertv2",
+  "graph_creating_retriever": "colbertv2",
+  "extraction_model": "gpt-3.5-turbo-1106",
+  "extraction_type": "ner",
+  "graph_type": "facts_and_sim",
+  "documents": 1600,
+  "graph_nodes": 3603,
+  "graph_edges": 118870,
+  "phrases": 3603,
+  "load_seconds": 250.18151783943176,
+  "retrieval_seconds": 95.2505521774292,
+  "hipporag_internal_statistics": {
+    "ppr": 119,
+    "ppr_doc_ensemble": 192,
+    "doc": 4
+  },
+  "queries_with_zero_entities": 4,
+  "post_hoc": "This condition was run after the primary result was observed. It is a post-hoc sensitivity analysis, not preregistered."
+}

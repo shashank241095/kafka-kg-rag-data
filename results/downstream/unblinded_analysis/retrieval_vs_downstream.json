@@ -1,0 +1,60 @@
+{
+  "scope": "100 sampled downstream queries joined to authoritative corrected frozen retrieval rows",
+  "causal_warning": "Descriptive contingency summaries only; no causal inference is claimed.",
+  "methods": {
+    "Vector-only": {
+      "n": 100,
+      "gold_in_top5_count": 86,
+      "gold_in_top20_count": 96,
+      "root_cause_correct_count": 58,
+      "top5_contingency": {
+        "gold_in_top5_and_rca_correct": 54,
+        "gold_in_top5_and_rca_incorrect": 32,
+        "gold_outside_top5_and_rca_correct": 4,
+        "gold_outside_top5_and_rca_incorrect": 10
+      },
+      "top20_contingency": {
+        "gold_in_top20_and_rca_correct": 57,
+        "gold_in_top20_and_rca_incorrect": 39,
+        "gold_outside_top20_and_rca_correct": 1,
+        "gold_outside_top20_and_rca_incorrect": 3
+      }
+    },
+    "AST-KG + Cross-Encoder static-K": {
+      "n": 100,
+      "gold_in_top5_count": 85,
+      "gold_in_top20_count": 97,
+      "root_cause_correct_count": 57,
+      "top5_contingency": {
+        "gold_in_top5_and_rca_correct": 53,
+        "gold_in_top5_and_rca_incorrect": 32,
+        "gold_outside_top5_and_rca_correct": 4,
+        "gold_outside_top5_and_rca_incorrect": 11
+      },
+      "top20_contingency": {
+        "gold_in_top20_and_rca_correct": 57,
+        "gold_in_top20_and_rca_incorrect": 40,
+        "gold_outside_top20_and_rca_correct": 0,
+        "gold_outside_top20_and_rca_incorrect": 3
+      }
+    },
+    "AST-KG + Cross-Encoder + Staged Confidence": {
+      "n": 100,
+      "gold_in_top5_count": 88,
+      "gold_in_top20_count": 96,
+      "root_cause_correct_count": 52,
+      "top5_contingency": {
+        "gold_in_top5_and_rca_correct": 50,
+        "gold_in_top5_and_rca_incorrect": 38,
+        "gold_outside_top5_and_rca_correct": 2,
+        "gold_outside_top5_and_rca_incorrect": 10
+      },
+      "top20_contingency": {
+        "gold_in_top20_and_rca_correct": 52,
+        "gold_in_top20_and_rca_incorrect": 44,
+        "gold_outside_top20_and_rca_correct": 0,
+        "gold_outside_top20_and_rca_incorrect": 4
+      }
+    }
+  }
+}

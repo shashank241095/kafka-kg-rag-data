@@ -1,0 +1,180 @@
+{
+  "rows": [
+    {
+      "k": 5,
+      "method": "Vector-only",
+      "query_count": 315,
+      "unique_target_count": 103,
+      "query_weighted_recall_at_k": 0.8603174603174604,
+      "target_balanced_recall_at_k": 0.867660656495608,
+      "query_weighted_mrr_at_k": 0.7416931216931216,
+      "target_balanced_mrr_at_k": 0.748928956695947,
+      "target_balancing_definition": "Average query outcomes within each expected (file,line) target, then average the 103 targets equally."
+    },
+    {
+      "k": 5,
+      "method": "Vector + Cross-Encoder",
+      "query_count": 315,
+      "unique_target_count": 103,
+      "query_weighted_recall_at_k": 0.8603174603174604,
+      "target_balanced_recall_at_k": 0.867660656495608,
+      "query_weighted_mrr_at_k": 0.7084656084656085,
+      "target_balanced_mrr_at_k": 0.7144976113422715,
+      "target_balancing_definition": "Average query outcomes within each expected (file,line) target, then average the 103 targets equally."
+    },
+    {
+      "k": 5,
+      "method": "AST-KG + Cross-Encoder static-K",
+      "query_count": 315,
+      "unique_target_count": 103,
+      "query_weighted_recall_at_k": 0.834920634920635,
+      "target_balanced_recall_at_k": 0.8428109107720758,
+      "query_weighted_mrr_at_k": 0.6874603174603175,
+      "target_balanced_mrr_at_k": 0.6932963476652797,
+      "target_balancing_definition": "Average query outcomes within each expected (file,line) target, then average the 103 targets equally."
+    },
+    {
+      "k": 5,
+      "method": "AST-KG + Staged Confidence",
+      "query_count": 315,
+      "unique_target_count": 103,
+      "query_weighted_recall_at_k": 0.8380952380952381,
+      "target_balanced_recall_at_k": 0.8441978733240869,
+      "query_weighted_mrr_at_k": 0.6941798941798941,
+      "target_balanced_mrr_at_k": 0.6995299738018185,
+      "target_balancing_definition": "Average query outcomes within each expected (file,line) target, then average the 103 targets equally."
+    },
+    {
+      "k": 10,
+      "method": "Vector-only",
+      "query_count": 315,
+      "unique_target_count": 103,
+      "query_weighted_recall_at_k": 0.9079365079365079,
+      "target_balanced_recall_at_k": 0.9116967175219601,
+      "query_weighted_mrr_at_k": 0.7477500629881582,
+      "target_balanced_mrr_at_k": 0.7544549750860431,
+      "target_balancing_definition": "Average query outcomes within each expected (file,line) target, then average the 103 targets equally."
+    },
+    {
+      "k": 10,
+      "method": "Vector + Cross-Encoder",
+      "query_count": 315,
+      "unique_target_count": 103,
+      "query_weighted_recall_at_k": 0.9079365079365079,
+      "target_balanced_recall_at_k": 0.9116967175219601,
+      "query_weighted_mrr_at_k": 0.7054106827916352,
+      "target_balanced_mrr_at_k": 0.7110755197440357,
+      "target_balancing_definition": "Average query outcomes within each expected (file,line) target, then average the 103 targets equally."
+    },
+    {
+      "k": 10,
+      "method": "AST-KG + Cross-Encoder static-K",
+      "query_count": 315,
+      "unique_target_count": 103,
+      "query_weighted_recall_at_k": 0.9015873015873016,
+      "target_balanced_recall_at_k": 0.9107720758206195,
+      "query_weighted_mrr_at_k": 0.6965444696397077,
+      "target_balanced_mrr_at_k": 0.7026917347305697,
+      "target_balancing_definition": "Average query outcomes within each expected (file,line) target, then average the 103 targets equally."
+    },
+    {
+      "k": 10,
+      "method": "AST-KG + Staged Confidence",
+      "query_count": 315,
+      "unique_target_count": 103,
+      "query_weighted_recall_at_k": 0.9079365079365079,
+      "target_balanced_recall_at_k": 0.9135460009246417,
+      "query_weighted_mrr_at_k": 0.7035336356764929,
+      "target_balanced_mrr_at_k": 0.7093469534523626,
+      "target_balancing_definition": "Average query outcomes within each expected (file,line) target, then average the 103 targets equally."
+    },
+    {
+      "k": 15,
+      "method": "Vector-only",
+      "query_count": 315,
+      "unique_target_count": 103,
+      "query_weighted_recall_at_k": 0.9396825396825397,
+      "target_balanced_recall_at_k": 0.9422098936662043,
+      "query_weighted_mrr_at_k": 0.7502932869599536,
+      "target_balanced_mrr_at_k": 0.7568794653746109,
+      "target_balancing_definition": "Average query outcomes within each expected (file,line) target, then average the 103 targets equally."
+    },
+    {
+      "k": 15,
+      "method": "Vector + Cross-Encoder",
+      "query_count": 315,
+      "unique_target_count": 103,
+      "query_weighted_recall_at_k": 0.9396825396825397,
+      "target_balanced_recall_at_k": 0.9422098936662043,
+      "query_weighted_mrr_at_k": 0.7026214085737895,
+      "target_balanced_mrr_at_k": 0.7083349357274461,
+      "target_balancing_definition": "Average query outcomes within each expected (file,line) target, then average the 103 targets equally."
+    },
+    {
+      "k": 15,
+      "method": "AST-KG + Cross-Encoder static-K",
+      "query_count": 315,
+      "unique_target_count": 103,
+      "query_weighted_recall_at_k": 0.9238095238095239,
+      "target_balanced_recall_at_k": 0.9334257975034673,
+      "query_weighted_mrr_at_k": 0.7017041864660912,
+      "target_balanced_mrr_at_k": 0.7079516402331937,
+      "target_balancing_definition": "Average query outcomes within each expected (file,line) target, then average the 103 targets equally."
+    },
+    {
+      "k": 15,
+      "method": "AST-KG + Staged Confidence",
+      "query_count": 315,
+      "unique_target_count": 103,
+      "query_weighted_recall_at_k": 0.9333333333333333,
+      "target_balanced_recall_at_k": 0.9375866851595007,
+      "query_weighted_mrr_at_k": 0.701230859088002,
+      "target_balanced_mrr_at_k": 0.7070596378502064,
+      "target_balancing_definition": "Average query outcomes within each expected (file,line) target, then average the 103 targets equally."
+    },
+    {
+      "k": 20,
+      "method": "Vector-only",
+      "query_count": 315,
+      "unique_target_count": 103,
+      "query_weighted_recall_at_k": 0.9555555555555556,
+      "target_balanced_recall_at_k": 0.9546925566343042,
+      "query_weighted_mrr_at_k": 0.7511943140374513,
+      "target_balanced_mrr_at_k": 0.7575899437407146,
+      "target_balancing_definition": "Average query outcomes within each expected (file,line) target, then average the 103 targets equally."
+    },
+    {
+      "k": 20,
+      "method": "Vector + Cross-Encoder",
+      "query_count": 315,
+      "unique_target_count": 103,
+      "query_weighted_recall_at_k": 0.9555555555555556,
+      "target_balanced_recall_at_k": 0.9546925566343042,
+      "query_weighted_mrr_at_k": 0.6974876669679855,
+      "target_balanced_mrr_at_k": 0.7030149988790164,
+      "target_balancing_definition": "Average query outcomes within each expected (file,line) target, then average the 103 targets equally."
+    },
+    {
+      "k": 20,
+      "method": "AST-KG + Cross-Encoder static-K",
+      "query_count": 315,
+      "unique_target_count": 103,
+      "query_weighted_recall_at_k": 0.946031746031746,
+      "target_balanced_recall_at_k": 0.9542302357836339,
+      "query_weighted_mrr_at_k": 0.7045628855012609,
+      "target_balanced_mrr_at_k": 0.7105576340870459,
+      "target_balancing_definition": "Average query outcomes within each expected (file,line) target, then average the 103 targets equally."
+    },
+    {
+      "k": 20,
+      "method": "AST-KG + Staged Confidence",
+      "query_count": 315,
+      "unique_target_count": 103,
+      "query_weighted_recall_at_k": 0.9555555555555556,
+      "target_balanced_recall_at_k": 0.9546925566343042,
+      "query_weighted_mrr_at_k": 0.6971882281723061,
+      "target_balanced_mrr_at_k": 0.7027097457377899,
+      "target_balancing_definition": "Average query outcomes within each expected (file,line) target, then average the 103 targets equally."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "If you use these artifacts, please cite this repository and the accompanying manuscript."
+title: "Data and Reproducibility Artifacts for: Evaluating AST-Derived Knowledge Graph Retrieval for AIOps Incident Diagnosis in Apache Kafka"
+type: dataset
+authors:
+  - family-names: Mishra
+    given-names: Shashank
+  - family-names: Mishra
+    given-names: Shweta
+version: 1.0.0
+date-released: 2026-09-13
+license: CC-BY-4.0
+repository-code: "https://github.com/shashank241095/kafka-kg-rag-data"
+url: "https://github.com/shashank241095/kafka-kg-rag-data"
+abstract: >-
+  Frozen research artifacts supporting the manuscript "Evaluating AST-Derived
+  Knowledge Graph Retrieval for AIOps Incident Diagnosis in Apache Kafka":
+  the audited 315-query benchmark, the archived 321-query benchmark and its
+  audit record, the frozen 1,600-record source-linked log corpus, per-query
+  retrieval outputs for all evaluated conditions including the ColBERTv2-only
+  control and both HippoRAG configurations, downstream evaluation records,
+  statistical outputs, configurations, and the pre-specified analysis plan.
+keywords:
+  - AIOps
+  - Apache Kafka
+  - knowledge graph
+  - graph-augmented retrieval
+  - retrieval-augmented generation
+  - source-code analysis
+  - incident diagnosis
+  - dense retrieval
+references:
+  - type: article
+    title: "Evaluating AST-Derived Knowledge Graph Retrieval for AIOps Incident Diagnosis in Apache Kafka"
+    authors:
+      - family-names: Mishra
+        given-names: Shashank
+      - family-names: Mishra
+        given-names: Shweta
+    year: 2026
+    notes: "Manuscript under review; no DOI assigned at the time of this release."

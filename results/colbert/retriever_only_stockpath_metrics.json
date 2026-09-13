@@ -1,0 +1,33 @@
+{
+  "role": "SUPPLEMENTARY implementation-sensitivity result; NOT for the main manuscript table. Uses HippoRAG v1's stock custom-data loading path, which introduces an additional delimiter artifact during TSV serialization (a data-loading compatibility issue, not part of the retrieval algorithm). The primary ColBERTv2-only control is artifacts/hipporag/retriever_only_per_query.jsonl.",
+  "metrics": {
+    "k_5": {
+      "hits": 208,
+      "queries": 315,
+      "recall": 0.6603174603174603,
+      "mrr": 0.5363492063492064
+    },
+    "k_10": {
+      "hits": 231,
+      "queries": 315,
+      "recall": 0.7333333333333333,
+      "mrr": 0.5460279667422524
+    },
+    "k_15": {
+      "hits": 247,
+      "queries": 315,
+      "recall": 0.7841269841269841,
+      "mrr": 0.550091046519618
+    },
+    "k_20": {
+      "hits": 252,
+      "queries": 315,
+      "recall": 0.8,
+      "mrr": 0.5509667106254164
+    }
+  },
+  "target_balanced": {
+    "target_balanced_recall_at_20": 0.8072122052704577,
+    "target_balanced_mrr_at_20": 0.5554815519782907
+  }
+}

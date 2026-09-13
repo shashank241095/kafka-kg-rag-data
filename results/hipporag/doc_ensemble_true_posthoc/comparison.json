@@ -1,0 +1,274 @@
+{
+  "aggregates": [
+    {
+      "method": "ColBERTv2-only",
+      "queries": 315,
+      "hits": 253,
+      "recall": 0.8031746031746032,
+      "mrr": 0.5519974381879144,
+      "tb_recall": 0.8085991678224689,
+      "tb_mrr": 0.5560121827112118
+    },
+    {
+      "method": "HippoRAG doc_ensemble=false",
+      "queries": 315,
+      "hits": 97,
+      "recall": 0.30793650793650795,
+      "mrr": 0.10986158512806013,
+      "tb_recall": 0.3136846971798428,
+      "tb_mrr": 0.11224432331055614
+    },
+    {
+      "method": "HippoRAG doc_ensemble=true",
+      "queries": 315,
+      "hits": 204,
+      "recall": 0.6476190476190476,
+      "mrr": 0.21901234585629395,
+      "tb_recall": 0.6581137309292648,
+      "tb_mrr": 0.22288623410425987
+    },
+    {
+      "method": "Vector-only",
+      "queries": 315,
+      "hits": 301,
+      "recall": 0.9555555555555556,
+      "mrr": 0.7511943140374513,
+      "tb_recall": 0.9546925566343042,
+      "tb_mrr": 0.7575899437407146
+    },
+    {
+      "method": "Vector + Cross-Encoder",
+      "queries": 315,
+      "hits": 301,
+      "recall": 0.9555555555555556,
+      "mrr": 0.6974876669679855,
+      "tb_recall": 0.9546925566343042,
+      "tb_mrr": 0.7030149988790164
+    },
+    {
+      "method": "AST-KG static",
+      "queries": 315,
+      "hits": 298,
+      "recall": 0.946031746031746,
+      "mrr": 0.7045628855012609,
+      "tb_recall": 0.9542302357836339,
+      "tb_mrr": 0.7105576340870459
+    },
+    {
+      "method": "AST-KG staged",
+      "queries": 315,
+      "hits": 301,
+      "recall": 0.9555555555555556,
+      "mrr": 0.6971882281723061,
+      "tb_recall": 0.9546925566343042,
+      "tb_mrr": 0.7027097457377899
+    }
+  ],
+  "paired": [
+    {
+      "comparison": "HippoRAG doc_ensemble=true - HippoRAG doc_ensemble=false",
+      "method_a": "HippoRAG doc_ensemble=false",
+      "method_b": "HippoRAG doc_ensemble=true",
+      "n10_a_only": 0,
+      "n01_b_only": 107,
+      "both_hit": 97,
+      "both_miss": 111,
+      "exact_mcnemar_two_sided_p": 1.232595164407831e-32,
+      "recall_diff": 0.3396825396825397,
+      "recall_ci_lo": 0.27706638902498776,
+      "recall_ci_hi": 0.40384615384615385,
+      "mrr_diff": 0.10915076072823382,
+      "mrr_ci_lo": 0.08896942062446264,
+      "mrr_ci_hi": 0.13137749942080149
+    },
+    {
+      "comparison": "HippoRAG doc_ensemble=true - ColBERTv2-only",
+      "method_a": "ColBERTv2-only",
+      "method_b": "HippoRAG doc_ensemble=true",
+      "n10_a_only": 56,
+      "n01_b_only": 7,
+      "both_hit": 197,
+      "both_miss": 55,
+      "exact_mcnemar_two_sided_p": 1.363671398024735e-10,
+      "recall_diff": -0.15555555555555556,
+      "recall_ci_lo": -0.2120253164556962,
+      "recall_ci_hi": -0.10191082802547771,
+      "mrr_diff": -0.33298509233162044,
+      "mrr_ci_lo": -0.39557572221298387,
+      "mrr_ci_hi": -0.2683628774268379
+    },
+    {
+      "comparison": "HippoRAG doc_ensemble=true - Vector-only",
+      "method_a": "Vector-only",
+      "method_b": "HippoRAG doc_ensemble=true",
+      "n10_a_only": 98,
+      "n01_b_only": 1,
+      "both_hit": 203,
+      "both_miss": 13,
+      "exact_mcnemar_two_sided_p": 3.155443620884047e-28,
+      "recall_diff": -0.30793650793650795,
+      "recall_ci_lo": -0.3703762868299609,
+      "recall_ci_hi": -0.24600638977635783,
+      "mrr_diff": -0.5321819681811573,
+      "mrr_ci_lo": -0.5905596149054544,
+      "mrr_ci_hi": -0.47392315343296093
+    },
+    {
+      "comparison": "HippoRAG doc_ensemble=true - AST-KG static",
+      "method_a": "AST-KG static",
+      "method_b": "HippoRAG doc_ensemble=true",
+      "n10_a_only": 94,
+      "n01_b_only": 0,
+      "both_hit": 204,
+      "both_miss": 17,
+      "exact_mcnemar_two_sided_p": 1.0097419586828951e-28,
+      "recall_diff": -0.2984126984126984,
+      "recall_ci_lo": -0.3605080155549383,
+      "recall_ci_hi": -0.2375,
+      "mrr_diff": -0.4855505396449669,
+      "mrr_ci_lo": -0.5431594981885353,
+      "mrr_ci_hi": -0.4264315351224821
+    },
+    {
+      "comparison": "HippoRAG doc_ensemble=true - AST-KG staged",
+      "method_a": "AST-KG staged",
+      "method_b": "HippoRAG doc_ensemble=true",
+      "n10_a_only": 98,
+      "n01_b_only": 1,
+      "both_hit": 203,
+      "both_miss": 13,
+      "exact_mcnemar_two_sided_p": 3.155443620884047e-28,
+      "recall_diff": -0.30793650793650795,
+      "recall_ci_lo": -0.3709677419354839,
+      "recall_ci_hi": -0.24600509734586476,
+      "mrr_diff": -0.4781758823160121,
+      "mrr_ci_lo": -0.5352531154175304,
+      "mrr_ci_hi": -0.41960927801042636
+    }
+  ],
+  "k_sensitivity": [
+    {
+      "method": "ColBERTv2-only",
+      "k": 5,
+      "queries": 315,
+      "hits": 210,
+      "recall": 0.6666666666666666,
+      "mrr": 0.5375661375661376
+    },
+    {
+      "method": "ColBERTv2-only",
+      "k": 10,
+      "queries": 315,
+      "hits": 236,
+      "recall": 0.7492063492063492,
+      "mrr": 0.548114134542706
+    },
+    {
+      "method": "ColBERTv2-only",
+      "k": 15,
+      "queries": 315,
+      "hits": 248,
+      "recall": 0.7873015873015873,
+      "mrr": 0.5510891489462918
+    },
+    {
+      "method": "ColBERTv2-only",
+      "k": 20,
+      "queries": 315,
+      "hits": 253,
+      "recall": 0.8031746031746032,
+      "mrr": 0.5519974381879144
+    },
+    {
+      "method": "HippoRAG doc_ensemble=false",
+      "k": 5,
+      "queries": 315,
+      "hits": 60,
+      "recall": 0.19047619047619047,
+      "mrr": 0.09894179894179894
+    },
+    {
+      "method": "HippoRAG doc_ensemble=false",
+      "k": 10,
+      "queries": 315,
+      "hits": 77,
+      "recall": 0.24444444444444444,
+      "mrr": 0.10577475434618291
+    },
+    {
+      "method": "HippoRAG doc_ensemble=false",
+      "k": 15,
+      "queries": 315,
+      "hits": 86,
+      "recall": 0.273015873015873,
+      "mrr": 0.10790706647849505
+    },
+    {
+      "method": "HippoRAG doc_ensemble=false",
+      "k": 20,
+      "queries": 315,
+      "hits": 97,
+      "recall": 0.30793650793650795,
+      "mrr": 0.10986158512806013
+    },
+    {
+      "method": "HippoRAG doc_ensemble=true",
+      "k": 5,
+      "queries": 315,
+      "hits": 130,
+      "recall": 0.4126984126984127,
+      "mrr": 0.1944973544973545
+    },
+    {
+      "method": "HippoRAG doc_ensemble=true",
+      "k": 10,
+      "queries": 315,
+      "hits": 168,
+      "recall": 0.5333333333333333,
+      "mrr": 0.21112622826908542
+    },
+    {
+      "method": "HippoRAG doc_ensemble=true",
+      "k": 15,
+      "queries": 315,
+      "hits": 188,
+      "recall": 0.5968253968253968,
+      "mrr": 0.21619253762110904
+    },
+    {
+      "method": "HippoRAG doc_ensemble=true",
+      "k": 20,
+      "queries": 315,
+      "hits": 204,
+      "recall": 0.6476190476190476,
+      "mrr": 0.21901234585629395
+    }
+  ],
+  "concentration": [
+    {
+      "method": "ColBERTv2-only",
+      "distinct_top1_docs": 172,
+      "max_top1_repeat": 9,
+      "distinct_docs_in_top20": 1080,
+      "max_top20_frequency": 54,
+      "top20_coverage_pct": 67.5
+    },
+    {
+      "method": "HippoRAG doc_ensemble=false",
+      "distinct_top1_docs": 135,
+      "max_top1_repeat": 23,
+      "distinct_docs_in_top20": 844,
+      "max_top20_frequency": 123,
+      "top20_coverage_pct": 52.75
+    },
+    {
+      "method": "HippoRAG doc_ensemble=true",
+      "distinct_top1_docs": 148,
+      "max_top1_repeat": 12,
+      "distinct_docs_in_top20": 1036,
+      "max_top20_frequency": 87,
+      "top20_coverage_pct": 64.75
+    }
+  ],
+  "note": "POST-HOC sensitivity analysis; not preregistered."
+}

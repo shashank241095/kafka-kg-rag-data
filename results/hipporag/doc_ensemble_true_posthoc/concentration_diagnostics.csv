@@ -1,0 +1,4 @@
+method,distinct_top1_docs,max_top1_repeat,distinct_docs_in_top20,max_top20_frequency,top20_coverage_pct
+ColBERTv2-only,172,9,1080,54,67.5
+HippoRAG doc_ensemble=false,135,23,844,123,52.75
+HippoRAG doc_ensemble=true,148,12,1036,87,64.75

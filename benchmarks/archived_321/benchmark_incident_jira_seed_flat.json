@@ -1,0 +1,254 @@
+[
+  {
+    "id": "KAFKA-19586-Q1",
+    "issue_key": "KAFKA-19586",
+    "source_type": "jira",
+    "source_url": "https://issues.apache.org/jira/browse/KAFKA-19586",
+    "summary": "Kafka broker freezes and gets fenced during rolling restart with KRaft mode",
+    "question": "Why was a KRaft broker fenced after missing heartbeats during a rolling restart?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 1698
+    }
+  },
+  {
+    "id": "KAFKA-19586-Q2",
+    "issue_key": "KAFKA-19586",
+    "source_type": "jira",
+    "source_url": "https://issues.apache.org/jira/browse/KAFKA-19586",
+    "summary": "Kafka broker freezes and gets fenced during rolling restart with KRaft mode",
+    "question": "What Kafka log indicates a broker got fenced because its session timed out?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 1698
+    }
+  },
+  {
+    "id": "KAFKA-19586-Q3",
+    "issue_key": "KAFKA-19586",
+    "source_type": "jira",
+    "source_url": "https://issues.apache.org/jira/browse/KAFKA-19586",
+    "summary": "Kafka broker freezes and gets fenced during rolling restart with KRaft mode",
+    "question": "Could a heartbeat timeout explain why the broker was fenced at its current epoch?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 1698
+    }
+  },
+  {
+    "id": "KAFKA-9877-RM-Q1",
+    "issue_key": "KAFKA-9877",
+    "source_type": "jira",
+    "source_url": "https://issues.apache.org/jira/browse/KAFKA-9877",
+    "summary": "ERROR Shutdown broker because all log dirs in /tmp/kafka-logs have failed",
+    "question": "Why did Kafka stop serving replicas in a log directory after storage errors?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+      "line": 2172
+    }
+  },
+  {
+    "id": "KAFKA-9877-RM-Q2",
+    "issue_key": "KAFKA-9877",
+    "source_type": "jira",
+    "source_url": "https://issues.apache.org/jira/browse/KAFKA-9877",
+    "summary": "ERROR Shutdown broker because all log dirs in /tmp/kafka-logs have failed",
+    "question": "What log explains a broker taking replicas offline because a log directory failed?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+      "line": 2172
+    }
+  },
+  {
+    "id": "KAFKA-9877-RM-Q3",
+    "issue_key": "KAFKA-9877",
+    "source_type": "jira",
+    "source_url": "https://issues.apache.org/jira/browse/KAFKA-9877",
+    "summary": "ERROR Shutdown broker because all log dirs in /tmp/kafka-logs have failed",
+    "question": "Could log directory failure be why the broker stopped serving replicas from that path?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+      "line": 2172
+    }
+  },
+  {
+    "id": "KAFKA-9877-AF-Q2",
+    "issue_key": "KAFKA-9877",
+    "source_type": "jira",
+    "source_url": "https://issues.apache.org/jira/browse/KAFKA-9877",
+    "summary": "ERROR Shutdown broker because all log dirs in /tmp/kafka-logs have failed",
+    "question": "What Kafka log indicates the broker removed fetchers for affected partitions?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/AbstractFetcherManager.scala",
+      "line": 203
+    }
+  },
+  {
+    "id": "KAFKA-9877-LM-Q1",
+    "issue_key": "KAFKA-9877",
+    "source_type": "jira",
+    "source_url": "https://issues.apache.org/jira/browse/KAFKA-9877",
+    "summary": "ERROR Shutdown broker because all log dirs in /tmp/kafka-logs have failed",
+    "question": "Why did the broker shut down after every log directory failed?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/log/LogManager.scala",
+      "line": 228
+    }
+  },
+  {
+    "id": "KAFKA-9877-LM-Q2",
+    "issue_key": "KAFKA-9877",
+    "source_type": "jira",
+    "source_url": "https://issues.apache.org/jira/browse/KAFKA-9877",
+    "summary": "ERROR Shutdown broker because all log dirs in /tmp/kafka-logs have failed",
+    "question": "What Kafka log indicates the broker is exiting because all log dirs are unusable?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/log/LogManager.scala",
+      "line": 228
+    }
+  },
+  {
+    "id": "KAFKA-9357-Q1",
+    "issue_key": "KAFKA-9357",
+    "source_type": "jira",
+    "source_url": "https://issues.apache.org/jira/browse/KAFKA-9357",
+    "summary": "Error sending fetch request",
+    "question": "Why are replica fetch requests being disconnected before the response is read?",
+    "expected": {
+      "file": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+      "line": 618
+    }
+  },
+  {
+    "id": "KAFKA-9357-Q2",
+    "issue_key": "KAFKA-9357",
+    "source_type": "jira",
+    "source_url": "https://issues.apache.org/jira/browse/KAFKA-9357",
+    "summary": "Error sending fetch request",
+    "question": "What Kafka log explains repeated 'Error sending fetch request' messages between brokers?",
+    "expected": {
+      "file": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+      "line": 618
+    }
+  },
+  {
+    "id": "KAFKA-9357-Q3",
+    "issue_key": "KAFKA-9357",
+    "source_type": "jira",
+    "source_url": "https://issues.apache.org/jira/browse/KAFKA-9357",
+    "summary": "Error sending fetch request",
+    "question": "Could inter-broker communication failure be causing fetch requests to drop before a response is read?",
+    "expected": {
+      "file": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+      "line": 618
+    }
+  },
+  {
+    "id": "KAFKA-8046-Q1",
+    "issue_key": "KAFKA-8046",
+    "source_type": "jira",
+    "source_url": "https://issues.apache.org/jira/browse/KAFKA-8046",
+    "summary": "Shutdown broker because all log dirs in /tmp/kafka-logs have failed",
+    "question": "Why did the broker shut down because every Kafka log directory was marked failed?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/log/LogManager.scala",
+      "line": 228
+    }
+  },
+  {
+    "id": "KAFKA-8046-Q2",
+    "issue_key": "KAFKA-8046",
+    "source_type": "jira",
+    "source_url": "https://issues.apache.org/jira/browse/KAFKA-8046",
+    "summary": "Shutdown broker because all log dirs in /tmp/kafka-logs have failed",
+    "question": "Which Kafka log explains a broker exiting after all log dirs become unavailable?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/log/LogManager.scala",
+      "line": 228
+    }
+  },
+  {
+    "id": "KAFKA-13960-Q1",
+    "issue_key": "KAFKA-13960",
+    "source_type": "jira",
+    "source_url": "https://issues.apache.org/jira/browse/KAFKA-13960",
+    "summary": "ERROR Shutdown broker because all log dirs in c:\\kafka\\kafka-logs have failed (kafka.log.LogManager)",
+    "question": "Why is Kafka refusing to start because all log directories are already considered failed?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/log/LogManager.scala",
+      "line": 228
+    }
+  },
+  {
+    "id": "KAFKA-13960-Q2",
+    "issue_key": "KAFKA-13960",
+    "source_type": "jira",
+    "source_url": "https://issues.apache.org/jira/browse/KAFKA-13960",
+    "summary": "ERROR Shutdown broker because all log dirs in c:\\kafka\\kafka-logs have failed (kafka.log.LogManager)",
+    "question": "Which Kafka log explains a broker aborting startup because every log dir has failed?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/log/LogManager.scala",
+      "line": 228
+    }
+  },
+  {
+    "id": "KAFKA-9016-Q3",
+    "issue_key": "KAFKA-9016",
+    "source_type": "jira",
+    "source_url": "https://issues.apache.org/jira/browse/KAFKA-9016",
+    "summary": "Warn when log dir stopped serving replicas",
+    "question": "Could a log directory I/O failure explain why Kafka stopped serving replicas from that path?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+      "line": 2172
+    }
+  },
+  {
+    "id": "KAFKA-13317-Q1",
+    "issue_key": "KAFKA-13317",
+    "source_type": "jira",
+    "source_url": "https://issues.apache.org/jira/browse/KAFKA-13317",
+    "summary": "Kafka brokers can't communicate with each other, reports Error sending fetch request , java.io.IOException: Connection to 2 was disconnected before the response was read",
+    "question": "Why are brokers repeatedly logging that fetch requests to another broker were disconnected before a response was read?",
+    "expected": {
+      "file": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+      "line": 618
+    }
+  },
+  {
+    "id": "KAFKA-13317-Q2",
+    "issue_key": "KAFKA-13317",
+    "source_type": "jira",
+    "source_url": "https://issues.apache.org/jira/browse/KAFKA-13317",
+    "summary": "Kafka brokers can't communicate with each other, reports Error sending fetch request , java.io.IOException: Connection to 2 was disconnected before the response was read",
+    "question": "What Kafka log explains inter-broker fetch traffic failing with 'connection disconnected before the response was read'?",
+    "expected": {
+      "file": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+      "line": 618
+    }
+  },
+  {
+    "id": "KAFKA-13317-Q3",
+    "issue_key": "KAFKA-13317",
+    "source_type": "jira",
+    "source_url": "https://issues.apache.org/jira/browse/KAFKA-13317",
+    "summary": "Kafka brokers can't communicate with each other, reports Error sending fetch request , java.io.IOException: Connection to 2 was disconnected before the response was read",
+    "question": "Could broken broker-to-broker connectivity be the cause of repeated fetch request disconnects?",
+    "expected": {
+      "file": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+      "line": 618
+    }
+  },
+  {
+    "id": "KAFKA-7802-Q2",
+    "issue_key": "KAFKA-7802",
+    "source_type": "jira",
+    "source_url": "https://issues.apache.org/jira/browse/KAFKA-7802",
+    "summary": "Connection to Broker Disconnected Taking Down the Whole Cluster",
+    "question": "Which Kafka log explains replica fetchers losing the response path to another broker?",
+    "expected": {
+      "file": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+      "line": 618
+    }
+  }
+]

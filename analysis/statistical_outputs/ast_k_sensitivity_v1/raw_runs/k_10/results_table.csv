@@ -1,0 +1,5 @@
+Method,Recall@K,MRR,PairSavings%,CETimeSavings%
+Vector-only,0.9079365079365079,0.748,0.0,0.0
+Vector+CrossEncoder,0.9079365079365079,0.705,0.0,0.0
+KG+CrossEncoder(static-K),0.9015873015873016,0.697,0.0,0.0
+KG+CrossEncoder+StagedConfidence,0.9079365079365079,0.704,62.0,62.7

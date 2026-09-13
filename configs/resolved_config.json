@@ -1,0 +1,130 @@
+{
+  "upstream_repo": "https://github.com/OSU-NLP-Group/HippoRAG",
+  "upstream_commit": "b144c46df14cabe5f5822d8caded4bec5f709461",
+  "upstream_tag": "v1.0.0",
+  "command_sequence_source": "src/setup_hipporag_colbert.sh",
+  "dataset": "kafka_ast",
+  "documents": 1600,
+  "queries": 315,
+  "retriever": "colbertv2",
+  "extraction_model": "gpt-3.5-turbo-1106",
+  "llm_api": "openai",
+  "extraction_type": "ner",
+  "synonym_threshold": 0.8,
+  "cosine_sim_edges": true,
+  "ppr_damping": 0.5,
+  "doc_ensemble": false,
+  "max_steps": 1,
+  "recognition_threshold": 0.9,
+  "graph_alg": "ppr",
+  "nbits": 2,
+  "corpus_source": "artifacts/hipporag/frozen_corpus_1600.jsonl",
+  "corpus_sha256": "950cf89775df0f4d2a6b5940c0d1246bd1655315481dd4322b12825885351889",
+  "num_processes": 1,
+  "num_processes_note": "D8: sequential on macOS; upstream's Pool path depends on fork inheriting a module-global client and is unusable under spawn. Same prompts, model, temperature and parsing; only wall-clock differs.",
+  "wall_clock_seconds_total": 6406.191369056702,
+  "stages": [
+    {
+      "stage": "1_passage_openie",
+      "argv": [
+        "/Users/shashankmishra/kafka-kg-rag/third_party/hipporag/src/openie_with_retrieval_option_parallel.py",
+        "--dataset",
+        "kafka_ast",
+        "--llm",
+        "openai",
+        "--model_name",
+        "gpt-3.5-turbo-1106",
+        "--run_ner",
+        "--num_passages",
+        "all",
+        "--num_processes",
+        "1"
+      ],
+      "seconds": 5163.359201908112,
+      "returncode": 0
+    },
+    {
+      "stage": "2_query_ner",
+      "argv": [
+        "/Users/shashankmishra/kafka-kg-rag/third_party/hipporag/src/named_entity_extraction_parallel.py",
+        "--dataset",
+        "kafka_ast",
+        "--llm",
+        "openai",
+        "--model_name",
+        "gpt-3.5-turbo-1106",
+        "--num_processes",
+        "1"
+      ],
+      "seconds": 991.4298639297485,
+      "returncode": 0
+    },
+    {
+      "stage": "3_create_graph_pass1",
+      "argv": [
+        "/Users/shashankmishra/kafka-kg-rag/third_party/hipporag/src/create_graph.py",
+        "--dataset",
+        "kafka_ast",
+        "--model_name",
+        "colbertv2",
+        "--extraction_model",
+        "gpt-3.5-turbo-1106",
+        "--threshold",
+        "0.8",
+        "--extraction_type",
+        "ner",
+        "--cosine_sim_edges"
+      ],
+      "seconds": 1.589514970779419,
+      "returncode": 0
+    },
+    {
+      "stage": "4_knn_kb_to_kb",
+      "argv": [
+        "/Users/shashankmishra/kafka-kg-rag/third_party/hipporag/src/colbertv2_knn.py",
+        "--filename",
+        "output/kb_to_kb.tsv"
+      ],
+      "seconds": 123.44192600250244,
+      "returncode": 0
+    },
+    {
+      "stage": "5_knn_query_to_kb",
+      "argv": [
+        "/Users/shashankmishra/kafka-kg-rag/third_party/hipporag/src/colbertv2_knn.py",
+        "--filename",
+        "output/query_to_kb.tsv"
+      ],
+      "seconds": 124.22435474395752,
+      "returncode": 0
+    },
+    {
+      "stage": "6_create_graph_pass2",
+      "argv": [
+        "/Users/shashankmishra/kafka-kg-rag/third_party/hipporag/src/create_graph.py",
+        "--dataset",
+        "kafka_ast",
+        "--model_name",
+        "colbertv2",
+        "--extraction_model",
+        "gpt-3.5-turbo-1106",
+        "--threshold",
+        "0.8",
+        "--create_graph",
+        "--extraction_type",
+        "ner",
+        "--cosine_sim_edges"
+      ],
+      "seconds": 2.1420390605926514,
+      "returncode": 0
+    }
+  ],
+  "deviations": [
+    "D1 faiss-cpu",
+    "D2 CPU ColBERT",
+    "D3 python 3.10",
+    "D4 adapter data loading",
+    "D6 ColBERT launcher in-process",
+    "D7 langchain dependency resolution"
+  ]
+}

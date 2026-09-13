@@ -1,0 +1,375 @@
+{
+  "k_values": [
+    5,
+    10,
+    15,
+    20
+  ],
+  "methods": {
+    "Vector-only": {
+      "k_5": {
+        "queries": 315,
+        "hits": 271,
+        "recall": 0.8603174603174604,
+        "mrr": 0.7416931216931216,
+        "target_balanced_recall": 0.867660656495608,
+        "target_balanced_mrr": 0.748928956695947,
+        "unique_target_count": 103
+      },
+      "k_10": {
+        "queries": 315,
+        "hits": 286,
+        "recall": 0.9079365079365079,
+        "mrr": 0.7477500629881582,
+        "target_balanced_recall": 0.9116967175219601,
+        "target_balanced_mrr": 0.7544549750860431,
+        "unique_target_count": 103
+      },
+      "k_15": {
+        "queries": 315,
+        "hits": 296,
+        "recall": 0.9396825396825397,
+        "mrr": 0.7502932869599536,
+        "target_balanced_recall": 0.9422098936662043,
+        "target_balanced_mrr": 0.7568794653746109,
+        "unique_target_count": 103
+      },
+      "k_20": {
+        "queries": 315,
+        "hits": 301,
+        "recall": 0.9555555555555556,
+        "mrr": 0.7511943140374513,
+        "target_balanced_recall": 0.9546925566343042,
+        "target_balanced_mrr": 0.7575899437407146,
+        "unique_target_count": 103
+      }
+    },
+    "Vector + Cross-Encoder": {
+      "k_5": {
+        "queries": 315,
+        "hits": 271,
+        "recall": 0.8603174603174604,
+        "mrr": 0.7084656084656085,
+        "target_balanced_recall": 0.867660656495608,
+        "target_balanced_mrr": 0.7144976113422715,
+        "unique_target_count": 103
+      },
+      "k_10": {
+        "queries": 315,
+        "hits": 286,
+        "recall": 0.9079365079365079,
+        "mrr": 0.7054106827916352,
+        "target_balanced_recall": 0.9116967175219601,
+        "target_balanced_mrr": 0.7110755197440357,
+        "unique_target_count": 103
+      },
+      "k_15": {
+        "queries": 315,
+        "hits": 296,
+        "recall": 0.9396825396825397,
+        "mrr": 0.7026214085737895,
+        "target_balanced_recall": 0.9422098936662043,
+        "target_balanced_mrr": 0.7083349357274461,
+        "unique_target_count": 103
+      },
+      "k_20": {
+        "queries": 315,
+        "hits": 301,
+        "recall": 0.9555555555555556,
+        "mrr": 0.6974876669679855,
+        "target_balanced_recall": 0.9546925566343042,
+        "target_balanced_mrr": 0.7030149988790164,
+        "unique_target_count": 103
+      }
+    },
+    "AST-KG static": {
+      "k_5": {
+        "queries": 315,
+        "hits": 263,
+        "recall": 0.834920634920635,
+        "mrr": 0.6874603174603175,
+        "target_balanced_recall": 0.8428109107720758,
+        "target_balanced_mrr": 0.6932963476652797,
+        "unique_target_count": 103
+      },
+      "k_10": {
+        "queries": 315,
+        "hits": 284,
+        "recall": 0.9015873015873016,
+        "mrr": 0.6965444696397077,
+        "target_balanced_recall": 0.9107720758206195,
+        "target_balanced_mrr": 0.7026917347305697,
+        "unique_target_count": 103
+      },
+      "k_15": {
+        "queries": 315,
+        "hits": 291,
+        "recall": 0.9238095238095239,
+        "mrr": 0.7017041864660912,
+        "target_balanced_recall": 0.9334257975034673,
+        "target_balanced_mrr": 0.7079516402331937,
+        "unique_target_count": 103
+      },
+      "k_20": {
+        "queries": 315,
+        "hits": 298,
+        "recall": 0.946031746031746,
+        "mrr": 0.7045628855012609,
+        "target_balanced_recall": 0.9542302357836339,
+        "target_balanced_mrr": 0.7105576340870459,
+        "unique_target_count": 103
+      }
+    },
+    "AST-KG staged": {
+      "k_5": {
+        "queries": 315,
+        "hits": 264,
+        "recall": 0.8380952380952381,
+        "mrr": 0.6941798941798941,
+        "target_balanced_recall": 0.8441978733240869,
+        "target_balanced_mrr": 0.6995299738018185,
+        "unique_target_count": 103
+      },
+      "k_10": {
+        "queries": 315,
+        "hits": 286,
+        "recall": 0.9079365079365079,
+        "mrr": 0.7035336356764929,
+        "target_balanced_recall": 0.9135460009246417,
+        "target_balanced_mrr": 0.7093469534523626,
+        "unique_target_count": 103
+      },
+      "k_15": {
+        "queries": 315,
+        "hits": 294,
+        "recall": 0.9333333333333333,
+        "mrr": 0.701230859088002,
+        "target_balanced_recall": 0.9375866851595007,
+        "target_balanced_mrr": 0.7070596378502064,
+        "unique_target_count": 103
+      },
+      "k_20": {
+        "queries": 315,
+        "hits": 301,
+        "recall": 0.9555555555555556,
+        "mrr": 0.6971882281723061,
+        "target_balanced_recall": 0.9546925566343042,
+        "target_balanced_mrr": 0.7027097457377899,
+        "unique_target_count": 103
+      }
+    },
+    "ColBERTv2-only": {
+      "k_5": {
+        "queries": 315,
+        "hits": 210,
+        "recall": 0.6666666666666666,
+        "mrr": 0.5375661375661376,
+        "target_balanced_recall": 0.6712898751733702,
+        "target_balanced_mrr": 0.5414162428725535,
+        "unique_target_count": 103
+      },
+      "k_10": {
+        "queries": 315,
+        "hits": 236,
+        "recall": 0.7492063492063492,
+        "mrr": 0.548114134542706,
+        "target_balanced_recall": 0.7554322699953768,
+        "target_balanced_mrr": 0.5521690553243952,
+        "unique_target_count": 103
+      },
+      "k_15": {
+        "queries": 315,
+        "hits": 248,
+        "recall": 0.7873015873015873,
+        "mrr": 0.5510891489462918,
+        "target_balanced_recall": 0.7942672214516875,
+        "target_balanced_mrr": 0.5552018369979534,
+        "unique_target_count": 103
+      },
+      "k_20": {
+        "queries": 315,
+        "hits": 253,
+        "recall": 0.8031746031746032,
+        "mrr": 0.5519974381879144,
+        "target_balanced_recall": 0.8085991678224689,
+        "target_balanced_mrr": 0.5560121827112118,
+        "unique_target_count": 103
+      }
+    },
+    "HippoRAG (ColBERTv2)": {
+      "k_5": {
+        "queries": 315,
+        "hits": 60,
+        "recall": 0.19047619047619047,
+        "mrr": 0.09894179894179894,
+        "target_balanced_recall": 0.1941747572815534,
+        "target_balanced_mrr": 0.10086299892125135,
+        "unique_target_count": 103
+      },
+      "k_10": {
+        "queries": 315,
+        "hits": 77,
+        "recall": 0.24444444444444444,
+        "mrr": 0.10577475434618291,
+        "target_balanced_recall": 0.255663430420712,
+        "target_balanced_mrr": 0.10847588226229002,
+        "unique_target_count": 103
+      },
+      "k_15": {
+        "queries": 315,
+        "hits": 86,
+        "recall": 0.273015873015873,
+        "mrr": 0.10790706647849505,
+        "target_balanced_recall": 0.2829403606102635,
+        "target_balanced_mrr": 0.11050734594423915,
+        "unique_target_count": 103
+      },
+      "k_20": {
+        "queries": 315,
+        "hits": 97,
+        "recall": 0.30793650793650795,
+        "mrr": 0.10986158512806013,
+        "target_balanced_recall": 0.3136846971798428,
+        "target_balanced_mrr": 0.11224432331055614,
+        "unique_target_count": 103
+      }
+    }
+  },
+  "comparisons": {
+    "ColBERTv2-only vs Vector-only": {
+      "method_a": "Vector-only",
+      "method_b": "ColBERTv2-only",
+      "k": 20,
+      "mcnemar": {
+        "both_hit": 252,
+        "n10_a_only": 49,
+        "n01_b_only": 1,
+        "both_miss": 13,
+        "exact_mcnemar_two_sided_p": 9.059419880941277e-14
+      },
+      "bootstrap": {
+        "Recall": {
+          "difference": -0.1523809523809524,
+          "ci_95_lower": -0.20766773162939298,
+          "ci_95_upper": -0.10158730158730159
+        },
+        "MRR": {
+          "difference": -0.19919687584953694,
+          "ci_95_lower": -0.2497761513349239,
+          "ci_95_upper": -0.1518698000877048
+        },
+        "bootstrap_seed": 42,
+        "bootstrap_replicates": 10000,
+        "resampling_unit": "expected (file,line) target cluster"
+      }
+    },
+    "HippoRAG (ColBERTv2) vs ColBERTv2-only": {
+      "method_a": "ColBERTv2-only",
+      "method_b": "HippoRAG (ColBERTv2)",
+      "k": 20,
+      "mcnemar": {
+        "both_hit": 92,
+        "n10_a_only": 161,
+        "n01_b_only": 5,
+        "both_miss": 57,
+        "exact_mcnemar_two_sided_p": 2.1803905931263096e-41
+      },
+      "bootstrap": {
+        "Recall": {
+          "difference": -0.49523809523809526,
+          "ci_95_lower": -0.5681818181818182,
+          "ci_95_upper": -0.4212218649517685
+        },
+        "MRR": {
+          "difference": -0.4421358530598543,
+          "ci_95_lower": -0.5082511255315431,
+          "ci_95_upper": -0.3748560443971351
+        },
+        "bootstrap_seed": 42,
+        "bootstrap_replicates": 10000,
+        "resampling_unit": "expected (file,line) target cluster"
+      }
+    },
+    "HippoRAG (ColBERTv2) vs Vector-only": {
+      "method_a": "Vector-only",
+      "method_b": "HippoRAG (ColBERTv2)",
+      "k": 20,
+      "mcnemar": {
+        "both_hit": 97,
+        "n10_a_only": 204,
+        "n01_b_only": 0,
+        "both_miss": 14,
+        "exact_mcnemar_two_sided_p": 7.778769097326427e-62
+      },
+      "bootstrap": {
+        "Recall": {
+          "difference": -0.6476190476190476,
+          "ci_95_lower": -0.7152103559870551,
+          "ci_95_upper": -0.5751633986928104
+        },
+        "MRR": {
+          "difference": -0.6413327289093912,
+          "ci_95_lower": -0.7038123175607365,
+          "ci_95_upper": -0.5772372813564588
+        },
+        "bootstrap_seed": 42,
+        "bootstrap_replicates": 10000,
+        "resampling_unit": "expected (file,line) target cluster"
+      }
+    },
+    "HippoRAG (ColBERTv2) vs AST-KG static": {
+      "method_a": "AST-KG static",
+      "method_b": "HippoRAG (ColBERTv2)",
+      "k": 20,
+      "mcnemar": {
+        "both_hit": 97,
+        "n10_a_only": 201,
+        "n01_b_only": 0,
+        "both_miss": 17,
+        "exact_mcnemar_two_sided_p": 6.223015277861142e-61
+      },
+      "bootstrap": {
+        "Recall": {
+          "difference": -0.638095238095238,
+          "ci_95_lower": -0.7079399585921325,
+          "ci_95_upper": -0.5632911392405063
+        },
+        "MRR": {
+          "difference": -0.5947013003732008,
+          "ci_95_lower": -0.6536991916752957,
+          "ci_95_upper": -0.5329851435838909
+        },
+        "bootstrap_seed": 42,
+        "bootstrap_replicates": 10000,
+        "resampling_unit": "expected (file,line) target cluster"
+      }
+    },
+    "HippoRAG (ColBERTv2) vs AST-KG staged": {
+      "method_a": "AST-KG staged",
+      "method_b": "HippoRAG (ColBERTv2)",
+      "k": 20,
+      "mcnemar": {
+        "both_hit": 97,
+        "n10_a_only": 204,
+        "n01_b_only": 0,
+        "both_miss": 14,
+        "exact_mcnemar_two_sided_p": 7.778769097326427e-62
+      },
+      "bootstrap": {
+        "Recall": {
+          "difference": -0.6476190476190476,
+          "ci_95_lower": -0.7152207220873786,
+          "ci_95_upper": -0.5750798722044729
+        },
+        "MRR": {
+          "difference": -0.5873266430442459,
+          "ci_95_lower": -0.6461261164990846,
+          "ci_95_upper": -0.5248830838463184
+        },
+        "bootstrap_seed": 42,
+        "bootstrap_replicates": 10000,
+        "resampling_unit": "expected (file,line) target cluster"
+      }
+    }
+  }
+}

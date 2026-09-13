@@ -1,0 +1,63 @@
+{
+  "status": "frozen_before_generation",
+  "created_at": "2026-08-10T18:38:14.221647+00:00",
+  "selected_queries_path": "results/ast_downstream_gpt41mini_v1/selected_queries.json",
+  "selected_queries_sha256": "0b0e8ba3bed4302b02b32118a7df465417af12d3626ace40a46cfb01d31d5599",
+  "corrected_metrics_path": "scripts/results_ast_315_paper_config/corrected_metrics/results_summary.json",
+  "corrected_metrics_sha256": "6e8b33c739b8cbaac9e58d1b3d32e5519d4492923f15f760650c4bded2a0c5da",
+  "expected_generations": 300,
+  "methods": [
+    "Vector-only",
+    "KG+CrossEncoder(static-K)",
+    "KG+CrossEncoder+StagedConfidence"
+  ],
+  "stores": {
+    "neo4j_uri": "bolt://localhost:7688",
+    "repo_name": "kafka",
+    "qdrant_url": "http://localhost:6333",
+    "qdrant_collection": "kafka_log_templates_ast"
+  },
+  "retrieval": {
+    "embedding_model": "text-embedding-3-large",
+    "retrieval_k": 20,
+    "evidence_k": 5,
+    "rerank_model": "BAAI/bge-reranker-v2-m3",
+    "rerank_device": null,
+    "rerank_batch_size": 16,
+    "rerank_kg_max": 200,
+    "dynamic_k_min": 10,
+    "dynamic_k_max": 40,
+    "dynamic_k_drop": 0.15,
+    "staged_batch_size": 20,
+    "confidence_high": 0.6,
+    "confidence_low": 0.25,
+    "staged_big_step": null,
+    "staged_small_step": null,
+    "evidence_source": "top 5 of final retrieved output only"
+  },
+  "generation": {
+    "api": "OpenAI Responses API",
+    "model": "gpt-4.1-mini-2025-04-14",
+    "prompt_version": "legacy_run_llm_extension_eval.build_generation_prompt.v1",
+    "prompt_source_sha256": "d9935a460e525f04e5157d3915ddebff12f4999abaad21e79187d1f113406517",
+    "system_prompt": null,
+    "temperature": "not supplied (OpenAI default)",
+    "max_output_tokens": "not supplied (OpenAI default)",
+    "response_format": "not supplied",
+    "supplied_request_fields": [
+      "model",
+      "input"
+    ],
+    "outer_generation_max_attempts": 3
+  },
+  "manual_scoring_rubric": {
+    "RootCauseCorrectness": "1 only when the predicted cause clearly matches the issue asked in the query logically and semantically; otherwise 0.",
+    "EvidenceGrounding": "1 only when the explanation is supported by the retrieved logs; otherwise 0.",
+    "Hallucination": "1 when the answer introduces an unsupported causal claim; otherwise 0."
+  },
+  "blinding": {
+    "enabled": true,
+    "seed": 42,
+    "method_mapping_scope": "randomized independently per query"
+  }
+}

@@ -1,0 +1,2837 @@
+[
+  {
+    "query_id": "L001-Q1",
+    "query": "We've observed a sudden change in the partitions being used by our Kafka topic. Can anyone explain what triggered this adjustment?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 2055,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:2055",
+    "gold_doc_id": "1e725cc7-1fe6-5c43-a6a3-a326c6d94c2c",
+    "gold_idx": 1563
+  },
+  {
+    "query_id": "L001-Q2",
+    "query": "Hey team, I've noticed that our topic's partitions are switching around unexpectedly. Is there something in the configuration we need to check?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 2055,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:2055",
+    "gold_doc_id": "1e725cc7-1fe6-5c43-a6a3-a326c6d94c2c",
+    "gold_idx": 1563
+  },
+  {
+    "query_id": "L001-Q3",
+    "query": "Could the alteration in partition assignments for our Kafka messages be linked to recent scaling operations or configuration changes?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 2055,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:2055",
+    "gold_doc_id": "1e725cc7-1fe6-5c43-a6a3-a326c6d94c2c",
+    "gold_idx": 1563
+  },
+  {
+    "query_id": "L002-Q1",
+    "query": "We're encountering issues when trying to remove a replica from a specified topic partition. What might be causing this failure?",
+    "gold_file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+    "gold_line": 2392,
+    "canonical_target": "core/src/main/scala/kafka/server/ReplicaManager.scala:2392",
+    "gold_doc_id": "0d4d3999-f149-5318-b4e4-e78749c39a42",
+    "gold_idx": 1395
+  },
+  {
+    "query_id": "L002-Q2",
+    "query": "Hey, has anyone noticed that we can't seem to delete a replica from the topic partition? This is really slowing things down!",
+    "gold_file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+    "gold_line": 2392,
+    "canonical_target": "core/src/main/scala/kafka/server/ReplicaManager.scala:2392",
+    "gold_doc_id": "0d4d3999-f149-5318-b4e4-e78749c39a42",
+    "gold_idx": 1395
+  },
+  {
+    "query_id": "L002-Q3",
+    "query": "Could the inability to delete the replica for the defined topic partition indicate a potential underlying configuration issue or resource limitation?",
+    "gold_file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+    "gold_line": 2392,
+    "canonical_target": "core/src/main/scala/kafka/server/ReplicaManager.scala:2392",
+    "gold_doc_id": "0d4d3999-f149-5318-b4e4-e78749c39a42",
+    "gold_idx": 1395
+  },
+  {
+    "query_id": "L003-Q1",
+    "query": "Why is the AlterPartition request from node X failing for topic Y-partition Z, and what impact is this having on message processing?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1266,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1266",
+    "gold_doc_id": "5b48bd14-efa2-5eef-85a9-d03181bcf22f",
+    "gold_idx": 1542
+  },
+  {
+    "query_id": "L003-Q2",
+    "query": "I noticed that node X couldn't handle the AlterPartition request for topic Y-partition Z—could this be causing issues with data replication?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1266,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1266",
+    "gold_doc_id": "5b48bd14-efa2-5eef-85a9-d03181bcf22f",
+    "gold_idx": 1542
+  },
+  {
+    "query_id": "L003-Q3",
+    "query": "What could be the underlying reason for node X rejecting the AlterPartition request for topic Y-partition Z, and how can we troubleshoot this further?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1266,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1266",
+    "gold_doc_id": "5b48bd14-efa2-5eef-85a9-d03181bcf22f",
+    "gold_idx": 1542
+  },
+  {
+    "query_id": "L004-Q1",
+    "query": "Why is Broker {} showing a controlled shutdown state, and what impact does this have on message processing?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/BrokerHeartbeatManager.java",
+    "gold_line": 455,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/BrokerHeartbeatManager.java:455",
+    "gold_doc_id": "27a32b53-922c-5826-bfed-fc802feb54f5",
+    "gold_idx": 1438
+  },
+  {
+    "query_id": "L004-Q2",
+    "query": "I noticed that Broker {} is shutting down but seems stuck—could this cause delays in message delivery?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/BrokerHeartbeatManager.java",
+    "gold_line": 455,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/BrokerHeartbeatManager.java:455",
+    "gold_doc_id": "27a32b53-922c-5826-bfed-fc802feb54f5",
+    "gold_idx": 1438
+  },
+  {
+    "query_id": "L004-Q3",
+    "query": "Can we investigate why Broker {} is in a controlled shutdown state and if it affects the cluster's availability?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/BrokerHeartbeatManager.java",
+    "gold_line": 455,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/BrokerHeartbeatManager.java:455",
+    "gold_doc_id": "27a32b53-922c-5826-bfed-fc802feb54f5",
+    "gold_idx": 1438
+  },
+  {
+    "query_id": "L005-Q1",
+    "query": "We're encountering issues with message appending; can we investigate the behavior of the $topicIdPartition partition during this operation?",
+    "gold_file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+    "gold_line": 1407,
+    "canonical_target": "core/src/main/scala/kafka/server/ReplicaManager.scala:1407",
+    "gold_doc_id": "5ff32d86-700e-59a2-bacf-133039eab1d9",
+    "gold_idx": 1370
+  },
+  {
+    "query_id": "L005-Q2",
+    "query": "Hey team, it looks like we have a problem with adding messages to one of our partitions. What's going on with $topicIdPartition?",
+    "gold_file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+    "gold_line": 1407,
+    "canonical_target": "core/src/main/scala/kafka/server/ReplicaManager.scala:1407",
+    "gold_doc_id": "5ff32d86-700e-59a2-bacf-133039eab1d9",
+    "gold_idx": 1370
+  },
+  {
+    "query_id": "L005-Q3",
+    "query": "Could there be a malfunction affecting the append functionality on the $topicIdPartition, and how could we confirm the root cause?",
+    "gold_file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+    "gold_line": 1407,
+    "canonical_target": "core/src/main/scala/kafka/server/ReplicaManager.scala:1407",
+    "gold_doc_id": "5ff32d86-700e-59a2-bacf-133039eab1d9",
+    "gold_idx": 1370
+  },
+  {
+    "query_id": "L006-Q1",
+    "query": "Why is the ISR for one of our partitions currently empty, and what impact might this have on message delivery?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/PartitionChangeBuilder.java",
+    "gold_line": 450,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/PartitionChangeBuilder.java:450",
+    "gold_doc_id": "af223c92-6809-500c-b3ce-df82b2d7fcad",
+    "gold_idx": 1482
+  },
+  {
+    "query_id": "L006-Q2",
+    "query": "Hey team, I've noticed that one of our partitions isn't having any in-sync replicas. Could this be affecting our data availability?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/PartitionChangeBuilder.java",
+    "gold_line": 450,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/PartitionChangeBuilder.java:450",
+    "gold_doc_id": "af223c92-6809-500c-b3ce-df82b2d7fcad",
+    "gold_idx": 1482
+  },
+  {
+    "query_id": "L006-Q3",
+    "query": "Can we diagnose why the ISR is empty for this partition and what changes occurred leading up to this situation?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/PartitionChangeBuilder.java",
+    "gold_line": 450,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/PartitionChangeBuilder.java:450",
+    "gold_doc_id": "af223c92-6809-500c-b3ce-df82b2d7fcad",
+    "gold_idx": 1482
+  },
+  {
+    "query_id": "L007-Q1",
+    "query": "Is there a broker registration failure occurring due to a mismatch in API versions?",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+    "gold_line": 417,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala:417",
+    "gold_doc_id": "5093171a-c22d-5b3d-95ae-3f67c6681a47",
+    "gold_idx": 1178
+  },
+  {
+    "query_id": "L007-Q2",
+    "query": "Hey, is anyone else noticing issues with a broker not being able to register? Sounds like there might be a version conflict.",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+    "gold_line": 417,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala:417",
+    "gold_doc_id": "5093171a-c22d-5b3d-95ae-3f67c6681a47",
+    "gold_idx": 1178
+  },
+  {
+    "query_id": "L007-Q3",
+    "query": "Could the inability to register broker $nodeId indicate that the required API version is not supported by the current setup?",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+    "gold_line": 417,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala:417",
+    "gold_doc_id": "5093171a-c22d-5b3d-95ae-3f67c6681a47",
+    "gold_idx": 1178
+  },
+  {
+    "query_id": "L008-Q1",
+    "query": "We're encountering an issue where a message indicates an inconsistency in the topic ID for partition $topicPartition; can anyone confirm if there have been recent changes to the topic configuration?",
+    "gold_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+    "gold_line": 456,
+    "canonical_target": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala:456",
+    "gold_doc_id": "c4520d78-0fe8-58df-997c-6379487c57a3",
+    "gold_idx": 1123
+  },
+  {
+    "query_id": "L008-Q2",
+    "query": "Has anyone noticed any odd behaviors related to the topic ID for partition $topicPartition? It seems like the leader is sending us conflicting information.",
+    "gold_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+    "gold_line": 456,
+    "canonical_target": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala:456",
+    "gold_doc_id": "c4520d78-0fe8-58df-997c-6379487c57a3",
+    "gold_idx": 1123
+  },
+  {
+    "query_id": "L008-Q3",
+    "query": "Can we investigate the status of partition $topicPartition? It appears that we're receiving inconsistent topic ID errors from the leader, which might affect data consistency.",
+    "gold_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+    "gold_line": 456,
+    "canonical_target": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala:456",
+    "gold_doc_id": "c4520d78-0fe8-58df-997c-6379487c57a3",
+    "gold_idx": 1123
+  },
+  {
+    "query_id": "L009-Q1",
+    "query": "Why is the periodic task failing to execute as scheduled, and what implications does its unregistration have on system performance?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/PeriodicTaskControlManager.java",
+    "gold_line": 178,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/PeriodicTaskControlManager.java:178",
+    "gold_doc_id": "291da0a8-d27f-5be9-9f2b-ffae29dc6d1a",
+    "gold_idx": 1488
+  },
+  {
+    "query_id": "L009-Q2",
+    "query": "Hey, I noticed that a scheduled task has been unregistered. Could this be causing some delays in processing?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/PeriodicTaskControlManager.java",
+    "gold_line": 178,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/PeriodicTaskControlManager.java:178",
+    "gold_doc_id": "291da0a8-d27f-5be9-9f2b-ffae29dc6d1a",
+    "gold_idx": 1488
+  },
+  {
+    "query_id": "L009-Q3",
+    "query": "Could the unregistration of this periodic task be related to recent configuration changes or resource constraints?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/PeriodicTaskControlManager.java",
+    "gold_line": 178,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/PeriodicTaskControlManager.java:178",
+    "gold_doc_id": "291da0a8-d27f-5be9-9f2b-ffae29dc6d1a",
+    "gold_idx": 1488
+  },
+  {
+    "query_id": "L010-Q1",
+    "query": "We've noticed that the heartbeat signal is failing to send on time; could this be impacting the connection stability?",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+    "gold_line": 471,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala:471",
+    "gold_doc_id": "bf5953ca-bdf2-58ad-99e2-5f1ddb8842cc",
+    "gold_idx": 1184
+  },
+  {
+    "query_id": "L010-Q2",
+    "query": "Hey team, anyone else experiencing delays with the heartbeat? It seems like messages aren't getting through as expected.",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+    "gold_line": 471,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala:471",
+    "gold_doc_id": "bf5953ca-bdf2-58ad-99e2-5f1ddb8842cc",
+    "gold_idx": 1184
+  },
+  {
+    "query_id": "L010-Q3",
+    "query": "Can we investigate whether the recent RPC timeout is causing issues with heartbeat transmissions and leading to downstream problems?",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+    "gold_line": 471,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala:471",
+    "gold_doc_id": "bf5953ca-bdf2-58ad-99e2-5f1ddb8842cc",
+    "gold_idx": 1184
+  },
+  {
+    "query_id": "L011-Q1",
+    "query": "The system experienced delays, taking %d milliseconds to delete records from the local log. What factors may be contributing to this latency?",
+    "gold_file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+    "gold_line": 1317,
+    "canonical_target": "core/src/main/scala/kafka/server/ReplicaManager.scala:1317",
+    "gold_doc_id": "52aca7e8-d87f-50cb-ac2b-ebe69bc8e95f",
+    "gold_idx": 1368
+  },
+  {
+    "query_id": "L011-Q2",
+    "query": "Hey team, I've noticed that deleting records from the local log is taking way longer than usual—around %d ms! Any ideas on what's going on?",
+    "gold_file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+    "gold_line": 1317,
+    "canonical_target": "core/src/main/scala/kafka/server/ReplicaManager.scala:1317",
+    "gold_doc_id": "52aca7e8-d87f-50cb-ac2b-ebe69bc8e95f",
+    "gold_idx": 1368
+  },
+  {
+    "query_id": "L011-Q3",
+    "query": "We need to investigate the performance hit observed during record deletions on the local log, which are now taking %d ms longer than expected. What metrics should we check to diagnose this issue?",
+    "gold_file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+    "gold_line": 1317,
+    "canonical_target": "core/src/main/scala/kafka/server/ReplicaManager.scala:1317",
+    "gold_doc_id": "52aca7e8-d87f-50cb-ac2b-ebe69bc8e95f",
+    "gold_idx": 1368
+  },
+  {
+    "query_id": "L012-Q1",
+    "query": "It seems that a broker in our Kafka cluster has unexpectedly fenced itself. What impact has this had on message processing and consumer behavior?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/BrokerHeartbeatManager.java",
+    "gold_line": 408,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/BrokerHeartbeatManager.java:408",
+    "gold_doc_id": "7a137941-2ba6-5565-a04e-fb92532b79de",
+    "gold_idx": 1431
+  },
+  {
+    "query_id": "L012-Q2",
+    "query": "Hey team, we’ve noticed that one of our Kafka brokers is acting strange and has requested to be fenced. Has anyone else seen any dropped messages or delays in consumption from this broker?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/BrokerHeartbeatManager.java",
+    "gold_line": 408,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/BrokerHeartbeatManager.java:408",
+    "gold_doc_id": "7a137941-2ba6-5565-a04e-fb92532b79de",
+    "gold_idx": 1431
+  },
+  {
+    "query_id": "L012-Q3",
+    "query": "Could you investigate the implications of the recent fencing action taken by one of the brokers? Are there any potential issues with message availability or partition leadership we should be aware of?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/BrokerHeartbeatManager.java",
+    "gold_line": 408,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/BrokerHeartbeatManager.java:408",
+    "gold_doc_id": "7a137941-2ba6-5565-a04e-fb92532b79de",
+    "gold_idx": 1431
+  },
+  {
+    "query_id": "L013-Q1",
+    "query": "We've noticed that the selector is not responding as expected. Can anyone explain why the processor with ID $id is closing?",
+    "gold_file": "core/src/main/scala/kafka/network/SocketServer.scala",
+    "gold_line": 931,
+    "canonical_target": "core/src/main/scala/kafka/network/SocketServer.scala:931",
+    "gold_doc_id": "beede35c-642e-541f-8515-816b2cab7ef2",
+    "gold_idx": 1079
+  },
+  {
+    "query_id": "L013-Q2",
+    "query": "It seems like the processor identified by $id is shutting down unexpectedly. Could this be affecting our message flow?",
+    "gold_file": "core/src/main/scala/kafka/network/SocketServer.scala",
+    "gold_line": 931,
+    "canonical_target": "core/src/main/scala/kafka/network/SocketServer.scala:931",
+    "gold_doc_id": "beede35c-642e-541f-8515-816b2cab7ef2",
+    "gold_idx": 1079
+  },
+  {
+    "query_id": "L013-Q3",
+    "query": "Is there any ongoing maintenance that could be causing the processor $id to close its selector prematurely?",
+    "gold_file": "core/src/main/scala/kafka/network/SocketServer.scala",
+    "gold_line": 931,
+    "canonical_target": "core/src/main/scala/kafka/network/SocketServer.scala:931",
+    "gold_doc_id": "beede35c-642e-541f-8515-816b2cab7ef2",
+    "gold_idx": 1079
+  },
+  {
+    "query_id": "L014-Q1",
+    "query": "Are you experiencing issues with data being sent to the specified connection, particularly with connection ID $connectionId?",
+    "gold_file": "core/src/main/scala/kafka/network/SocketServer.scala",
+    "gold_line": 994,
+    "canonical_target": "core/src/main/scala/kafka/network/SocketServer.scala:994",
+    "gold_doc_id": "90648b6c-0e24-5ce2-a3d0-f15def5795ae",
+    "gold_idx": 1083
+  },
+  {
+    "query_id": "L014-Q2",
+    "query": "Noticed any delays in data being processed for connection $connectionId, especially after the server received a response?",
+    "gold_file": "core/src/main/scala/kafka/network/SocketServer.scala",
+    "gold_line": 994,
+    "canonical_target": "core/src/main/scala/kafka/network/SocketServer.scala:994",
+    "gold_doc_id": "90648b6c-0e24-5ce2-a3d0-f15def5795ae",
+    "gold_idx": 1083
+  },
+  {
+    "query_id": "L014-Q3",
+    "query": "Could there be a bottleneck in our socket server that's preventing timely data transmission for connection ID $connectionId?",
+    "gold_file": "core/src/main/scala/kafka/network/SocketServer.scala",
+    "gold_line": 994,
+    "canonical_target": "core/src/main/scala/kafka/network/SocketServer.scala:994",
+    "gold_doc_id": "90648b6c-0e24-5ce2-a3d0-f15def5795ae",
+    "gold_idx": 1083
+  },
+  {
+    "query_id": "L015-Q1",
+    "query": "The system is failing to register a controller, indicating that the channel manager might not be initialized. What could be the cause of this initialization issue?",
+    "gold_file": "core/src/main/scala/kafka/server/ControllerRegistrationManager.scala",
+    "gold_line": 205,
+    "canonical_target": "core/src/main/scala/kafka/server/ControllerRegistrationManager.scala:205",
+    "gold_doc_id": "5a8ece51-70b3-5cd4-8675-41ead0d23ef3",
+    "gold_idx": 1233
+  },
+  {
+    "query_id": "L015-Q2",
+    "query": "We're experiencing a hiccup where the controller can't get registered. Is there any reason the channel manager hasn't been set up yet?",
+    "gold_file": "core/src/main/scala/kafka/server/ControllerRegistrationManager.scala",
+    "gold_line": 205,
+    "canonical_target": "core/src/main/scala/kafka/server/ControllerRegistrationManager.scala:205",
+    "gold_doc_id": "5a8ece51-70b3-5cd4-8675-41ead0d23ef3",
+    "gold_idx": 1233
+  },
+  {
+    "query_id": "L015-Q3",
+    "query": "It appears that the controller registration process is stalled due to an uninitialized channel manager. What steps can we take to diagnose and address this problem?",
+    "gold_file": "core/src/main/scala/kafka/server/ControllerRegistrationManager.scala",
+    "gold_line": 205,
+    "canonical_target": "core/src/main/scala/kafka/server/ControllerRegistrationManager.scala:205",
+    "gold_doc_id": "5a8ece51-70b3-5cd4-8675-41ead0d23ef3",
+    "gold_idx": 1233
+  },
+  {
+    "query_id": "L016-Q1",
+    "query": "The system is failing to process incoming requests, leading to unexpected interruptions in service. What could be causing this issue?",
+    "gold_file": "core/src/main/scala/kafka/server/ControllerApis.scala",
+    "gold_line": 153,
+    "canonical_target": "core/src/main/scala/kafka/server/ControllerApis.scala:153",
+    "gold_doc_id": "3b91b798-e436-52d6-9c2b-740786ef9781",
+    "gold_idx": 1223
+  },
+  {
+    "query_id": "L016-Q2",
+    "query": "I'm noticing that requests are not being handled correctly, resulting in errors. What should we check first to resolve this?",
+    "gold_file": "core/src/main/scala/kafka/server/ControllerApis.scala",
+    "gold_line": 153,
+    "canonical_target": "core/src/main/scala/kafka/server/ControllerApis.scala:153",
+    "gold_doc_id": "3b91b798-e436-52d6-9c2b-740786ef9781",
+    "gold_idx": 1223
+  },
+  {
+    "query_id": "L016-Q3",
+    "query": "Could the handling failure of the incoming request be due to a configuration issue or resource limitation on the server?",
+    "gold_file": "core/src/main/scala/kafka/server/ControllerApis.scala",
+    "gold_line": 153,
+    "canonical_target": "core/src/main/scala/kafka/server/ControllerApis.scala:153",
+    "gold_doc_id": "3b91b798-e436-52d6-9c2b-740786ef9781",
+    "gold_idx": 1223
+  },
+  {
+    "query_id": "L017-Q1",
+    "query": "Why is the Kafka consumer unable to connect to the coordinator, and what impact is this having on message processing?",
+    "gold_file": "core/src/main/scala/kafka/server/KafkaApis.scala",
+    "gold_line": 1252,
+    "canonical_target": "core/src/main/scala/kafka/server/KafkaApis.scala:1252",
+    "gold_doc_id": "5a38688b-c575-5567-8c32-1310514f82a8",
+    "gold_idx": 1306
+  },
+  {
+    "query_id": "L017-Q2",
+    "query": "Is anyone else experiencing issues with the Kafka topic where messages aren’t being acknowledged due to an invalid coordinator key?",
+    "gold_file": "core/src/main/scala/kafka/server/KafkaApis.scala",
+    "gold_line": 1252,
+    "canonical_target": "core/src/main/scala/kafka/server/KafkaApis.scala:1252",
+    "gold_doc_id": "5a38688b-c575-5567-8c32-1310514f82a8",
+    "gold_idx": 1306
+  },
+  {
+    "query_id": "L017-Q3",
+    "query": "Could the invalid share coordinator key be causing delays in message delivery, and how can we pinpoint the root cause?",
+    "gold_file": "core/src/main/scala/kafka/server/KafkaApis.scala",
+    "gold_line": 1252,
+    "canonical_target": "core/src/main/scala/kafka/server/KafkaApis.scala:1252",
+    "gold_doc_id": "5a38688b-c575-5567-8c32-1310514f82a8",
+    "gold_idx": 1306
+  },
+  {
+    "query_id": "L018-Q1",
+    "query": "Why are the processors failing to initialize for the specified listener endpoint?",
+    "gold_file": "core/src/main/scala/kafka/network/SocketServer.scala",
+    "gold_line": 537,
+    "canonical_target": "core/src/main/scala/kafka/network/SocketServer.scala:537",
+    "gold_doc_id": "e9834f96-3fb6-5d39-8c0f-aa51a240e190",
+    "gold_idx": 1066
+  },
+  {
+    "query_id": "L018-Q2",
+    "query": "Hey, is anyone else noticing that the listener seems to be stuck and not processing messages?",
+    "gold_file": "core/src/main/scala/kafka/network/SocketServer.scala",
+    "gold_line": 537,
+    "canonical_target": "core/src/main/scala/kafka/network/SocketServer.scala:537",
+    "gold_doc_id": "e9834f96-3fb6-5d39-8c0f-aa51a240e190",
+    "gold_idx": 1066
+  },
+  {
+    "query_id": "L018-Q3",
+    "query": "Can we confirm whether the listener endpoint is correctly starting its processors as expected?",
+    "gold_file": "core/src/main/scala/kafka/network/SocketServer.scala",
+    "gold_line": 537,
+    "canonical_target": "core/src/main/scala/kafka/network/SocketServer.scala:537",
+    "gold_doc_id": "e9834f96-3fb6-5d39-8c0f-aa51a240e190",
+    "gold_idx": 1066
+  },
+  {
+    "query_id": "L019-Q1",
+    "query": "Why did we initiate a new fetch context, and what impact does it have on our partition data?",
+    "gold_file": "core/src/main/scala/kafka/server/FetchSession.scala",
+    "gold_line": 863,
+    "canonical_target": "core/src/main/scala/kafka/server/FetchSession.scala:863",
+    "gold_doc_id": "464bc7cb-2145-509b-98ac-65d7a3fd0a49",
+    "gold_idx": 1282
+  },
+  {
+    "query_id": "L019-Q2",
+    "query": "I noticed we created a new fetch context—could this affect our current stream performance?",
+    "gold_file": "core/src/main/scala/kafka/server/FetchSession.scala",
+    "gold_line": 863,
+    "canonical_target": "core/src/main/scala/kafka/server/FetchSession.scala:863",
+    "gold_doc_id": "464bc7cb-2145-509b-98ac-65d7a3fd0a49",
+    "gold_idx": 1282
+  },
+  {
+    "query_id": "L019-Q3",
+    "query": "Can we analyze the scenarios that trigger the creation of a full FetchContext and their implications on data retrieval?",
+    "gold_file": "core/src/main/scala/kafka/server/FetchSession.scala",
+    "gold_line": 863,
+    "canonical_target": "core/src/main/scala/kafka/server/FetchSession.scala:863",
+    "gold_doc_id": "464bc7cb-2145-509b-98ac-65d7a3fd0a49",
+    "gold_idx": 1282
+  },
+  {
+    "query_id": "L020-Q1",
+    "query": "What could be causing the system to report difficulties in accessing the leader ID and Epoch, resulting in a reliance on the metadata cache?",
+    "gold_file": "core/src/main/scala/kafka/server/KafkaApis.scala",
+    "gold_line": 376,
+    "canonical_target": "core/src/main/scala/kafka/server/KafkaApis.scala:376",
+    "gold_doc_id": "1d26c4af-ec32-5151-a14a-63b4ba43c696",
+    "gold_idx": 1297
+  },
+  {
+    "query_id": "L020-Q2",
+    "query": "Hey, why is it that I'm seeing issues with fetching the leader information? It seems like it's defaulting to some backup metadata.",
+    "gold_file": "core/src/main/scala/kafka/server/KafkaApis.scala",
+    "gold_line": 376,
+    "canonical_target": "core/src/main/scala/kafka/server/KafkaApis.scala:376",
+    "gold_doc_id": "1d26c4af-ec32-5151-a14a-63b4ba43c696",
+    "gold_idx": 1297
+  },
+  {
+    "query_id": "L020-Q3",
+    "query": "Can we investigate why the Kafka broker is unable to get the local leader ID and Epoch, and what role this might play in our current data handling?",
+    "gold_file": "core/src/main/scala/kafka/server/KafkaApis.scala",
+    "gold_line": 376,
+    "canonical_target": "core/src/main/scala/kafka/server/KafkaApis.scala:376",
+    "gold_doc_id": "1d26c4af-ec32-5151-a14a-63b4ba43c696",
+    "gold_idx": 1297
+  },
+  {
+    "query_id": "L021-Q1",
+    "query": "We've noticed that a channel has been terminated due to it being inactive for too long. Could this be impacting our message processing?",
+    "gold_file": "core/src/main/scala/kafka/network/SocketServer.scala",
+    "gold_line": 1033,
+    "canonical_target": "core/src/main/scala/kafka/network/SocketServer.scala:1033",
+    "gold_doc_id": "27832228-d611-5f1c-a0fc-318ddb23ec59",
+    "gold_idx": 1087
+  },
+  {
+    "query_id": "L021-Q2",
+    "query": "Hey team, it seems like we're losing some connections due to inactivity. Is anyone else seeing issues with channels dropping unexpectedly?",
+    "gold_file": "core/src/main/scala/kafka/network/SocketServer.scala",
+    "gold_line": 1033,
+    "canonical_target": "core/src/main/scala/kafka/network/SocketServer.scala:1033",
+    "gold_doc_id": "27832228-d611-5f1c-a0fc-318ddb23ec59",
+    "gold_idx": 1087
+  },
+  {
+    "query_id": "L021-Q3",
+    "query": "Can we investigate why channels are being disconnected for expiration? Are there specific patterns or timeframes in which this is occurring?",
+    "gold_file": "core/src/main/scala/kafka/network/SocketServer.scala",
+    "gold_line": 1033,
+    "canonical_target": "core/src/main/scala/kafka/network/SocketServer.scala:1033",
+    "gold_doc_id": "27832228-d611-5f1c-a0fc-318ddb23ec59",
+    "gold_idx": 1087
+  },
+  {
+    "query_id": "L022-Q1",
+    "query": "Why is the data being truncated and the fetch offset reset for the specified partition, and what impact does this have on message consumption?",
+    "gold_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+    "gold_line": 711,
+    "canonical_target": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala:711",
+    "gold_doc_id": "75fbf250-585b-5af5-a192-ccfdc5169c17",
+    "gold_idx": 1131
+  },
+  {
+    "query_id": "L022-Q2",
+    "query": "Hey, I noticed that our messages for the topic are missing; could it be related to a fetch offset reset on one of the partitions?",
+    "gold_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+    "gold_line": 711,
+    "canonical_target": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala:711",
+    "gold_doc_id": "75fbf250-585b-5af5-a192-ccfdc5169c17",
+    "gold_idx": 1131
+  },
+  {
+    "query_id": "L022-Q3",
+    "query": "Could the recent truncation and reset of the fetch offset for this partition indicate a potential issue with data retention or replication?",
+    "gold_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+    "gold_line": 711,
+    "canonical_target": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala:711",
+    "gold_doc_id": "75fbf250-585b-5af5-a192-ccfdc5169c17",
+    "gold_idx": 1131
+  },
+  {
+    "query_id": "L023-Q1",
+    "query": "What problems are occurring with the communication between the offline log directory and the controllers?",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+    "gold_line": 332,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala:332",
+    "gold_doc_id": "7bfae605-e303-5d90-95a6-a786621c3cfd",
+    "gold_idx": 1173
+  },
+  {
+    "query_id": "L023-Q2",
+    "query": "Hey, why is the system shutting down? Is it related to issues with the offline log directory?",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+    "gold_line": 332,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala:332",
+    "gold_doc_id": "7bfae605-e303-5d90-95a6-a786621c3cfd",
+    "gold_idx": 1173
+  },
+  {
+    "query_id": "L023-Q3",
+    "query": "Can you investigate whether the offline log directory is failing to communicate with the controllers and what impact that might have?",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+    "gold_line": 332,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala:332",
+    "gold_doc_id": "7bfae605-e303-5d90-95a6-a786621c3cfd",
+    "gold_idx": 1173
+  },
+  {
+    "query_id": "L024-Q1",
+    "query": "Why is our application experiencing delays when trying to produce messages, possibly due to an unknown topic identifier from the leader?",
+    "gold_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+    "gold_line": 450,
+    "canonical_target": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala:450",
+    "gold_doc_id": "4a489c73-e06a-5e3d-a706-ba329a89e86f",
+    "gold_idx": 1122
+  },
+  {
+    "query_id": "L024-Q2",
+    "query": "Hey, why does it seem like we're getting errors about a topic not being recognized when we try to send data?",
+    "gold_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+    "gold_line": 450,
+    "canonical_target": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala:450",
+    "gold_doc_id": "4a489c73-e06a-5e3d-a706-ba329a89e86f",
+    "gold_idx": 1122
+  },
+  {
+    "query_id": "L024-Q3",
+    "query": "Could this issue with the partition be linked to a misconfiguration or a lack of topic registration in our Kafka setup?",
+    "gold_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+    "gold_line": 450,
+    "canonical_target": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala:450",
+    "gold_doc_id": "4a489c73-e06a-5e3d-a706-ba329a89e86f",
+    "gold_idx": 1122
+  },
+  {
+    "query_id": "L025-Q1",
+    "query": "We've encountered an issue where new wakeup requests are unable to be added to the queue because it appears to be full. How are we managing the callback processing in light of this?",
+    "gold_file": "core/src/main/scala/kafka/network/RequestChannel.scala",
+    "gold_line": 503,
+    "canonical_target": "core/src/main/scala/kafka/network/RequestChannel.scala:503",
+    "gold_doc_id": "967a0fd9-2f0e-580d-b3ed-4b749275f11d",
+    "gold_idx": 1051
+  },
+  {
+    "query_id": "L025-Q2",
+    "query": "Hey team, it looks like we're hitting a snag with our wakeup requests not being added to the queue because it's at capacity. What does this mean for our current callback operations?",
+    "gold_file": "core/src/main/scala/kafka/network/RequestChannel.scala",
+    "gold_line": 503,
+    "canonical_target": "core/src/main/scala/kafka/network/RequestChannel.scala:503",
+    "gold_doc_id": "967a0fd9-2f0e-580d-b3ed-4b749275f11d",
+    "gold_idx": 1051
+  },
+  {
+    "query_id": "L025-Q3",
+    "query": "Can we investigate the implications of not being able to add new wakeup requests to the queue? It seems like we might need to optimize our queue handling to avoid processing delays.",
+    "gold_file": "core/src/main/scala/kafka/network/RequestChannel.scala",
+    "gold_line": 503,
+    "canonical_target": "core/src/main/scala/kafka/network/RequestChannel.scala:503",
+    "gold_doc_id": "967a0fd9-2f0e-580d-b3ed-4b749275f11d",
+    "gold_idx": 1051
+  },
+  {
+    "query_id": "L026-Q1",
+    "query": "The application is failing to initiate data retrieval for the specified topic partition. How do we troubleshoot this issue?",
+    "gold_file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+    "gold_line": 2508,
+    "canonical_target": "core/src/main/scala/kafka/server/ReplicaManager.scala:2508",
+    "gold_doc_id": "bd3af3ae-8849-5336-8728-d0291a5b1ab0",
+    "gold_idx": 1400
+  },
+  {
+    "query_id": "L026-Q2",
+    "query": "It looks like we're running into a problem where the fetch process isn't starting for one of our topic partitions. What could be causing this?",
+    "gold_file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+    "gold_line": 2508,
+    "canonical_target": "core/src/main/scala/kafka/server/ReplicaManager.scala:2508",
+    "gold_doc_id": "bd3af3ae-8849-5336-8728-d0291a5b1ab0",
+    "gold_idx": 1400
+  },
+  {
+    "query_id": "L026-Q3",
+    "query": "What diagnostic steps can we take to identify why the fetching process for the specified topic partition isn't starting up correctly?",
+    "gold_file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+    "gold_line": 2508,
+    "canonical_target": "core/src/main/scala/kafka/server/ReplicaManager.scala:2508",
+    "gold_doc_id": "bd3af3ae-8849-5336-8728-d0291a5b1ab0",
+    "gold_idx": 1400
+  },
+  {
+    "query_id": "L027-Q1",
+    "query": "We've initiated an auto-creation request for topics, but the controller isn't responding as expected. What could be causing this delay?",
+    "gold_file": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala",
+    "gold_line": 311,
+    "canonical_target": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala:311",
+    "gold_doc_id": "64f8f70f-2a1e-521b-aedc-251d968c860d",
+    "gold_idx": 1159
+  },
+  {
+    "query_id": "L027-Q2",
+    "query": "It seems like we're trying to auto-create some topics, but nothing is happening. Has anyone noticed this issue before?",
+    "gold_file": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala",
+    "gold_line": 311,
+    "canonical_target": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala:311",
+    "gold_doc_id": "64f8f70f-2a1e-521b-aedc-251d968c860d",
+    "gold_idx": 1159
+  },
+  {
+    "query_id": "L027-Q3",
+    "query": "The system successfully sent a request to create new topics, yet there's been no update from the controller. Could there be a connectivity issue?",
+    "gold_file": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala",
+    "gold_line": 311,
+    "canonical_target": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala:311",
+    "gold_doc_id": "64f8f70f-2a1e-521b-aedc-251d968c860d",
+    "gold_idx": 1159
+  },
+  {
+    "query_id": "L028-Q1",
+    "query": "Why is there an extended delay in the log cleanup process, and how is it affecting message retention in Kafka?",
+    "gold_file": "core/src/main/scala/kafka/log/LogManager.scala",
+    "gold_line": 612,
+    "canonical_target": "core/src/main/scala/kafka/log/LogManager.scala:612",
+    "gold_doc_id": "aae94c20-93c4-5afc-bd18-26eaa1a8e8d3",
+    "gold_idx": 1014
+  },
+  {
+    "query_id": "L028-Q2",
+    "query": "Hey, has anyone noticed if the log cleanup is taking longer than usual? It seems like things are getting backed up.",
+    "gold_file": "core/src/main/scala/kafka/log/LogManager.scala",
+    "gold_line": 612,
+    "canonical_target": "core/src/main/scala/kafka/log/LogManager.scala:612",
+    "gold_doc_id": "aae94c20-93c4-5afc-bd18-26eaa1a8e8d3",
+    "gold_idx": 1014
+  },
+  {
+    "query_id": "L028-Q3",
+    "query": "Can we investigate the implications of the log cleanup starting with such a lengthy period? Is it causing any performance degradation?",
+    "gold_file": "core/src/main/scala/kafka/log/LogManager.scala",
+    "gold_line": 612,
+    "canonical_target": "core/src/main/scala/kafka/log/LogManager.scala:612",
+    "gold_doc_id": "aae94c20-93c4-5afc-bd18-26eaa1a8e8d3",
+    "gold_idx": 1014
+  },
+  {
+    "query_id": "L029-Q1",
+    "query": "We're experiencing issues with processing incoming envelope responses due to missing header information. Can we investigate why the necessary request headers are not being parsed?",
+    "gold_file": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala",
+    "gold_line": 275,
+    "canonical_target": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala:275",
+    "gold_doc_id": "0c8a7f4c-b223-5b46-a383-27cd7b693d57",
+    "gold_idx": 1155
+  },
+  {
+    "query_id": "L029-Q2",
+    "query": "Hey team, it seems like our system is failing to read envelope responses properly. Is there a chance we could check what happened to the original request headers?",
+    "gold_file": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala",
+    "gold_line": 275,
+    "canonical_target": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala:275",
+    "gold_doc_id": "0c8a7f4c-b223-5b46-a383-27cd7b693d57",
+    "gold_idx": 1155
+  },
+  {
+    "query_id": "L029-Q3",
+    "query": "Could we run a diagnostic to determine the root cause of the failure in parsing envelope responses, specifically focusing on the absence of the required request header information?",
+    "gold_file": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala",
+    "gold_line": 275,
+    "canonical_target": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala:275",
+    "gold_doc_id": "0c8a7f4c-b223-5b46-a383-27cd7b693d57",
+    "gold_idx": 1155
+  },
+  {
+    "query_id": "L030-Q1",
+    "query": "What steps can we take to address the abrupt shutdown of the request handler identified as $id on broker $brokerId?",
+    "gold_file": "core/src/main/scala/kafka/server/KafkaRequestHandler.scala",
+    "gold_line": 124,
+    "canonical_target": "core/src/main/scala/kafka/server/KafkaRequestHandler.scala:124",
+    "gold_doc_id": "c25ab58a-864d-5349-b661-5abaf433d2c7",
+    "gold_idx": 1323
+  },
+  {
+    "query_id": "L030-Q2",
+    "query": "Hey team, did anyone notice that the request handler $id on broker $brokerId just went down unexpectedly? What could have triggered that?",
+    "gold_file": "core/src/main/scala/kafka/server/KafkaRequestHandler.scala",
+    "gold_line": 124,
+    "canonical_target": "core/src/main/scala/kafka/server/KafkaRequestHandler.scala:124",
+    "gold_doc_id": "c25ab58a-864d-5349-b661-5abaf433d2c7",
+    "gold_idx": 1323
+  },
+  {
+    "query_id": "L030-Q3",
+    "query": "Could the sudden shutdown command for request handler $id on broker $brokerId indicate a potential issue with resource management or server stability?",
+    "gold_file": "core/src/main/scala/kafka/server/KafkaRequestHandler.scala",
+    "gold_line": 124,
+    "canonical_target": "core/src/main/scala/kafka/server/KafkaRequestHandler.scala:124",
+    "gold_doc_id": "c25ab58a-864d-5349-b661-5abaf433d2c7",
+    "gold_idx": 1323
+  },
+  {
+    "query_id": "L031-Q1",
+    "query": "Why did the broker receive approval to unfence, and what impact is this having on message processing?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/BrokerHeartbeatManager.java",
+    "gold_line": 413,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/BrokerHeartbeatManager.java:413",
+    "gold_doc_id": "2c3fb5fb-d7c6-5ba5-aa4d-3d25759ecaf8",
+    "gold_idx": 1432
+  },
+  {
+    "query_id": "L031-Q2",
+    "query": "Hey team, did we just get a green light from the broker to unfence? What does that mean for our current operations?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/BrokerHeartbeatManager.java",
+    "gold_line": 413,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/BrokerHeartbeatManager.java:413",
+    "gold_doc_id": "2c3fb5fb-d7c6-5ba5-aa4d-3d25759ecaf8",
+    "gold_idx": 1432
+  },
+  {
+    "query_id": "L031-Q3",
+    "query": "Could the granting of the unfence request from the broker indicate underlying issues with our current queue management?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/BrokerHeartbeatManager.java",
+    "gold_line": 413,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/BrokerHeartbeatManager.java:413",
+    "gold_doc_id": "2c3fb5fb-d7c6-5ba5-aa4d-3d25759ecaf8",
+    "gold_idx": 1432
+  },
+  {
+    "query_id": "L032-Q1",
+    "query": "The broker is unable to communicate with the controller, leading to issues with partition alterations. What are the possible configuration issues that could cause this?",
+    "gold_file": "core/src/main/scala/kafka/server/AlterPartitionManager.scala",
+    "gold_line": 247,
+    "canonical_target": "core/src/main/scala/kafka/server/AlterPartitionManager.scala:247",
+    "gold_doc_id": "1eb61b6f-18b1-5091-99a1-88ab46123938",
+    "gold_idx": 1144
+  },
+  {
+    "query_id": "L032-Q2",
+    "query": "Why is the broker being blocked from sending partition changes to the controller? Could this be a permissions problem?",
+    "gold_file": "core/src/main/scala/kafka/server/AlterPartitionManager.scala",
+    "gold_line": 247,
+    "canonical_target": "core/src/main/scala/kafka/server/AlterPartitionManager.scala:247",
+    "gold_doc_id": "1eb61b6f-18b1-5091-99a1-88ab46123938",
+    "gold_idx": 1144
+  },
+  {
+    "query_id": "L032-Q3",
+    "query": "We are encountering a situation where the broker lacks authorization to perform AlterPartition operations. Have there been any recent changes to the security settings or access controls?",
+    "gold_file": "core/src/main/scala/kafka/server/AlterPartitionManager.scala",
+    "gold_line": 247,
+    "canonical_target": "core/src/main/scala/kafka/server/AlterPartitionManager.scala:247",
+    "gold_doc_id": "1eb61b6f-18b1-5091-99a1-88ab46123938",
+    "gold_idx": 1144
+  },
+  {
+    "query_id": "L033-Q1",
+    "query": "We've observed that a connection was rejected because the maximum allowed connections from a specific IP address have been reached. Can we investigate the source and reason for this limit being hit?",
+    "gold_file": "core/src/main/scala/kafka/network/SocketServer.scala",
+    "gold_line": 691,
+    "canonical_target": "core/src/main/scala/kafka/network/SocketServer.scala:691",
+    "gold_doc_id": "c7840bb8-2cef-5aed-ac3d-2b3e0282108d",
+    "gold_idx": 1074
+  },
+  {
+    "query_id": "L033-Q2",
+    "query": "Looks like we're hitting a connection cap from one IP address—any ideas on why this is happening?",
+    "gold_file": "core/src/main/scala/kafka/network/SocketServer.scala",
+    "gold_line": 691,
+    "canonical_target": "core/src/main/scala/kafka/network/SocketServer.scala:691",
+    "gold_doc_id": "c7840bb8-2cef-5aed-ac3d-2b3e0282108d",
+    "gold_idx": 1074
+  },
+  {
+    "query_id": "L033-Q3",
+    "query": "Can we run a diagnostic on the connection limits? It appears that a client from ${e.ip} is unable to connect due to exceeding our maximum connection settings.",
+    "gold_file": "core/src/main/scala/kafka/network/SocketServer.scala",
+    "gold_line": 691,
+    "canonical_target": "core/src/main/scala/kafka/network/SocketServer.scala:691",
+    "gold_doc_id": "c7840bb8-2cef-5aed-ac3d-2b3e0282108d",
+    "gold_idx": 1074
+  },
+  {
+    "query_id": "L034-Q1",
+    "query": "Why are we seeing a transition of ${localFollowers.size} partitions, and how is it affecting message processing?",
+    "gold_file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+    "gold_line": 2465,
+    "canonical_target": "core/src/main/scala/kafka/server/ReplicaManager.scala:2465",
+    "gold_doc_id": "76a01fba-60c9-54e3-9e88-1f1930a315f2",
+    "gold_idx": 1398
+  },
+  {
+    "query_id": "L034-Q2",
+    "query": "Hey, has anyone noticed that there are ${localFollowers.size} partitions moving around? Is this normal?",
+    "gold_file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+    "gold_line": 2465,
+    "canonical_target": "core/src/main/scala/kafka/server/ReplicaManager.scala:2465",
+    "gold_doc_id": "76a01fba-60c9-54e3-9e88-1f1930a315f2",
+    "gold_idx": 1398
+  },
+  {
+    "query_id": "L034-Q3",
+    "query": "Could the transition of ${localFollowers.size} partitions indicate a possible issue with our cluster's leader election process?",
+    "gold_file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+    "gold_line": 2465,
+    "canonical_target": "core/src/main/scala/kafka/server/ReplicaManager.scala:2465",
+    "gold_doc_id": "76a01fba-60c9-54e3-9e88-1f1930a315f2",
+    "gold_idx": 1398
+  },
+  {
+    "query_id": "L035-Q1",
+    "query": "Why are we unable to delete the specified topics in Kafka, as it appears that the operation returned no results?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1014,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1014",
+    "gold_doc_id": "d50c7cbc-d95d-5afd-9c2c-6ab88c1beb39",
+    "gold_idx": 1531
+  },
+  {
+    "query_id": "L035-Q2",
+    "query": "Hey team, has anyone else noticed that attempts to delete topics are coming back with no changes at all?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1014,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1014",
+    "gold_doc_id": "d50c7cbc-d95d-5afd-9c2c-6ab88c1beb39",
+    "gold_idx": 1531
+  },
+  {
+    "query_id": "L035-Q3",
+    "query": "Could this issue indicate a problem with the topic deletion permissions or configuration settings in our Kafka setup?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1014,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1014",
+    "gold_doc_id": "d50c7cbc-d95d-5afd-9c2c-6ab88c1beb39",
+    "gold_idx": 1531
+  },
+  {
+    "query_id": "L036-Q1",
+    "query": "We've encountered an issue where messages cannot be consumed because the specified topic or partition appears to be unknown to the leader. What could be causing this?",
+    "gold_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+    "gold_line": 444,
+    "canonical_target": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala:444",
+    "gold_doc_id": "fca0e267-c67d-55f8-9e46-12d748f63e5c",
+    "gold_idx": 1121
+  },
+  {
+    "query_id": "L036-Q2",
+    "query": "Hey team, we're getting an unknown topic error when trying to access certain partitions. Has anyone else seen this or know what's going on?",
+    "gold_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+    "gold_line": 444,
+    "canonical_target": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala:444",
+    "gold_doc_id": "fca0e267-c67d-55f8-9e46-12d748f63e5c",
+    "gold_idx": 1121
+  },
+  {
+    "query_id": "L036-Q3",
+    "query": "Could the absence of the expected topic or partition from the leader's perspective indicate a potential configuration error or a problem with our topic registrations?",
+    "gold_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+    "gold_line": 444,
+    "canonical_target": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala:444",
+    "gold_doc_id": "fca0e267-c67d-55f8-9e46-12d748f63e5c",
+    "gold_idx": 1121
+  },
+  {
+    "query_id": "L037-Q1",
+    "query": "We've observed an unexpected removal of a topic in our Kafka environment. Can we determine the implications of replaying a RemoveTopicRecord for this specific topic ID?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 568,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:568",
+    "gold_doc_id": "ef6ca2df-98ba-5332-8a67-4cbdfb719018",
+    "gold_idx": 1522
+  },
+  {
+    "query_id": "L037-Q2",
+    "query": "Hey team, it looks like one of our Kafka topics has been removed, and I'm curious if anyone knows why this might have happened. What could trigger a replay of a RemoveTopicRecord?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 568,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:568",
+    "gold_doc_id": "ef6ca2df-98ba-5332-8a67-4cbdfb719018",
+    "gold_idx": 1522
+  },
+  {
+    "query_id": "L037-Q3",
+    "query": "During our debugging process, we need to investigate how replaying a RemoveTopicRecord for this topic ID affects the overall system. Are there dependencies that might be impacted?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 568,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:568",
+    "gold_doc_id": "ef6ca2df-98ba-5332-8a67-4cbdfb719018",
+    "gold_idx": 1522
+  },
+  {
+    "query_id": "L038-Q1",
+    "query": "Why is the periodic task not executing as expected, indicating that it may have been unregistered?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/PeriodicTaskControlManager.java",
+    "gold_line": 175,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/PeriodicTaskControlManager.java:175",
+    "gold_doc_id": "bc050907-5f84-552f-9a3d-25a80336d558",
+    "gold_idx": 1487
+  },
+  {
+    "query_id": "L038-Q2",
+    "query": "Hey, has anyone noticed that a scheduled task seems to be missing from our system?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/PeriodicTaskControlManager.java",
+    "gold_line": 175,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/PeriodicTaskControlManager.java:175",
+    "gold_doc_id": "bc050907-5f84-552f-9a3d-25a80336d558",
+    "gold_idx": 1487
+  },
+  {
+    "query_id": "L038-Q3",
+    "query": "Could the unexpected absence of the periodic task indicate an issue with our task registration process?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/PeriodicTaskControlManager.java",
+    "gold_line": 175,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/PeriodicTaskControlManager.java:175",
+    "gold_doc_id": "bc050907-5f84-552f-9a3d-25a80336d558",
+    "gold_idx": 1487
+  },
+  {
+    "query_id": "L039-Q1",
+    "query": "We're encountering issues where specific configurations for broker $brokerId appear to be unresponsive. What might be causing this failure in configuration application?",
+    "gold_file": "core/src/main/scala/kafka/server/DynamicBrokerConfig.scala",
+    "gold_line": 394,
+    "canonical_target": "core/src/main/scala/kafka/server/DynamicBrokerConfig.scala:394",
+    "gold_doc_id": "875de943-f05a-5a6e-a9c2-9458c08e23b0",
+    "gold_idx": 1259
+  },
+  {
+    "query_id": "L039-Q2",
+    "query": "Hey team, it looks like the settings for broker $brokerId aren't taking effect as expected. Any ideas on what could be going wrong?",
+    "gold_file": "core/src/main/scala/kafka/server/DynamicBrokerConfig.scala",
+    "gold_line": 394,
+    "canonical_target": "core/src/main/scala/kafka/server/DynamicBrokerConfig.scala:394",
+    "gold_doc_id": "875de943-f05a-5a6e-a9c2-9458c08e23b0",
+    "gold_idx": 1259
+  },
+  {
+    "query_id": "L039-Q3",
+    "query": "What diagnostic steps can we take to identify why the configurations for broker $brokerId are not being applied as intended?",
+    "gold_file": "core/src/main/scala/kafka/server/DynamicBrokerConfig.scala",
+    "gold_line": 394,
+    "canonical_target": "core/src/main/scala/kafka/server/DynamicBrokerConfig.scala:394",
+    "gold_doc_id": "875de943-f05a-5a6e-a9c2-9458c08e23b0",
+    "gold_idx": 1259
+  },
+  {
+    "query_id": "L040-Q1",
+    "query": "Why are we consistently noticing that there are no entries that can be evicted from the cache, and how might this affect overall system performance?",
+    "gold_file": "core/src/main/scala/kafka/server/FetchSession.scala",
+    "gold_line": 731,
+    "canonical_target": "core/src/main/scala/kafka/server/FetchSession.scala:731",
+    "gold_doc_id": "70f822ac-7986-563d-b722-5ac63ecc3693",
+    "gold_idx": 1279
+  },
+  {
+    "query_id": "L040-Q2",
+    "query": "It seems like the cache is telling us there aren't any evictable entries. Is that a good thing or is something potentially broken here?",
+    "gold_file": "core/src/main/scala/kafka/server/FetchSession.scala",
+    "gold_line": 731,
+    "canonical_target": "core/src/main/scala/kafka/server/FetchSession.scala:731",
+    "gold_doc_id": "70f822ac-7986-563d-b722-5ac63ecc3693",
+    "gold_idx": 1279
+  },
+  {
+    "query_id": "L040-Q3",
+    "query": "Could the absence of evictable entries indicate an unusual behavior in cache utilization, and what steps should we take to investigate further?",
+    "gold_file": "core/src/main/scala/kafka/server/FetchSession.scala",
+    "gold_line": 731,
+    "canonical_target": "core/src/main/scala/kafka/server/FetchSession.scala:731",
+    "gold_doc_id": "70f822ac-7986-563d-b722-5ac63ecc3693",
+    "gold_idx": 1279
+  },
+  {
+    "query_id": "L041-Q1",
+    "query": "Why is the incremental fetch for session ${session.id} taking longer than expected to return results?",
+    "gold_file": "core/src/main/scala/kafka/server/FetchSession.scala",
+    "gold_line": 550,
+    "canonical_target": "core/src/main/scala/kafka/server/FetchSession.scala:550",
+    "gold_doc_id": "42e55c3e-f0a5-5954-9f64-6c1225cf504f",
+    "gold_idx": 1273
+  },
+  {
+    "query_id": "L041-Q2",
+    "query": "Hey, has anyone noticed that the data from session ${session.id} isn't showing up as it should?",
+    "gold_file": "core/src/main/scala/kafka/server/FetchSession.scala",
+    "gold_line": 550,
+    "canonical_target": "core/src/main/scala/kafka/server/FetchSession.scala:550",
+    "gold_doc_id": "42e55c3e-f0a5-5954-9f64-6c1225cf504f",
+    "gold_idx": 1273
+  },
+  {
+    "query_id": "L041-Q3",
+    "query": "Could the delay in the incremental fetch context for session ${session.id} indicate an underlying issue with data consistency or availability?",
+    "gold_file": "core/src/main/scala/kafka/server/FetchSession.scala",
+    "gold_line": 550,
+    "canonical_target": "core/src/main/scala/kafka/server/FetchSession.scala:550",
+    "gold_doc_id": "42e55c3e-f0a5-5954-9f64-6c1225cf504f",
+    "gold_idx": 1273
+  },
+  {
+    "query_id": "L042-Q1",
+    "query": "The application is failing to initiate the acceptor for the specified listener endpoint, causing connection issues.",
+    "gold_file": "core/src/main/scala/kafka/network/SocketServer.scala",
+    "gold_line": 548,
+    "canonical_target": "core/src/main/scala/kafka/network/SocketServer.scala:548",
+    "gold_doc_id": "7d3b3495-7553-5f05-8581-1019720f2c3b",
+    "gold_idx": 1069
+  },
+  {
+    "query_id": "L042-Q2",
+    "query": "Hey, it seems like the service won't start properly because it can't set up the listener. What's going on?",
+    "gold_file": "core/src/main/scala/kafka/network/SocketServer.scala",
+    "gold_line": 548,
+    "canonical_target": "core/src/main/scala/kafka/network/SocketServer.scala:548",
+    "gold_doc_id": "7d3b3495-7553-5f05-8581-1019720f2c3b",
+    "gold_idx": 1069
+  },
+  {
+    "query_id": "L042-Q3",
+    "query": "Can we check why the acceptor for the configured listener endpoint isn't initializing? This might be blocking the service.",
+    "gold_file": "core/src/main/scala/kafka/network/SocketServer.scala",
+    "gold_line": 548,
+    "canonical_target": "core/src/main/scala/kafka/network/SocketServer.scala:548",
+    "gold_doc_id": "7d3b3495-7553-5f05-8581-1019720f2c3b",
+    "gold_idx": 1069
+  },
+  {
+    "query_id": "L043-Q1",
+    "query": "We're experiencing connection issues with the NetworkClient; can you detail if any errors were encountered during the disconnection process?",
+    "gold_file": "core/src/main/scala/kafka/server/NodeToControllerChannelManager.scala",
+    "gold_line": 313,
+    "canonical_target": "core/src/main/scala/kafka/server/NodeToControllerChannelManager.scala:313",
+    "gold_doc_id": "5bcd905e-5bb1-5137-9468-aa81757a8905",
+    "gold_idx": 1339
+  },
+  {
+    "query_id": "L043-Q2",
+    "query": "Hey team, has anyone noticed any weirdness when trying to disconnect from the NetworkClient? It feels like something’s off.",
+    "gold_file": "core/src/main/scala/kafka/server/NodeToControllerChannelManager.scala",
+    "gold_line": 313,
+    "canonical_target": "core/src/main/scala/kafka/server/NodeToControllerChannelManager.scala:313",
+    "gold_doc_id": "5bcd905e-5bb1-5137-9468-aa81757a8905",
+    "gold_idx": 1339
+  },
+  {
+    "query_id": "L043-Q3",
+    "query": "What potential causes could lead to errors while disconnecting from the NetworkClient, and how can we investigate further?",
+    "gold_file": "core/src/main/scala/kafka/server/NodeToControllerChannelManager.scala",
+    "gold_line": 313,
+    "canonical_target": "core/src/main/scala/kafka/server/NodeToControllerChannelManager.scala:313",
+    "gold_doc_id": "5bcd905e-5bb1-5137-9468-aa81757a8905",
+    "gold_idx": 1339
+  },
+  {
+    "query_id": "L044-Q1",
+    "query": "The system is unable to successfully apply the updated configuration for the broker, resulting in potential disruptions in message processing.",
+    "gold_file": "core/src/main/scala/kafka/server/DynamicBrokerConfig.scala",
+    "gold_line": 584,
+    "canonical_target": "core/src/main/scala/kafka/server/DynamicBrokerConfig.scala:584",
+    "gold_doc_id": "85e80d3a-5b62-5688-af77-f46fcb855db0",
+    "gold_idx": 1264
+  },
+  {
+    "query_id": "L044-Q2",
+    "query": "Hey team, I've noticed that we're having issues updating the broker settings – could this be causing our message delivery delays?",
+    "gold_file": "core/src/main/scala/kafka/server/DynamicBrokerConfig.scala",
+    "gold_line": 584,
+    "canonical_target": "core/src/main/scala/kafka/server/DynamicBrokerConfig.scala:584",
+    "gold_doc_id": "85e80d3a-5b62-5688-af77-f46fcb855db0",
+    "gold_idx": 1264
+  },
+  {
+    "query_id": "L044-Q3",
+    "query": "Could you check if there are underlying permission issues or connectivity problems that might be preventing the broker configuration from being updated?",
+    "gold_file": "core/src/main/scala/kafka/server/DynamicBrokerConfig.scala",
+    "gold_line": 584,
+    "canonical_target": "core/src/main/scala/kafka/server/DynamicBrokerConfig.scala:584",
+    "gold_doc_id": "85e80d3a-5b62-5688-af77-f46fcb855db0",
+    "gold_idx": 1264
+  },
+  {
+    "query_id": "L045-Q1",
+    "query": "The system has encountered an issue where it fails to automatically create the specified topic, leading to potential disruptions in message processing.",
+    "gold_file": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala",
+    "gold_line": 267,
+    "canonical_target": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala:267",
+    "gold_doc_id": "677796c6-d31d-5108-9102-c4f3e8d2dd43",
+    "gold_idx": 1153
+  },
+  {
+    "query_id": "L045-Q2",
+    "query": "Hey, it looks like we can't seem to create the topic automatically anymore. What's going on with that?",
+    "gold_file": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala",
+    "gold_line": 267,
+    "canonical_target": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala:267",
+    "gold_doc_id": "677796c6-d31d-5108-9102-c4f3e8d2dd43",
+    "gold_idx": 1153
+  },
+  {
+    "query_id": "L045-Q3",
+    "query": "Can we investigate the underlying cause of the auto topic creation failure, specifically related to the error reported for ${topicResult.name}?",
+    "gold_file": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala",
+    "gold_line": 267,
+    "canonical_target": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala:267",
+    "gold_doc_id": "677796c6-d31d-5108-9102-c4f3e8d2dd43",
+    "gold_idx": 1153
+  },
+  {
+    "query_id": "L046-Q1",
+    "query": "The broker encountered an error while attempting to send a heartbeat request, what could be causing this disruption?",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+    "gold_line": 554,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala:554",
+    "gold_doc_id": "16c3e207-9edc-5dcc-b507-8c6c54d25608",
+    "gold_idx": 1198
+  },
+  {
+    "query_id": "L046-Q2",
+    "query": "Hey, why did the broker's heartbeat request fail? Is something wrong with its connection?",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+    "gold_line": 554,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala:554",
+    "gold_doc_id": "16c3e207-9edc-5dcc-b507-8c6c54d25608",
+    "gold_idx": 1198
+  },
+  {
+    "query_id": "L046-Q3",
+    "query": "Investigate the reason behind the broker's heartbeat request failure due to the reported error code.",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+    "gold_line": 554,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala:554",
+    "gold_doc_id": "16c3e207-9edc-5dcc-b507-8c6c54d25608",
+    "gold_idx": 1198
+  },
+  {
+    "query_id": "L047-Q1",
+    "query": "Has there been an increase in error messages related to unsupported quota entities, indicating potential misconfigurations in quota management?",
+    "gold_file": "core/src/main/scala/kafka/server/metadata/ClientQuotaMetadataManager.scala",
+    "gold_line": 107,
+    "canonical_target": "core/src/main/scala/kafka/server/metadata/ClientQuotaMetadataManager.scala:107",
+    "gold_doc_id": "0ae31378-7b3c-5cdf-a54f-f6085d2f9efd",
+    "gold_idx": 1416
+  },
+  {
+    "query_id": "L047-Q2",
+    "query": "Looks like we're ignoring some unsupported quota entities—could this be affecting our overall system performance?",
+    "gold_file": "core/src/main/scala/kafka/server/metadata/ClientQuotaMetadataManager.scala",
+    "gold_line": 107,
+    "canonical_target": "core/src/main/scala/kafka/server/metadata/ClientQuotaMetadataManager.scala:107",
+    "gold_doc_id": "0ae31378-7b3c-5cdf-a54f-f6085d2f9efd",
+    "gold_idx": 1416
+  },
+  {
+    "query_id": "L047-Q3",
+    "query": "Could the system's inability to recognize certain quota entities be leading to unexpected resource allocation issues?",
+    "gold_file": "core/src/main/scala/kafka/server/metadata/ClientQuotaMetadataManager.scala",
+    "gold_line": 107,
+    "canonical_target": "core/src/main/scala/kafka/server/metadata/ClientQuotaMetadataManager.scala:107",
+    "gold_doc_id": "0ae31378-7b3c-5cdf-a54f-f6085d2f9efd",
+    "gold_idx": 1416
+  },
+  {
+    "query_id": "L048-Q1",
+    "query": "The system is unable to create new topics due to a version mismatch error, which is preventing resource allocation.",
+    "gold_file": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala",
+    "gold_line": 447,
+    "canonical_target": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala:447",
+    "gold_doc_id": "e466bdc0-765a-57b5-9efb-90cf5ab0795e",
+    "gold_idx": 1163
+  },
+  {
+    "query_id": "L048-Q2",
+    "query": "Hey, why can’t we set up those new topics? There seems to be an issue with version compatibility.",
+    "gold_file": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala",
+    "gold_line": 447,
+    "canonical_target": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala:447",
+    "gold_doc_id": "e466bdc0-765a-57b5-9efb-90cf5ab0795e",
+    "gold_idx": 1163
+  },
+  {
+    "query_id": "L048-Q3",
+    "query": "Can we investigate the version settings? It looks like there’s a conflict preventing auto topic creation for the specified keys.",
+    "gold_file": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala",
+    "gold_line": 447,
+    "canonical_target": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala:447",
+    "gold_doc_id": "e466bdc0-765a-57b5-9efb-90cf5ab0795e",
+    "gold_idx": 1163
+  },
+  {
+    "query_id": "L049-Q1",
+    "query": "The system is experiencing unexpected behavior following a metadata version upgrade. What impact could this version change have on cluster performance?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/FeatureControlManager.java",
+    "gold_line": 414,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/FeatureControlManager.java:414",
+    "gold_doc_id": "f78dda34-b442-5949-b862-1cdae508c433",
+    "gold_idx": 1465
+  },
+  {
+    "query_id": "L049-Q2",
+    "query": "After updating the metadata version, are you noticing any disruptions or failures in data processing?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/FeatureControlManager.java",
+    "gold_line": 414,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/FeatureControlManager.java:414",
+    "gold_doc_id": "f78dda34-b442-5949-b862-1cdae508c433",
+    "gold_idx": 1465
+  },
+  {
+    "query_id": "L049-Q3",
+    "query": "Can we verify if the application is maintaining its stability after the metadata version increment?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/FeatureControlManager.java",
+    "gold_line": 414,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/FeatureControlManager.java:414",
+    "gold_doc_id": "f78dda34-b442-5949-b862-1cdae508c433",
+    "gold_idx": 1465
+  },
+  {
+    "query_id": "L050-Q1",
+    "query": "We've encountered issues fetching messages from the specified partition; what might be causing this irregularity?",
+    "gold_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+    "gold_line": 406,
+    "canonical_target": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala:406",
+    "gold_doc_id": "076c3d7c-3ed7-552d-bf02-d55c747a6a46",
+    "gold_idx": 1115
+  },
+  {
+    "query_id": "L050-Q2",
+    "query": "It looks like there are some bad messages in the queue for the given partition. Can we investigate what's going wrong?",
+    "gold_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+    "gold_line": 406,
+    "canonical_target": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala:406",
+    "gold_doc_id": "076c3d7c-3ed7-552d-bf02-d55c747a6a46",
+    "gold_idx": 1115
+  },
+  {
+    "query_id": "L050-Q3",
+    "query": "The fetch operation for the provided partition is returning invalid messages; could this be linked to a serialization error or data format mismatch?",
+    "gold_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+    "gold_line": 406,
+    "canonical_target": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala:406",
+    "gold_doc_id": "076c3d7c-3ed7-552d-bf02-d55c747a6a46",
+    "gold_idx": 1115
+  },
+  {
+    "query_id": "L051-Q1",
+    "query": "During the shutdown process, an unexpected thread error was encountered that seems to be affecting the LogManager functionality. What could be the underlying cause?",
+    "gold_file": "core/src/main/scala/kafka/log/LogManager.scala",
+    "gold_line": 689,
+    "canonical_target": "core/src/main/scala/kafka/log/LogManager.scala:689",
+    "gold_doc_id": "e3da0aaf-9f4d-5c44-aca0-1f9e17995b98",
+    "gold_idx": 1019
+  },
+  {
+    "query_id": "L051-Q2",
+    "query": "Hey team, it looks like we ran into an issue when shutting down the LogManager—any idea why a thread is throwing an error?",
+    "gold_file": "core/src/main/scala/kafka/log/LogManager.scala",
+    "gold_line": 689,
+    "canonical_target": "core/src/main/scala/kafka/log/LogManager.scala:689",
+    "gold_doc_id": "e3da0aaf-9f4d-5c44-aca0-1f9e17995b98",
+    "gold_idx": 1019
+  },
+  {
+    "query_id": "L051-Q3",
+    "query": "Can we investigate the thread error reported during the LogManager shutdown? What steps should we take to diagnose the root cause?",
+    "gold_file": "core/src/main/scala/kafka/log/LogManager.scala",
+    "gold_line": 689,
+    "canonical_target": "core/src/main/scala/kafka/log/LogManager.scala:689",
+    "gold_doc_id": "e3da0aaf-9f4d-5c44-aca0-1f9e17995b98",
+    "gold_idx": 1019
+  },
+  {
+    "query_id": "L052-Q1",
+    "query": "The application is unable to retrieve the end offset for the specified topic and partition, leading to potential data loss.",
+    "gold_file": "core/src/main/scala/kafka/server/LocalLeaderEndPoint.scala",
+    "gold_line": 155,
+    "canonical_target": "core/src/main/scala/kafka/server/LocalLeaderEndPoint.scala:155",
+    "gold_doc_id": "f3b3f9ce-9fe5-5583-9b62-8814fa14dfa6",
+    "gold_idx": 1331
+  },
+  {
+    "query_id": "L052-Q2",
+    "query": "Hey, have you noticed that we're getting errors when trying to access the end offset for a topic? It seems like it's throwing a critical issue.",
+    "gold_file": "core/src/main/scala/kafka/server/LocalLeaderEndPoint.scala",
+    "gold_line": 155,
+    "canonical_target": "core/src/main/scala/kafka/server/LocalLeaderEndPoint.scala:155",
+    "gold_doc_id": "f3b3f9ce-9fe5-5583-9b62-8814fa14dfa6",
+    "gold_idx": 1331
+  },
+  {
+    "query_id": "L052-Q3",
+    "query": "What causes the system to fail while trying to obtain the EpochEndOffset for a specific topic and partition?",
+    "gold_file": "core/src/main/scala/kafka/server/LocalLeaderEndPoint.scala",
+    "gold_line": 155,
+    "canonical_target": "core/src/main/scala/kafka/server/LocalLeaderEndPoint.scala:155",
+    "gold_doc_id": "f3b3f9ce-9fe5-5583-9b62-8814fa14dfa6",
+    "gold_idx": 1331
+  },
+  {
+    "query_id": "L053-Q1",
+    "query": "There seems to be an issue with the leader epoch request for certain partitions, causing potential delays in processing messages.",
+    "gold_file": "core/src/main/scala/kafka/server/RemoteLeaderEndPoint.scala",
+    "gold_line": 162,
+    "canonical_target": "core/src/main/scala/kafka/server/RemoteLeaderEndPoint.scala:162",
+    "gold_doc_id": "666acc7e-933f-584f-b1a7-31dcbbd249e3",
+    "gold_idx": 1346
+  },
+  {
+    "query_id": "L053-Q2",
+    "query": "We're experiencing problems sending requests for leader epochs, which might be affecting the data flow for some of our partitions.",
+    "gold_file": "core/src/main/scala/kafka/server/RemoteLeaderEndPoint.scala",
+    "gold_line": 162,
+    "canonical_target": "core/src/main/scala/kafka/server/RemoteLeaderEndPoint.scala:162",
+    "gold_doc_id": "666acc7e-933f-584f-b1a7-31dcbbd249e3",
+    "gold_idx": 1346
+  },
+  {
+    "query_id": "L053-Q3",
+    "query": "Can we confirm if the failure to send leader epoch requests is impacting the availability of specific partitions?",
+    "gold_file": "core/src/main/scala/kafka/server/RemoteLeaderEndPoint.scala",
+    "gold_line": 162,
+    "canonical_target": "core/src/main/scala/kafka/server/RemoteLeaderEndPoint.scala:162",
+    "gold_doc_id": "666acc7e-933f-584f-b1a7-31dcbbd249e3",
+    "gold_idx": 1346
+  },
+  {
+    "query_id": "L054-Q1",
+    "query": "The system is unable to process requests from the queue, indicating a version mismatch issue. What could be causing this incompatibility?",
+    "gold_file": "core/src/main/scala/kafka/server/NodeToControllerChannelManager.scala",
+    "gold_line": 290,
+    "canonical_target": "core/src/main/scala/kafka/server/NodeToControllerChannelManager.scala:290",
+    "gold_doc_id": "bd478d04-f904-5728-9543-89efd4f5042d",
+    "gold_idx": 1337
+  },
+  {
+    "query_id": "L054-Q2",
+    "query": "Hey, I've noticed that our request processing is hitting a wall because of a version error. Has anyone updated the system recently?",
+    "gold_file": "core/src/main/scala/kafka/server/NodeToControllerChannelManager.scala",
+    "gold_line": 290,
+    "canonical_target": "core/src/main/scala/kafka/server/NodeToControllerChannelManager.scala:290",
+    "gold_doc_id": "bd478d04-f904-5728-9543-89efd4f5042d",
+    "gold_idx": 1337
+  },
+  {
+    "query_id": "L054-Q3",
+    "query": "Could the unsupported version error suggest a misconfiguration in the application that's attempting to access the request queue?",
+    "gold_file": "core/src/main/scala/kafka/server/NodeToControllerChannelManager.scala",
+    "gold_line": 290,
+    "canonical_target": "core/src/main/scala/kafka/server/NodeToControllerChannelManager.scala:290",
+    "gold_doc_id": "bd478d04-f904-5728-9543-89efd4f5042d",
+    "gold_idx": 1337
+  },
+  {
+    "query_id": "L055-Q1",
+    "query": "The configuration update failed to process properly, leading to potential issues with the Kafka setup. What might be causing this error?",
+    "gold_file": "core/src/main/scala/kafka/server/ConfigAdminManager.scala",
+    "gold_line": 255,
+    "canonical_target": "core/src/main/scala/kafka/server/ConfigAdminManager.scala:255",
+    "gold_doc_id": "97773687-51d3-5ed0-8176-57c854a4ddca",
+    "gold_idx": 1217
+  },
+  {
+    "query_id": "L055-Q2",
+    "query": "Hey, it seems like there was a hiccup while trying to change the configuration settings. Any idea what’s going on?",
+    "gold_file": "core/src/main/scala/kafka/server/ConfigAdminManager.scala",
+    "gold_line": 255,
+    "canonical_target": "core/src/main/scala/kafka/server/ConfigAdminManager.scala:255",
+    "gold_doc_id": "97773687-51d3-5ed0-8176-57c854a4ddca",
+    "gold_idx": 1217
+  },
+  {
+    "query_id": "L055-Q3",
+    "query": "Can we investigate why the alterConfigs request is throwing an error on the specified configuration resource?",
+    "gold_file": "core/src/main/scala/kafka/server/ConfigAdminManager.scala",
+    "gold_line": 255,
+    "canonical_target": "core/src/main/scala/kafka/server/ConfigAdminManager.scala:255",
+    "gold_doc_id": "97773687-51d3-5ed0-8176-57c854a4ddca",
+    "gold_idx": 1217
+  },
+  {
+    "query_id": "L056-Q1",
+    "query": "We're encountering a severe issue where messages are not being processed for the specified topic, causing delays in data flow.",
+    "gold_file": "core/src/main/scala/kafka/log/LogManager.scala",
+    "gold_line": 1488,
+    "canonical_target": "core/src/main/scala/kafka/log/LogManager.scala:1488",
+    "gold_doc_id": "2fd6afdb-f2fd-5fee-a6f6-e2b2723daa8d",
+    "gold_idx": 1047
+  },
+  {
+    "query_id": "L056-Q2",
+    "query": "It seems we're having trouble with sending data to the named topic, leaving some messages stuck and unreleased.",
+    "gold_file": "core/src/main/scala/kafka/log/LogManager.scala",
+    "gold_line": 1488,
+    "canonical_target": "core/src/main/scala/kafka/log/LogManager.scala:1488",
+    "gold_doc_id": "2fd6afdb-f2fd-5fee-a6f6-e2b2723daa8d",
+    "gold_idx": 1047
+  },
+  {
+    "query_id": "L056-Q3",
+    "query": "Can we investigate why the flushing operation for the specified topic partition is failing, potentially impacting throughput?",
+    "gold_file": "core/src/main/scala/kafka/log/LogManager.scala",
+    "gold_line": 1488,
+    "canonical_target": "core/src/main/scala/kafka/log/LogManager.scala:1488",
+    "gold_doc_id": "2fd6afdb-f2fd-5fee-a6f6-e2b2723daa8d",
+    "gold_idx": 1047
+  },
+  {
+    "query_id": "L057-Q1",
+    "query": "The system is failing to establish communication with the broker, leading to repeated retry attempts when sending the heartbeat from node $nodeId.",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+    "gold_line": 493,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala:493",
+    "gold_doc_id": "8a408e0c-8cdc-5892-9be0-7447d232ec1a",
+    "gold_idx": 1187
+  },
+  {
+    "query_id": "L057-Q2",
+    "query": "Hey, we've noticed that node $nodeId isn't sending its heartbeat to the broker. It keeps trying, but nothing seems to connect.",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+    "gold_line": 493,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala:493",
+    "gold_doc_id": "8a408e0c-8cdc-5892-9be0-7447d232ec1a",
+    "gold_idx": 1187
+  },
+  {
+    "query_id": "L057-Q3",
+    "query": "Investigate why the broker heartbeat is not being sent from node $nodeId—could there be a network issue or a configuration problem?",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+    "gold_line": 493,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala:493",
+    "gold_doc_id": "8a408e0c-8cdc-5892-9be0-7447d232ec1a",
+    "gold_idx": 1187
+  },
+  {
+    "query_id": "L058-Q1",
+    "query": "The system encountered an issue while trying to create new topics automatically, resulting in the inability to process the response properly.",
+    "gold_file": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala",
+    "gold_line": 272,
+    "canonical_target": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala:272",
+    "gold_doc_id": "e8f85b28-93ab-55de-b531-634b27188b71",
+    "gold_idx": 1154
+  },
+  {
+    "query_id": "L058-Q2",
+    "query": "Why can't we create new topics automatically? The response parsing is failing.",
+    "gold_file": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala",
+    "gold_line": 272,
+    "canonical_target": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala:272",
+    "gold_doc_id": "e8f85b28-93ab-55de-b531-634b27188b71",
+    "gold_idx": 1154
+  },
+  {
+    "query_id": "L058-Q3",
+    "query": "What diagnostics can we run to determine why the envelope response is not being parsed for auto topic creation?",
+    "gold_file": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala",
+    "gold_line": 272,
+    "canonical_target": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala:272",
+    "gold_doc_id": "e8f85b28-93ab-55de-b531-634b27188b71",
+    "gold_idx": 1154
+  },
+  {
+    "query_id": "L059-Q1",
+    "query": "Why is the leader not closing properly after the replica fetcher thread shuts down, and what impact is this having on our message consumption?",
+    "gold_file": "core/src/main/scala/kafka/server/ReplicaFetcherThread.scala",
+    "gold_line": 91,
+    "canonical_target": "core/src/main/scala/kafka/server/ReplicaFetcherThread.scala:91",
+    "gold_doc_id": "247d4208-87c5-59ce-82c5-2e572ac96640",
+    "gold_idx": 1356
+  },
+  {
+    "query_id": "L059-Q2",
+    "query": "Dude, why does it feel like the leader is stuck and won't shut down the fetcher? What's going on?",
+    "gold_file": "core/src/main/scala/kafka/server/ReplicaFetcherThread.scala",
+    "gold_line": 91,
+    "canonical_target": "core/src/main/scala/kafka/server/ReplicaFetcherThread.scala:91",
+    "gold_doc_id": "247d4208-87c5-59ce-82c5-2e572ac96640",
+    "gold_idx": 1356
+  },
+  {
+    "query_id": "L059-Q3",
+    "query": "Can we investigate the issue with the leader's inability to close after the fetcher thread termination? What are the implications for our data consistency?",
+    "gold_file": "core/src/main/scala/kafka/server/ReplicaFetcherThread.scala",
+    "gold_line": 91,
+    "canonical_target": "core/src/main/scala/kafka/server/ReplicaFetcherThread.scala:91",
+    "gold_doc_id": "247d4208-87c5-59ce-82c5-2e572ac96640",
+    "gold_idx": 1356
+  },
+  {
+    "query_id": "L060-Q1",
+    "query": "We are experiencing issues with the registration process, as the backend is returning an unexpected response type. Could this be affecting user sign-ups?",
+    "gold_file": "core/src/main/scala/kafka/server/ControllerRegistrationManager.scala",
+    "gold_line": 252,
+    "canonical_target": "core/src/main/scala/kafka/server/ControllerRegistrationManager.scala:252",
+    "gold_doc_id": "d7b0bdd4-f161-5b34-9e6b-25c54a3498cc",
+    "gold_idx": 1241
+  },
+  {
+    "query_id": "L060-Q2",
+    "query": "Looks like something's off with the registration responses! Users are getting errors when trying to complete their registrations. What could be causing this?",
+    "gold_file": "core/src/main/scala/kafka/server/ControllerRegistrationManager.scala",
+    "gold_line": 252,
+    "canonical_target": "core/src/main/scala/kafka/server/ControllerRegistrationManager.scala:252",
+    "gold_doc_id": "d7b0bdd4-f161-5b34-9e6b-25c54a3498cc",
+    "gold_idx": 1241
+  },
+  {
+    "query_id": "L060-Q3",
+    "query": "Can we investigate the registration response handling? The system seems to be failing to process certain response types correctly, which might indicate a configuration or compatibility issue.",
+    "gold_file": "core/src/main/scala/kafka/server/ControllerRegistrationManager.scala",
+    "gold_line": 252,
+    "canonical_target": "core/src/main/scala/kafka/server/ControllerRegistrationManager.scala:252",
+    "gold_doc_id": "d7b0bdd4-f161-5b34-9e6b-25c54a3498cc",
+    "gold_idx": 1241
+  },
+  {
+    "query_id": "L061-Q1",
+    "query": "The system encountered an unexpected error while attempting to complete a controlled shutdown, resulting in an incomplete process.",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerServer.scala",
+    "gold_line": 785,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerServer.scala:785",
+    "gold_doc_id": "2e42536a-23e0-5282-8e1b-3ae4e54e7311",
+    "gold_idx": 1212
+  },
+  {
+    "query_id": "L061-Q2",
+    "query": "Hey, we tried to shut things down cleanly, but something went wrong and caused a hiccup. Any idea what happened?",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerServer.scala",
+    "gold_line": 785,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerServer.scala:785",
+    "gold_doc_id": "2e42536a-23e0-5282-8e1b-3ae4e54e7311",
+    "gold_idx": 1212
+  },
+  {
+    "query_id": "L061-Q3",
+    "query": "What specific factors might have led to an exception during the controlled shutdown process?",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerServer.scala",
+    "gold_line": 785,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerServer.scala:785",
+    "gold_doc_id": "2e42536a-23e0-5282-8e1b-3ae4e54e7311",
+    "gold_idx": 1212
+  },
+  {
+    "query_id": "L062-Q1",
+    "query": "Why are we experiencing connectivity issues with channel $channelId, leading to socket closures?",
+    "gold_file": "core/src/main/scala/kafka/network/SocketServer.scala",
+    "gold_line": 945,
+    "canonical_target": "core/src/main/scala/kafka/network/SocketServer.scala:945",
+    "gold_doc_id": "514a1a29-3696-5785-b5ff-b67b0d5b71ad",
+    "gold_idx": 1080
+  },
+  {
+    "query_id": "L062-Q2",
+    "query": "Hey, has anyone noticed if channel $channelId keeps dropping connections unexpectedly?",
+    "gold_file": "core/src/main/scala/kafka/network/SocketServer.scala",
+    "gold_line": 945,
+    "canonical_target": "core/src/main/scala/kafka/network/SocketServer.scala:945",
+    "gold_doc_id": "514a1a29-3696-5785-b5ff-b67b0d5b71ad",
+    "gold_idx": 1080
+  },
+  {
+    "query_id": "L062-Q3",
+    "query": "What underlying issues might be causing the frequent socket closures for channel $channelId?",
+    "gold_file": "core/src/main/scala/kafka/network/SocketServer.scala",
+    "gold_line": 945,
+    "canonical_target": "core/src/main/scala/kafka/network/SocketServer.scala:945",
+    "gold_doc_id": "514a1a29-3696-5785-b5ff-b67b0d5b71ad",
+    "gold_idx": 1080
+  },
+  {
+    "query_id": "L063-Q1",
+    "query": "The application is failing to process incoming data for the specified partition, leading to delays in message consumption.",
+    "gold_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+    "gold_line": 415,
+    "canonical_target": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala:415",
+    "gold_doc_id": "f2d00912-8d50-5b65-ae2e-ee890eff5f37",
+    "gold_idx": 1117
+  },
+  {
+    "query_id": "L063-Q2",
+    "query": "We're experiencing an issue where data processing seems to just stop for a particular partition. What could be going wrong?",
+    "gold_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+    "gold_line": 415,
+    "canonical_target": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala:415",
+    "gold_doc_id": "f2d00912-8d50-5b65-ae2e-ee890eff5f37",
+    "gold_idx": 1117
+  },
+  {
+    "query_id": "L063-Q3",
+    "query": "Can you investigate why there's an unexpected error occurring during data handling for partition $topicPartition?",
+    "gold_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+    "gold_line": 415,
+    "canonical_target": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala:415",
+    "gold_doc_id": "f2d00912-8d50-5b65-ae2e-ee890eff5f37",
+    "gold_idx": 1117
+  },
+  {
+    "query_id": "L064-Q1",
+    "query": "The application is failing to start due to configuration errors; can we confirm if any required properties are missing or misconfigured?",
+    "gold_file": "core/src/main/scala/kafka/server/DynamicBrokerConfig.scala",
+    "gold_line": 497,
+    "canonical_target": "core/src/main/scala/kafka/server/DynamicBrokerConfig.scala:497",
+    "gold_doc_id": "12aa74c8-37a6-56da-94b3-e6a6ad31b77d",
+    "gold_idx": 1263
+  },
+  {
+    "query_id": "L064-Q2",
+    "query": "Hey, it seems like some settings in our config aren't valid. Could that be causing the system to behave unexpectedly?",
+    "gold_file": "core/src/main/scala/kafka/server/DynamicBrokerConfig.scala",
+    "gold_line": 497,
+    "canonical_target": "core/src/main/scala/kafka/server/DynamicBrokerConfig.scala:497",
+    "gold_doc_id": "12aa74c8-37a6-56da-94b3-e6a6ad31b77d",
+    "gold_idx": 1263
+  },
+  {
+    "query_id": "L064-Q3",
+    "query": "Can we investigate the impact of the invalid configurations on service performance and identify which properties specifically need correction?",
+    "gold_file": "core/src/main/scala/kafka/server/DynamicBrokerConfig.scala",
+    "gold_line": 497,
+    "canonical_target": "core/src/main/scala/kafka/server/DynamicBrokerConfig.scala:497",
+    "gold_doc_id": "12aa74c8-37a6-56da-94b3-e6a6ad31b77d",
+    "gold_idx": 1263
+  },
+  {
+    "query_id": "L065-Q1",
+    "query": "The application is experiencing message delivery failures due to a partition issue.",
+    "gold_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+    "gold_line": 501,
+    "canonical_target": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala:501",
+    "gold_doc_id": "a97034ce-58ba-53c2-b915-51b3c7101e39",
+    "gold_idx": 1125
+  },
+  {
+    "query_id": "L065-Q2",
+    "query": "We've noticed that the messages aren't being processed as expected; could it be related to a specific partition failure?",
+    "gold_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+    "gold_line": 501,
+    "canonical_target": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala:501",
+    "gold_doc_id": "a97034ce-58ba-53c2-b915-51b3c7101e39",
+    "gold_idx": 1125
+  },
+  {
+    "query_id": "L065-Q3",
+    "query": "Can we investigate the impact on the system's performance after a partition was marked as failed?",
+    "gold_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+    "gold_line": 501,
+    "canonical_target": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala:501",
+    "gold_doc_id": "a97034ce-58ba-53c2-b915-51b3c7101e39",
+    "gold_idx": 1125
+  },
+  {
+    "query_id": "L066-Q1",
+    "query": "The broker is exhibiting an unexpected state, leading to potential disruptions in message processing.",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+    "gold_line": 550,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala:550",
+    "gold_doc_id": "7553cdd6-a334-5afc-95d3-385824bb01bb",
+    "gold_idx": 1197
+  },
+  {
+    "query_id": "L066-Q2",
+    "query": "We noticed the Kafka broker seems to be acting up and isn't responding as expected. What's going on?",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+    "gold_line": 550,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala:550",
+    "gold_doc_id": "7553cdd6-a334-5afc-95d3-385824bb01bb",
+    "gold_idx": 1197
+  },
+  {
+    "query_id": "L066-Q3",
+    "query": "Could the unexpected broker state be affecting our message throughput or availability?",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+    "gold_line": 550,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala:550",
+    "gold_doc_id": "7553cdd6-a334-5afc-95d3-385824bb01bb",
+    "gold_idx": 1197
+  },
+  {
+    "query_id": "L067-Q1",
+    "query": "The system is experiencing unexpected behavior as the controller is not providing enough results, causing delays in processing.",
+    "gold_file": "core/src/main/scala/kafka/server/ConfigAdminManager.scala",
+    "gold_line": 368,
+    "canonical_target": "core/src/main/scala/kafka/server/ConfigAdminManager.scala:368",
+    "gold_doc_id": "6360c164-1194-5ef7-b3aa-0742399c2ec4",
+    "gold_idx": 1219
+  },
+  {
+    "query_id": "L067-Q2",
+    "query": "Hey, why does it seem like we're missing some data? The controller's output is lower than what we expected!",
+    "gold_file": "core/src/main/scala/kafka/server/ConfigAdminManager.scala",
+    "gold_line": 368,
+    "canonical_target": "core/src/main/scala/kafka/server/ConfigAdminManager.scala:368",
+    "gold_doc_id": "6360c164-1194-5ef7-b3aa-0742399c2ec4",
+    "gold_idx": 1219
+  },
+  {
+    "query_id": "L067-Q3",
+    "query": "Could the reduced number of results from the controller indicate an underlying issue with data fetching or connectivity?",
+    "gold_file": "core/src/main/scala/kafka/server/ConfigAdminManager.scala",
+    "gold_line": 368,
+    "canonical_target": "core/src/main/scala/kafka/server/ConfigAdminManager.scala:368",
+    "gold_doc_id": "6360c164-1194-5ef7-b3aa-0742399c2ec4",
+    "gold_idx": 1219
+  },
+  {
+    "query_id": "L068-Q1",
+    "query": "The application is failing to install metadata publishers, leading to disruptions in service availability. Have there been any recent changes or updates that could have impacted this process?",
+    "gold_file": "core/src/main/scala/kafka/server/SharedServer.scala",
+    "gold_line": 347,
+    "canonical_target": "core/src/main/scala/kafka/server/SharedServer.scala:347",
+    "gold_doc_id": "874fe0f1-2f67-5d54-b659-e646eba37162",
+    "gold_idx": 1407
+  },
+  {
+    "query_id": "L068-Q2",
+    "query": "We can't seem to get the metadata publishers installed. Is anyone else experiencing this issue, or is it just me?",
+    "gold_file": "core/src/main/scala/kafka/server/SharedServer.scala",
+    "gold_line": 347,
+    "canonical_target": "core/src/main/scala/kafka/server/SharedServer.scala:347",
+    "gold_doc_id": "874fe0f1-2f67-5d54-b659-e646eba37162",
+    "gold_idx": 1407
+  },
+  {
+    "query_id": "L068-Q3",
+    "query": "Investigate the installation failure of metadata publishers to determine if there are any underlying configuration issues or missing dependencies.",
+    "gold_file": "core/src/main/scala/kafka/server/SharedServer.scala",
+    "gold_line": 347,
+    "canonical_target": "core/src/main/scala/kafka/server/SharedServer.scala:347",
+    "gold_doc_id": "874fe0f1-2f67-5d54-b659-e646eba37162",
+    "gold_idx": 1407
+  },
+  {
+    "query_id": "L069-Q1",
+    "query": "The system encounters an exception during the processing of requests, causing interruptions in service.",
+    "gold_file": "core/src/main/scala/kafka/server/KafkaRequestHandler.scala",
+    "gold_line": 149,
+    "canonical_target": "core/src/main/scala/kafka/server/KafkaRequestHandler.scala:149",
+    "gold_doc_id": "9920a9c5-d37c-5f8c-b9e1-10aad317f162",
+    "gold_idx": 1324
+  },
+  {
+    "query_id": "L069-Q2",
+    "query": "We noticed that there's an error popping up every time a request gets handled; could this be related to our service stability?",
+    "gold_file": "core/src/main/scala/kafka/server/KafkaRequestHandler.scala",
+    "gold_line": 149,
+    "canonical_target": "core/src/main/scala/kafka/server/KafkaRequestHandler.scala:149",
+    "gold_doc_id": "9920a9c5-d37c-5f8c-b9e1-10aad317f162",
+    "gold_idx": 1324
+  },
+  {
+    "query_id": "L069-Q3",
+    "query": "What specific conditions trigger the exception during request handling, and how might this affect overall system performance?",
+    "gold_file": "core/src/main/scala/kafka/server/KafkaRequestHandler.scala",
+    "gold_line": 149,
+    "canonical_target": "core/src/main/scala/kafka/server/KafkaRequestHandler.scala:149",
+    "gold_doc_id": "9920a9c5-d37c-5f8c-b9e1-10aad317f162",
+    "gold_idx": 1324
+  },
+  {
+    "query_id": "L070-Q1",
+    "query": "The system is failing to communicate with the controller, causing heartbeats to be undeliverable for a specific node. What could be the root cause of this connectivity issue?",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+    "gold_line": 496,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala:496",
+    "gold_doc_id": "2c0970b2-37e6-5962-964d-2764f0c9531f",
+    "gold_idx": 1188
+  },
+  {
+    "query_id": "L070-Q2",
+    "query": "I'm noticing that one of our nodes seems to be having trouble keeping its heartbeat alive with the controller. Has anyone else experienced this?",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+    "gold_line": 496,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala:496",
+    "gold_doc_id": "2c0970b2-37e6-5962-964d-2764f0c9531f",
+    "gold_idx": 1188
+  },
+  {
+    "query_id": "L070-Q3",
+    "query": "What issues might arise if a node is unable to maintain its heartbeat with the controller in a Kafka cluster?",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+    "gold_line": 496,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala:496",
+    "gold_doc_id": "2c0970b2-37e6-5962-964d-2764f0c9531f",
+    "gold_idx": 1188
+  },
+  {
+    "query_id": "L071-Q1",
+    "query": "The broker with ID $nodeId seems to be failing to complete its registration process. What might be causing this issue?",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+    "gold_line": 421,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala:421",
+    "gold_doc_id": "2bbb8774-b6b5-5677-85d7-27f61f6e4650",
+    "gold_idx": 1179
+  },
+  {
+    "query_id": "L071-Q2",
+    "query": "Hey, I noticed that the broker with ID $nodeId isn't showing up as registered. Any idea what's going on?",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+    "gold_line": 421,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala:421",
+    "gold_doc_id": "2bbb8774-b6b5-5677-85d7-27f61f6e4650",
+    "gold_idx": 1179
+  },
+  {
+    "query_id": "L071-Q3",
+    "query": "Investigate why the broker identified as $nodeId cannot successfully register. Are there network or configuration issues at play?",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+    "gold_line": 421,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala:421",
+    "gold_doc_id": "2bbb8774-b6b5-5677-85d7-27f61f6e4650",
+    "gold_idx": 1179
+  },
+  {
+    "query_id": "L072-Q1",
+    "query": "We've encountered an issue where the system is repeatedly detecting and loading stray logs from the specified directory, causing potential data inconsistencies.",
+    "gold_file": "core/src/main/scala/kafka/log/LogManager.scala",
+    "gold_line": 357,
+    "canonical_target": "core/src/main/scala/kafka/log/LogManager.scala:357",
+    "gold_doc_id": "4f1d5c14-29eb-5878-8379-0197806df81c",
+    "gold_idx": 998
+  },
+  {
+    "query_id": "L072-Q2",
+    "query": "Is anyone else seeing unexpected stray logs being loaded from the log directory? It seems to be happening intermittently.",
+    "gold_file": "core/src/main/scala/kafka/log/LogManager.scala",
+    "gold_line": 357,
+    "canonical_target": "core/src/main/scala/kafka/log/LogManager.scala:357",
+    "gold_doc_id": "4f1d5c14-29eb-5878-8379-0197806df81c",
+    "gold_idx": 998
+  },
+  {
+    "query_id": "L072-Q3",
+    "query": "Could you investigate why stray logs are being loaded from the specified directory? This might be impacting our log processing pipeline.",
+    "gold_file": "core/src/main/scala/kafka/log/LogManager.scala",
+    "gold_line": 357,
+    "canonical_target": "core/src/main/scala/kafka/log/LogManager.scala:357",
+    "gold_doc_id": "4f1d5c14-29eb-5878-8379-0197806df81c",
+    "gold_idx": 998
+  },
+  {
+    "query_id": "L073-Q1",
+    "query": "The system is failing to identify the specified persister, resulting in data not being saved as expected. What configurations were modified recently?",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerServer.scala",
+    "gold_line": 729,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerServer.scala:729",
+    "gold_doc_id": "e8a2acfb-9178-5e78-9f33-379a19e71eca",
+    "gold_idx": 1208
+  },
+  {
+    "query_id": "L073-Q2",
+    "query": "Hey, has anyone noticed that the application isn’t storing data? It seems like there’s an issue with the persister setup.",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerServer.scala",
+    "gold_line": 729,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerServer.scala:729",
+    "gold_doc_id": "e8a2acfb-9178-5e78-9f33-379a19e71eca",
+    "gold_idx": 1208
+  },
+  {
+    "query_id": "L073-Q3",
+    "query": "Can we determine if the persister factory settings were altered? This might lead us to the root cause of the data persistence problem.",
+    "gold_file": "core/src/main/scala/kafka/server/BrokerServer.scala",
+    "gold_line": 729,
+    "canonical_target": "core/src/main/scala/kafka/server/BrokerServer.scala:729",
+    "gold_doc_id": "e8a2acfb-9178-5e78-9f33-379a19e71eca",
+    "gold_idx": 1208
+  },
+  {
+    "query_id": "L074-Q1",
+    "query": "The application fails to process registration responses, leading to user sign-up issues. What API versions are currently supported?",
+    "gold_file": "core/src/main/scala/kafka/server/ControllerRegistrationManager.scala",
+    "gold_line": 246,
+    "canonical_target": "core/src/main/scala/kafka/server/ControllerRegistrationManager.scala:246",
+    "gold_doc_id": "3313202d-231d-531d-9a91-26ed9d4934de",
+    "gold_idx": 1239
+  },
+  {
+    "query_id": "L074-Q2",
+    "query": "Users are getting stuck during registration because the application doesn't recognize the API version. What could be causing this?",
+    "gold_file": "core/src/main/scala/kafka/server/ControllerRegistrationManager.scala",
+    "gold_line": 246,
+    "canonical_target": "core/src/main/scala/kafka/server/ControllerRegistrationManager.scala:246",
+    "gold_doc_id": "3313202d-231d-531d-9a91-26ed9d4934de",
+    "gold_idx": 1239
+  },
+  {
+    "query_id": "L074-Q3",
+    "query": "Investigate why the registration handler may be rejecting responses due to unsupported API version. Is the server up-to-date with the latest specifications?",
+    "gold_file": "core/src/main/scala/kafka/server/ControllerRegistrationManager.scala",
+    "gold_line": 246,
+    "canonical_target": "core/src/main/scala/kafka/server/ControllerRegistrationManager.scala:246",
+    "gold_doc_id": "3313202d-231d-531d-9a91-26ed9d4934de",
+    "gold_idx": 1239
+  },
+  {
+    "query_id": "L075-Q1",
+    "query": "Why did the system reset the fetch offset for the specified partition, and what impact could this have on data processing?",
+    "gold_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+    "gold_line": 677,
+    "canonical_target": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala:677",
+    "gold_doc_id": "5d8a5030-c7bf-5cc8-b51f-2b196ca3228c",
+    "gold_idx": 1130
+  },
+  {
+    "query_id": "L075-Q2",
+    "query": "Hey, why's our consumer suddenly acting weird? I think the offset just reset for one of the partitions.",
+    "gold_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+    "gold_line": 677,
+    "canonical_target": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala:677",
+    "gold_doc_id": "5d8a5030-c7bf-5cc8-b51f-2b196ca3228c",
+    "gold_idx": 1130
+  },
+  {
+    "query_id": "L075-Q3",
+    "query": "Can we investigate the conditions that led to the fetch offset reset for the partition, and whether this is affecting message consumption?",
+    "gold_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+    "gold_line": 677,
+    "canonical_target": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala:677",
+    "gold_doc_id": "5d8a5030-c7bf-5cc8-b51f-2b196ca3228c",
+    "gold_idx": 1130
+  },
+  {
+    "query_id": "L076-Q1",
+    "query": "The cluster seems to be rejecting partition alteration requests, potentially affecting topic management. What might be causing this behavior?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1300,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1300",
+    "gold_doc_id": "f4cac90b-153a-52d3-8ef0-4372209fc306",
+    "gold_idx": 1546
+  },
+  {
+    "query_id": "L076-Q2",
+    "query": "Hey, has anyone else noticed that we're unable to change partitions for some topics? It's been pretty frustrating.",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1300,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1300",
+    "gold_doc_id": "f4cac90b-153a-52d3-8ef0-4372209fc306",
+    "gold_idx": 1546
+  },
+  {
+    "query_id": "L076-Q3",
+    "query": "Could there be a network issue or misconfiguration with the nodes that is preventing AlterPartition requests from being processed?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1300,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1300",
+    "gold_doc_id": "f4cac90b-153a-52d3-8ef0-4372209fc306",
+    "gold_idx": 1546
+  },
+  {
+    "query_id": "L077-Q1",
+    "query": "User reports an unexpected server error when attempting to modify configuration settings.",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ConfigurationControlManager.java",
+    "gold_line": 374,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ConfigurationControlManager.java:374",
+    "gold_doc_id": "500cc840-b3f7-519f-b929-09cd27aad862",
+    "gold_idx": 1454
+  },
+  {
+    "query_id": "L077-Q2",
+    "query": "The application crashes intermittently when users try to alter server configurations, leading to disruptions.",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ConfigurationControlManager.java",
+    "gold_line": 374,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ConfigurationControlManager.java:374",
+    "gold_doc_id": "500cc840-b3f7-519f-b929-09cd27aad862",
+    "gold_idx": 1454
+  },
+  {
+    "query_id": "L077-Q3",
+    "query": "What could be causing the failure in validation during the configuration alteration process?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ConfigurationControlManager.java",
+    "gold_line": 374,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ConfigurationControlManager.java:374",
+    "gold_doc_id": "500cc840-b3f7-519f-b929-09cd27aad862",
+    "gold_idx": 1454
+  },
+  {
+    "query_id": "L078-Q1",
+    "query": "The system is failing to create new topics, resulting in a critical error message.",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 878,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:878",
+    "gold_doc_id": "d911bf84-5e70-5ebd-b93e-1fba032d1be6",
+    "gold_idx": 1528
+  },
+  {
+    "query_id": "L078-Q2",
+    "query": "Hey, has anyone else noticed that we can't create topics right now? Something's definitely up.",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 878,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:878",
+    "gold_doc_id": "d911bf84-5e70-5ebd-b93e-1fba032d1be6",
+    "gold_idx": 1528
+  },
+  {
+    "query_id": "L078-Q3",
+    "query": "What steps can we take to identify the root cause of the server error occurring during topic creation?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 878,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:878",
+    "gold_doc_id": "d911bf84-5e70-5ebd-b93e-1fba032d1be6",
+    "gold_idx": 1528
+  },
+  {
+    "query_id": "L079-Q1",
+    "query": "The application is frequently experiencing issues where it can't process messages due to an unknown partition imbalance. What could be causing this downtime?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1744,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1744",
+    "gold_doc_id": "851cd63f-22eb-53bc-8f37-fb7c42030a01",
+    "gold_idx": 1557
+  },
+  {
+    "query_id": "L079-Q2",
+    "query": "It seems like we're missing messages lately because something is off with partition handling. Any ideas on what might be happening?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1744,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1744",
+    "gold_doc_id": "851cd63f-22eb-53bc-8f37-fb7c42030a01",
+    "gold_idx": 1557
+  },
+  {
+    "query_id": "L079-Q3",
+    "query": "We should investigate why the system is skipping over certain partitions that it can't recognize as imbalanced. What diagnostic steps should we take?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1744,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1744",
+    "gold_doc_id": "851cd63f-22eb-53bc-8f37-fb7c42030a01",
+    "gold_idx": 1557
+  },
+  {
+    "query_id": "L080-Q1",
+    "query": "We've encountered an issue where the AlterPartition request is being denied from a specific node, affecting the partition reassignment process.",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1292,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1292",
+    "gold_doc_id": "da549794-fa77-5c1f-8d55-ee987d0117c2",
+    "gold_idx": 1545
+  },
+  {
+    "query_id": "L080-Q2",
+    "query": "It looks like there's a problem with one of the nodes rejecting partition alterations; could this impact our data distribution?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1292,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1292",
+    "gold_doc_id": "da549794-fa77-5c1f-8d55-ee987d0117c2",
+    "gold_idx": 1545
+  },
+  {
+    "query_id": "L080-Q3",
+    "query": "Can we investigate why the AlterPartition requests are being rejected by node {} for the topic-partition pair {}-{}?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1292,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1292",
+    "gold_doc_id": "da549794-fa77-5c1f-8d55-ee987d0117c2",
+    "gold_idx": 1545
+  },
+  {
+    "query_id": "L082-Q1",
+    "query": "We've noticed a situation where the in-sync replica set is overlapping with the end log position, which might lead to data inconsistencies. What could be the root cause?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 2411,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:2411",
+    "gold_doc_id": "f2bb6b9e-949c-5905-8d72-ccfc439da9fc",
+    "gold_idx": 1571
+  },
+  {
+    "query_id": "L082-Q2",
+    "query": "Hey team, it seems like our ISR is larger than our ELR, and I'm worried this might affect our data flow. Any ideas on what’s going on?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 2411,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:2411",
+    "gold_doc_id": "f2bb6b9e-949c-5905-8d72-ccfc439da9fc",
+    "gold_idx": 1571
+  },
+  {
+    "query_id": "L082-Q3",
+    "query": "Could the overlapping ISR and ELR indicate an issue with our replica synchronization process? What checks should we perform to diagnose this further?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 2411,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:2411",
+    "gold_doc_id": "f2bb6b9e-949c-5905-8d72-ccfc439da9fc",
+    "gold_idx": 1571
+  },
+  {
+    "query_id": "L083-Q1",
+    "query": "The system seems to be skipping messages due to an unrecognized imbalanced topic. What could be causing this issue?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1738,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1738",
+    "gold_doc_id": "13823f9b-81ef-5368-b775-19397b4e669e",
+    "gold_idx": 1556
+  },
+  {
+    "query_id": "L083-Q2",
+    "query": "I've noticed that some messages aren't being processed because of a weird topic imbalance. What should we check?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1738,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1738",
+    "gold_doc_id": "13823f9b-81ef-5368-b775-19397b4e669e",
+    "gold_idx": 1556
+  },
+  {
+    "query_id": "L083-Q3",
+    "query": "Can we diagnose why the Kafka consumer is not handling the imbalanced topic effectively?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1738,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1738",
+    "gold_doc_id": "13823f9b-81ef-5368-b775-19397b4e669e",
+    "gold_idx": 1556
+  },
+  {
+    "query_id": "L085-Q1",
+    "query": "A broker has marked several directories offline; could this lead to data unavailability for consumers?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1498,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1498",
+    "gold_doc_id": "d89d0405-a18b-5eae-963e-a3f695ca5cab",
+    "gold_idx": 1550
+  },
+  {
+    "query_id": "L085-Q2",
+    "query": "Hey, I noticed that some directories are offline on one of our brokers—has anyone checked the impact on message processing?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1498,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1498",
+    "gold_doc_id": "d89d0405-a18b-5eae-963e-a3f695ca5cab",
+    "gold_idx": 1550
+  },
+  {
+    "query_id": "L085-Q3",
+    "query": "Can we investigate the broker's directory status to determine if the offline directories are affecting our replication or load balancing?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1498,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1498",
+    "gold_doc_id": "d89d0405-a18b-5eae-963e-a3f695ca5cab",
+    "gold_idx": 1550
+  },
+  {
+    "query_id": "L086-Q1",
+    "query": "We're encountering an issue where attempts to delete certain topics result in an unexpected error. Has anyone identified the root cause?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 995,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:995",
+    "gold_doc_id": "3f0c5987-947a-59f8-bad8-3eea3a7b4b8b",
+    "gold_idx": 1530
+  },
+  {
+    "query_id": "L086-Q2",
+    "query": "Does anyone know why we're suddenly unable to delete topics? It seems like there's an error popping up every time we try.",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 995,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:995",
+    "gold_doc_id": "3f0c5987-947a-59f8-bad8-3eea3a7b4b8b",
+    "gold_idx": 1530
+  },
+  {
+    "query_id": "L086-Q3",
+    "query": "Could this unexpected deleteTopics error be linked to permission settings or current broker configurations?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 995,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:995",
+    "gold_doc_id": "3f0c5987-947a-59f8-bad8-3eea3a7b4b8b",
+    "gold_idx": 1530
+  },
+  {
+    "query_id": "L087-Q1",
+    "query": "The system is failing to initiate a leader election for a partition that appears to be offline, causing potential data availability issues.",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1799,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1799",
+    "gold_doc_id": "d0ef5f09-a8b5-5cf4-b99d-6b14ea016d3a",
+    "gold_idx": 1559
+  },
+  {
+    "query_id": "L087-Q2",
+    "query": "Why can't we get a leader for that partition? It seems like it's stuck in an offline state.",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1799,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1799",
+    "gold_doc_id": "d0ef5f09-a8b5-5cf4-b99d-6b14ea016d3a",
+    "gold_idx": 1559
+  },
+  {
+    "query_id": "L087-Q3",
+    "query": "Investigate the root cause of the offline partition, as it is preventing an unclean leader election from occurring.",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1799,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1799",
+    "gold_doc_id": "d0ef5f09-a8b5-5cf4-b99d-6b14ea016d3a",
+    "gold_idx": 1559
+  },
+  {
+    "query_id": "L088-Q1",
+    "query": "We're experiencing issues with adding new partitions, as it seems the createPartitions request is failing unexpectedly.",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1823,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1823",
+    "gold_doc_id": "becb80fb-519e-564e-a63d-0ab9b044775a",
+    "gold_idx": 1561
+  },
+  {
+    "query_id": "L088-Q2",
+    "query": "Has anyone else noticed problems when trying to increase the number of partitions for a topic lately?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1823,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1823",
+    "gold_doc_id": "becb80fb-519e-564e-a63d-0ab9b044775a",
+    "gold_idx": 1561
+  },
+  {
+    "query_id": "L088-Q3",
+    "query": "Could the failed createPartitions operation indicate a misconfiguration or resource issue in our Kafka setup?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1823,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1823",
+    "gold_doc_id": "becb80fb-519e-564e-a63d-0ab9b044775a",
+    "gold_idx": 1561
+  },
+  {
+    "query_id": "L089-Q1",
+    "query": "The system is experiencing delays in processing broker heartbeats, leading to potential inconsistencies in cluster state.",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1660,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1660",
+    "gold_doc_id": "d3261ddb-2c48-5dca-a975-336feb9176e3",
+    "gold_idx": 1551
+  },
+  {
+    "query_id": "L089-Q2",
+    "query": "Hey, it seems like our Kafka controller is getting overwhelmed; the heartbeat checks are taking too long to respond.",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1660,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1660",
+    "gold_doc_id": "d3261ddb-2c48-5dca-a975-336feb9176e3",
+    "gold_idx": 1551
+  },
+  {
+    "query_id": "L089-Q3",
+    "query": "Could the recent overload in the event queue be causing connection issues with our brokers?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1660,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1660",
+    "gold_doc_id": "d3261ddb-2c48-5dca-a975-336feb9176e3",
+    "gold_idx": 1551
+  },
+  {
+    "query_id": "L090-Q1",
+    "query": "A broker is attempting to assign replicas, but it seems there are partitions that have not yet been assigned. What's going on?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 2285,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:2285",
+    "gold_doc_id": "b5be4774-cdcd-59de-a3f5-72c70cb14120",
+    "gold_idx": 1569
+  },
+  {
+    "query_id": "L090-Q2",
+    "query": "Hey team, has anyone noticed issues with replica assignments for certain partitions? They don’t seem to be getting assigned properly.",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 2285,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:2285",
+    "gold_doc_id": "b5be4774-cdcd-59de-a3f5-72c70cb14120",
+    "gold_idx": 1569
+  },
+  {
+    "query_id": "L090-Q3",
+    "query": "Investigate why the assignment request is being made for a partition that has no existing assignments.",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 2285,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:2285",
+    "gold_doc_id": "b5be4774-cdcd-59de-a3f5-72c70cb14120",
+    "gold_idx": 1569
+  },
+  {
+    "query_id": "L091-Q1",
+    "query": "The system appears to be consistently reporting leadership status for the same epoch; could this indicate a failure in leader election processes?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/QuorumController.java",
+    "gold_line": 1067,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/QuorumController.java:1067",
+    "gold_doc_id": "7b773460-b4c2-5ca8-ba48-32a7124b3bac",
+    "gold_idx": 1507
+  },
+  {
+    "query_id": "L091-Q2",
+    "query": "Hey, why does it seem like we're stuck in the same leader epoch forever?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/QuorumController.java",
+    "gold_line": 1067,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/QuorumController.java:1067",
+    "gold_doc_id": "7b773460-b4c2-5ca8-ba48-32a7124b3bac",
+    "gold_idx": 1507
+  },
+  {
+    "query_id": "L091-Q3",
+    "query": "Can we check if there are any underlying issues affecting the leader's ability to transition between epochs?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/QuorumController.java",
+    "gold_line": 1067,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/QuorumController.java:1067",
+    "gold_doc_id": "7b773460-b4c2-5ca8-ba48-32a7124b3bac",
+    "gold_idx": 1507
+  },
+  {
+    "query_id": "L092-Q1",
+    "query": "The application is failing to process messages, resulting in significant delays in data delivery.",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/EventPerformanceMonitor.java",
+    "gold_line": 142,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/EventPerformanceMonitor.java:142",
+    "gold_doc_id": "2040945e-f2b3-5f6f-a662-1bcedaaf9b4f",
+    "gold_idx": 1461
+  },
+  {
+    "query_id": "L092-Q2",
+    "query": "Hey, why are we seeing a lot of consumers lagging behind on message processing lately?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/EventPerformanceMonitor.java",
+    "gold_line": 142,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/EventPerformanceMonitor.java:142",
+    "gold_doc_id": "2040945e-f2b3-5f6f-a662-1bcedaaf9b4f",
+    "gold_idx": 1461
+  },
+  {
+    "query_id": "L092-Q3",
+    "query": "Could you investigate if there are any issues with the message offset commits or consumer group states?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/EventPerformanceMonitor.java",
+    "gold_line": 142,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/EventPerformanceMonitor.java:142",
+    "gold_doc_id": "2040945e-f2b3-5f6f-a662-1bcedaaf9b4f",
+    "gold_idx": 1461
+  },
+  {
+    "query_id": "L093-Q1",
+    "query": "The system appears to be experiencing a rollback in metadata versioning; could this impact data consistency?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/FeatureControlManager.java",
+    "gold_line": 403,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/FeatureControlManager.java:403",
+    "gold_doc_id": "b2114f55-efa6-55d1-b8f6-f4828137677c",
+    "gold_idx": 1464
+  },
+  {
+    "query_id": "L093-Q2",
+    "query": "Hey, I've noticed that our metadata version has dropped unexpectedly. Any idea what might be going on?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/FeatureControlManager.java",
+    "gold_line": 403,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/FeatureControlManager.java:403",
+    "gold_doc_id": "b2114f55-efa6-55d1-b8f6-f4828137677c",
+    "gold_idx": 1464
+  },
+  {
+    "query_id": "L093-Q3",
+    "query": "Is there a correlation between the downgrade in metadata.version and any recent operational changes or performance issues?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/FeatureControlManager.java",
+    "gold_line": 403,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/FeatureControlManager.java:403",
+    "gold_doc_id": "b2114f55-efa6-55d1-b8f6-f4828137677c",
+    "gold_idx": 1464
+  },
+  {
+    "query_id": "L094-Q1",
+    "query": "The broker is attempting to assign replicas, but it is unable to find the specified topic ID in the system. What could be causing this issue?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 2271,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:2271",
+    "gold_doc_id": "e0bc984e-1200-5bfc-8429-e78464842051",
+    "gold_idx": 1567
+  },
+  {
+    "query_id": "L094-Q2",
+    "query": "Hey team, has anyone else noticed that the broker can't find the topic ID when trying to assign replicas? This might be messing with our data flow.",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 2271,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:2271",
+    "gold_doc_id": "e0bc984e-1200-5bfc-8429-e78464842051",
+    "gold_idx": 1567
+  },
+  {
+    "query_id": "L094-Q3",
+    "query": "Investigate whether the topic ID mentioned in the allocation request is valid and properly configured in the system's metadata.",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 2271,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:2271",
+    "gold_doc_id": "e0bc984e-1200-5bfc-8429-e78464842051",
+    "gold_idx": 1567
+  },
+  {
+    "query_id": "L095-Q1",
+    "query": "The broker appears to be encountering an issue where it's referencing a partition that it doesn't recognize, leading to potential data replication failures.",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 2282,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:2282",
+    "gold_doc_id": "497c22a1-b059-5f89-b464-9f2b8a86e0ed",
+    "gold_idx": 1568
+  },
+  {
+    "query_id": "L095-Q2",
+    "query": "Hey, has anyone noticed that the broker is trying to assign replicas to partitions that don't seem to exist? This could really mess with our data flow.",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 2282,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:2282",
+    "gold_doc_id": "497c22a1-b059-5f89-b464-9f2b8a86e0ed",
+    "gold_idx": 1568
+  },
+  {
+    "query_id": "L095-Q3",
+    "query": "We should investigate why the broker is receiving requests for unknown partitions, as this may indicate a configuration issue or a synchronization problem in the cluster.",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 2282,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:2282",
+    "gold_doc_id": "497c22a1-b059-5f89-b464-9f2b8a86e0ed",
+    "gold_idx": 1568
+  },
+  {
+    "query_id": "L096-Q1",
+    "query": "The Kafka cluster experienced unexpected leader elections; could this impact message delivery and processing?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/QuorumController.java",
+    "gold_line": 1071,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/QuorumController.java:1071",
+    "gold_doc_id": "10b5ddea-6986-5540-8f44-816b072e92c9",
+    "gold_idx": 1508
+  },
+  {
+    "query_id": "L096-Q2",
+    "query": "I've noticed that the brokers are switching leaders more often than usual; is this causing any downtime?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/QuorumController.java",
+    "gold_line": 1071,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/QuorumController.java:1071",
+    "gold_doc_id": "10b5ddea-6986-5540-8f44-816b072e92c9",
+    "gold_idx": 1508
+  },
+  {
+    "query_id": "L096-Q3",
+    "query": "Can we investigate the reasons behind the leadership changes in the Kafka cluster to ensure stability?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/QuorumController.java",
+    "gold_line": 1071,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/QuorumController.java:1071",
+    "gold_doc_id": "10b5ddea-6986-5540-8f44-816b072e92c9",
+    "gold_idx": 1508
+  },
+  {
+    "query_id": "L097-Q1",
+    "query": "The Kafka delete-logs thread is unable to schedule the next deletion, leading to potential build-up of obsolete log data. What impact is this having on system performance?",
+    "gold_file": "core/src/main/scala/kafka/log/LogManager.scala",
+    "gold_line": 1167,
+    "canonical_target": "core/src/main/scala/kafka/log/LogManager.scala:1167",
+    "gold_doc_id": "0c84de41-76da-5b0f-9f19-ad49a327d914",
+    "gold_idx": 1033
+  },
+  {
+    "query_id": "L097-Q2",
+    "query": "I've noticed that old log files are piling up in Kafka. Is there a reason why the delete-logs thread isn't working like it should?",
+    "gold_file": "core/src/main/scala/kafka/log/LogManager.scala",
+    "gold_line": 1167,
+    "canonical_target": "core/src/main/scala/kafka/log/LogManager.scala:1167",
+    "gold_doc_id": "0c84de41-76da-5b0f-9f19-ad49a327d914",
+    "gold_idx": 1033
+  },
+  {
+    "query_id": "L097-Q3",
+    "query": "Could the failure to schedule the next delete in the kafka-delete-logs thread be causing delays in log retention and management?",
+    "gold_file": "core/src/main/scala/kafka/log/LogManager.scala",
+    "gold_line": 1167,
+    "canonical_target": "core/src/main/scala/kafka/log/LogManager.scala:1167",
+    "gold_doc_id": "0c84de41-76da-5b0f-9f19-ad49a327d914",
+    "gold_idx": 1033
+  },
+  {
+    "query_id": "L098-Q1",
+    "query": "The system is unable to retrieve data efficiently, indicating a possible configuration issue with the maximum fetch size.",
+    "gold_file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+    "gold_line": 1871,
+    "canonical_target": "core/src/main/scala/kafka/server/ReplicaManager.scala:1871",
+    "gold_doc_id": "8c9aef10-477d-5d95-a35f-a46a8f888823",
+    "gold_idx": 1379
+  },
+  {
+    "query_id": "L098-Q2",
+    "query": "Hey, I've noticed that we're having problems fetching data lately—could this be related to the max size settings?",
+    "gold_file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+    "gold_line": 1871,
+    "canonical_target": "core/src/main/scala/kafka/server/ReplicaManager.scala:1871",
+    "gold_doc_id": "8c9aef10-477d-5d95-a35f-a46a8f888823",
+    "gold_idx": 1379
+  },
+  {
+    "query_id": "L098-Q3",
+    "query": "Could this error signify that the fetch source is receiving inadequate data due to a misconfigured maximum byte limit?",
+    "gold_file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+    "gold_line": 1871,
+    "canonical_target": "core/src/main/scala/kafka/server/ReplicaManager.scala:1871",
+    "gold_doc_id": "8c9aef10-477d-5d95-a35f-a46a8f888823",
+    "gold_idx": 1379
+  },
+  {
+    "query_id": "L099-Q1",
+    "query": "The system is unable to recognize the defined configuration, resulting in failures during process initialization. What could be causing this issue?",
+    "gold_file": "core/src/main/scala/kafka/server/KafkaConfig.scala",
+    "gold_line": 554,
+    "canonical_target": "core/src/main/scala/kafka/server/KafkaConfig.scala:554",
+    "gold_doc_id": "da8d194c-286b-57a9-9a03-1f5b10c17762",
+    "gold_idx": 1320
+  },
+  {
+    "query_id": "L099-Q2",
+    "query": "Hey, I noticed that the application isn’t starting correctly. It keeps mentioning something about the configuration settings. Any ideas on what’s going wrong?",
+    "gold_file": "core/src/main/scala/kafka/server/KafkaConfig.scala",
+    "gold_line": 554,
+    "canonical_target": "core/src/main/scala/kafka/server/KafkaConfig.scala:554",
+    "gold_doc_id": "da8d194c-286b-57a9-9a03-1f5b10c17762",
+    "gold_idx": 1320
+  },
+  {
+    "query_id": "L099-Q3",
+    "query": "Investigate whether the configuration name is properly assigned and check if there are missing roles that may hinder process execution.",
+    "gold_file": "core/src/main/scala/kafka/server/KafkaConfig.scala",
+    "gold_line": 554,
+    "canonical_target": "core/src/main/scala/kafka/server/KafkaConfig.scala:554",
+    "gold_doc_id": "da8d194c-286b-57a9-9a03-1f5b10c17762",
+    "gold_idx": 1320
+  },
+  {
+    "query_id": "L100-Q1",
+    "query": "Is there a scenario where the system is trying to reset a partition status despite having no active requests?",
+    "gold_file": "core/src/main/scala/kafka/server/AlterPartitionManager.scala",
+    "gold_line": 144,
+    "canonical_target": "core/src/main/scala/kafka/server/AlterPartitionManager.scala:144",
+    "gold_doc_id": "fcdad4cb-0a02-543f-b587-f13da4a2468d",
+    "gold_idx": 1140
+  },
+  {
+    "query_id": "L100-Q2",
+    "query": "Why is the application trying to clear a flag for a partition that seems to be idle?",
+    "gold_file": "core/src/main/scala/kafka/server/AlterPartitionManager.scala",
+    "gold_line": 144,
+    "canonical_target": "core/src/main/scala/kafka/server/AlterPartitionManager.scala:144",
+    "gold_doc_id": "fcdad4cb-0a02-543f-b587-f13da4a2468d",
+    "gold_idx": 1140
+  },
+  {
+    "query_id": "L100-Q3",
+    "query": "What could be causing an attempt to modify partition states when there are no ongoing processes?",
+    "gold_file": "core/src/main/scala/kafka/server/AlterPartitionManager.scala",
+    "gold_line": 144,
+    "canonical_target": "core/src/main/scala/kafka/server/AlterPartitionManager.scala:144",
+    "gold_doc_id": "fcdad4cb-0a02-543f-b587-f13da4a2468d",
+    "gold_idx": 1140
+  },
+  {
+    "query_id": "KAFKA-19586-Q1",
+    "query": "Why was a KRaft broker fenced after missing heartbeats during a rolling restart?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1698,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1698",
+    "gold_doc_id": "098b0dd2-dbc3-5bcd-863e-5951faef1c82",
+    "gold_idx": 1555
+  },
+  {
+    "query_id": "KAFKA-19586-Q2",
+    "query": "What Kafka log indicates a broker got fenced because its session timed out?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1698,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1698",
+    "gold_doc_id": "098b0dd2-dbc3-5bcd-863e-5951faef1c82",
+    "gold_idx": 1555
+  },
+  {
+    "query_id": "KAFKA-19586-Q3",
+    "query": "Could a heartbeat timeout explain why the broker was fenced at its current epoch?",
+    "gold_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+    "gold_line": 1698,
+    "canonical_target": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1698",
+    "gold_doc_id": "098b0dd2-dbc3-5bcd-863e-5951faef1c82",
+    "gold_idx": 1555
+  },
+  {
+    "query_id": "KAFKA-9877-RM-Q1",
+    "query": "Why did Kafka stop serving replicas in a log directory after storage errors?",
+    "gold_file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+    "gold_line": 2172,
+    "canonical_target": "core/src/main/scala/kafka/server/ReplicaManager.scala:2172",
+    "gold_doc_id": "27ae76cf-f186-5240-8619-1f824812e5bf",
+    "gold_idx": 1382
+  },
+  {
+    "query_id": "KAFKA-9877-RM-Q2",
+    "query": "What log explains a broker taking replicas offline because a log directory failed?",
+    "gold_file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+    "gold_line": 2172,
+    "canonical_target": "core/src/main/scala/kafka/server/ReplicaManager.scala:2172",
+    "gold_doc_id": "27ae76cf-f186-5240-8619-1f824812e5bf",
+    "gold_idx": 1382
+  },
+  {
+    "query_id": "KAFKA-9877-RM-Q3",
+    "query": "Could log directory failure be why the broker stopped serving replicas from that path?",
+    "gold_file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+    "gold_line": 2172,
+    "canonical_target": "core/src/main/scala/kafka/server/ReplicaManager.scala:2172",
+    "gold_doc_id": "27ae76cf-f186-5240-8619-1f824812e5bf",
+    "gold_idx": 1382
+  },
+  {
+    "query_id": "KAFKA-9877-AF-Q2",
+    "query": "What Kafka log indicates the broker removed fetchers for affected partitions?",
+    "gold_file": "core/src/main/scala/kafka/server/AbstractFetcherManager.scala",
+    "gold_line": 203,
+    "canonical_target": "core/src/main/scala/kafka/server/AbstractFetcherManager.scala:203",
+    "gold_doc_id": "ae1f53a0-d015-5817-a3fe-8792c5a3a22d",
+    "gold_idx": 1102
+  },
+  {
+    "query_id": "KAFKA-9877-LM-Q1",
+    "query": "Why did the broker shut down after every log directory failed?",
+    "gold_file": "core/src/main/scala/kafka/log/LogManager.scala",
+    "gold_line": 228,
+    "canonical_target": "core/src/main/scala/kafka/log/LogManager.scala:228",
+    "gold_doc_id": "d280249c-6bf7-54b1-ad07-657a2c74dc83",
+    "gold_idx": 995
+  },
+  {
+    "query_id": "KAFKA-9877-LM-Q2",
+    "query": "What Kafka log indicates the broker is exiting because all log dirs are unusable?",
+    "gold_file": "core/src/main/scala/kafka/log/LogManager.scala",
+    "gold_line": 228,
+    "canonical_target": "core/src/main/scala/kafka/log/LogManager.scala:228",
+    "gold_doc_id": "d280249c-6bf7-54b1-ad07-657a2c74dc83",
+    "gold_idx": 995
+  },
+  {
+    "query_id": "KAFKA-9357-Q1",
+    "query": "Why are replica fetch requests being disconnected before the response is read?",
+    "gold_file": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+    "gold_line": 618,
+    "canonical_target": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java:618",
+    "gold_doc_id": "0b5a32cd-9c06-5089-a6ee-f2df80d954b0",
+    "gold_idx": 19
+  },
+  {
+    "query_id": "KAFKA-9357-Q2",
+    "query": "What Kafka log explains repeated 'Error sending fetch request' messages between brokers?",
+    "gold_file": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+    "gold_line": 618,
+    "canonical_target": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java:618",
+    "gold_doc_id": "0b5a32cd-9c06-5089-a6ee-f2df80d954b0",
+    "gold_idx": 19
+  },
+  {
+    "query_id": "KAFKA-9357-Q3",
+    "query": "Could inter-broker communication failure be causing fetch requests to drop before a response is read?",
+    "gold_file": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+    "gold_line": 618,
+    "canonical_target": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java:618",
+    "gold_doc_id": "0b5a32cd-9c06-5089-a6ee-f2df80d954b0",
+    "gold_idx": 19
+  },
+  {
+    "query_id": "KAFKA-8046-Q1",
+    "query": "Why did the broker shut down because every Kafka log directory was marked failed?",
+    "gold_file": "core/src/main/scala/kafka/log/LogManager.scala",
+    "gold_line": 228,
+    "canonical_target": "core/src/main/scala/kafka/log/LogManager.scala:228",
+    "gold_doc_id": "d280249c-6bf7-54b1-ad07-657a2c74dc83",
+    "gold_idx": 995
+  },
+  {
+    "query_id": "KAFKA-8046-Q2",
+    "query": "Which Kafka log explains a broker exiting after all log dirs become unavailable?",
+    "gold_file": "core/src/main/scala/kafka/log/LogManager.scala",
+    "gold_line": 228,
+    "canonical_target": "core/src/main/scala/kafka/log/LogManager.scala:228",
+    "gold_doc_id": "d280249c-6bf7-54b1-ad07-657a2c74dc83",
+    "gold_idx": 995
+  },
+  {
+    "query_id": "KAFKA-13960-Q1",
+    "query": "Why is Kafka refusing to start because all log directories are already considered failed?",
+    "gold_file": "core/src/main/scala/kafka/log/LogManager.scala",
+    "gold_line": 228,
+    "canonical_target": "core/src/main/scala/kafka/log/LogManager.scala:228",
+    "gold_doc_id": "d280249c-6bf7-54b1-ad07-657a2c74dc83",
+    "gold_idx": 995
+  },
+  {
+    "query_id": "KAFKA-13960-Q2",
+    "query": "Which Kafka log explains a broker aborting startup because every log dir has failed?",
+    "gold_file": "core/src/main/scala/kafka/log/LogManager.scala",
+    "gold_line": 228,
+    "canonical_target": "core/src/main/scala/kafka/log/LogManager.scala:228",
+    "gold_doc_id": "d280249c-6bf7-54b1-ad07-657a2c74dc83",
+    "gold_idx": 995
+  },
+  {
+    "query_id": "KAFKA-9016-Q3",
+    "query": "Could a log directory I/O failure explain why Kafka stopped serving replicas from that path?",
+    "gold_file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+    "gold_line": 2172,
+    "canonical_target": "core/src/main/scala/kafka/server/ReplicaManager.scala:2172",
+    "gold_doc_id": "27ae76cf-f186-5240-8619-1f824812e5bf",
+    "gold_idx": 1382
+  },
+  {
+    "query_id": "KAFKA-13317-Q1",
+    "query": "Why are brokers repeatedly logging that fetch requests to another broker were disconnected before a response was read?",
+    "gold_file": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+    "gold_line": 618,
+    "canonical_target": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java:618",
+    "gold_doc_id": "0b5a32cd-9c06-5089-a6ee-f2df80d954b0",
+    "gold_idx": 19
+  },
+  {
+    "query_id": "KAFKA-13317-Q2",
+    "query": "What Kafka log explains inter-broker fetch traffic failing with 'connection disconnected before the response was read'?",
+    "gold_file": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+    "gold_line": 618,
+    "canonical_target": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java:618",
+    "gold_doc_id": "0b5a32cd-9c06-5089-a6ee-f2df80d954b0",
+    "gold_idx": 19
+  },
+  {
+    "query_id": "KAFKA-13317-Q3",
+    "query": "Could broken broker-to-broker connectivity be the cause of repeated fetch request disconnects?",
+    "gold_file": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+    "gold_line": 618,
+    "canonical_target": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java:618",
+    "gold_doc_id": "0b5a32cd-9c06-5089-a6ee-f2df80d954b0",
+    "gold_idx": 19
+  },
+  {
+    "query_id": "KAFKA-7802-Q2",
+    "query": "Which Kafka log explains replica fetchers losing the response path to another broker?",
+    "gold_file": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+    "gold_line": 618,
+    "canonical_target": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java:618",
+    "gold_doc_id": "0b5a32cd-9c06-5089-a6ee-f2df80d954b0",
+    "gold_idx": 19
+  }
+]

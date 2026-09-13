@@ -1,0 +1,22 @@
+query_id,gold_file,gold_line,Vector-only,Vector + CE,AST-KG static,AST-KG staged,ColBERTv2-only,HippoRAG (ensemble off),HippoRAG + doc ensemble [POST-HOC]
+KAFKA-13317-Q1,clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java,618,11,19,MISS,19,MISS,MISS,MISS
+KAFKA-13317-Q2,clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java,618,4,15,MISS,15,MISS,MISS,MISS
+KAFKA-13317-Q3,clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java,618,9,17,MISS,17,MISS,MISS,MISS
+KAFKA-13960-Q1,core/src/main/scala/kafka/log/LogManager.scala,228,1,1,1,1,1,MISS,MISS
+KAFKA-13960-Q2,core/src/main/scala/kafka/log/LogManager.scala,228,1,1,1,1,1,19,19
+KAFKA-19586-Q1,metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java,1698,3,5,5,5,7,MISS,12
+KAFKA-19586-Q2,metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java,1698,1,1,1,1,1,MISS,MISS
+KAFKA-19586-Q3,metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java,1698,1,1,1,1,1,MISS,4
+KAFKA-7802-Q2,clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java,618,16,19,MISS,19,MISS,MISS,MISS
+KAFKA-8046-Q1,core/src/main/scala/kafka/log/LogManager.scala,228,1,1,1,1,1,MISS,MISS
+KAFKA-8046-Q2,core/src/main/scala/kafka/log/LogManager.scala,228,1,1,1,1,1,19,19
+KAFKA-9016-Q3,core/src/main/scala/kafka/server/ReplicaManager.scala,2172,2,1,1,1,1,MISS,MISS
+KAFKA-9357-Q1,clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java,618,20,18,MISS,18,MISS,MISS,MISS
+KAFKA-9357-Q2,clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java,618,1,1,1,1,2,MISS,4
+KAFKA-9357-Q3,clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java,618,6,17,6,17,16,13,6
+KAFKA-9877-AF-Q2,core/src/main/scala/kafka/server/AbstractFetcherManager.scala,203,1,1,1,1,1,10,10
+KAFKA-9877-LM-Q1,core/src/main/scala/kafka/log/LogManager.scala,228,1,1,1,1,1,MISS,MISS
+KAFKA-9877-LM-Q2,core/src/main/scala/kafka/log/LogManager.scala,228,1,1,1,1,1,19,19
+KAFKA-9877-RM-Q1,core/src/main/scala/kafka/server/ReplicaManager.scala,2172,2,1,1,1,1,MISS,MISS
+KAFKA-9877-RM-Q2,core/src/main/scala/kafka/server/ReplicaManager.scala,2172,6,3,3,3,2,MISS,MISS
+KAFKA-9877-RM-Q3,core/src/main/scala/kafka/server/ReplicaManager.scala,2172,1,2,2,2,2,MISS,MISS

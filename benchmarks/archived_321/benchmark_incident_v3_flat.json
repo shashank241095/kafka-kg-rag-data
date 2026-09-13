@@ -1,0 +1,1202 @@
+[
+  {
+    "id": "L001-Q1",
+    "question": "During the shutdown process, an unexpected thread error was encountered that seems to be affecting the LogManager functionality. What could be the underlying cause?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/log/LogManager.scala",
+      "line": 689
+    }
+  },
+  {
+    "id": "L001-Q2",
+    "question": "Hey team, it looks like we ran into an issue when shutting down the LogManager\u2014any idea why a thread is throwing an error?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/log/LogManager.scala",
+      "line": 689
+    }
+  },
+  {
+    "id": "L001-Q3",
+    "question": "Can we investigate the thread error reported during the LogManager shutdown? What steps should we take to diagnose the root cause?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/log/LogManager.scala",
+      "line": 689
+    }
+  },
+  {
+    "id": "L002-Q1",
+    "question": "The application is unable to retrieve the end offset for the specified topic and partition, leading to potential data loss.",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/LocalLeaderEndPoint.scala",
+      "line": 155
+    }
+  },
+  {
+    "id": "L002-Q2",
+    "question": "Hey, have you noticed that we're getting errors when trying to access the end offset for a topic? It seems like it's throwing a critical issue.",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/LocalLeaderEndPoint.scala",
+      "line": 155
+    }
+  },
+  {
+    "id": "L002-Q3",
+    "question": "What causes the system to fail while trying to obtain the EpochEndOffset for a specific topic and partition?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/LocalLeaderEndPoint.scala",
+      "line": 155
+    }
+  },
+  {
+    "id": "L003-Q1",
+    "question": "There seems to be an issue with the leader epoch request for certain partitions, causing potential delays in processing messages.",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/RemoteLeaderEndPoint.scala",
+      "line": 162
+    }
+  },
+  {
+    "id": "L003-Q2",
+    "question": "We're experiencing problems sending requests for leader epochs, which might be affecting the data flow for some of our partitions.",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/RemoteLeaderEndPoint.scala",
+      "line": 162
+    }
+  },
+  {
+    "id": "L003-Q3",
+    "question": "Can we confirm if the failure to send leader epoch requests is impacting the availability of specific partitions?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/RemoteLeaderEndPoint.scala",
+      "line": 162
+    }
+  },
+  {
+    "id": "L004-Q1",
+    "question": "The system is unable to process requests from the queue, indicating a version mismatch issue. What could be causing this incompatibility?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/NodeToControllerChannelManager.scala",
+      "line": 290
+    }
+  },
+  {
+    "id": "L004-Q2",
+    "question": "Hey, I've noticed that our request processing is hitting a wall because of a version error. Has anyone updated the system recently?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/NodeToControllerChannelManager.scala",
+      "line": 290
+    }
+  },
+  {
+    "id": "L004-Q3",
+    "question": "Could the unsupported version error suggest a misconfiguration in the application that's attempting to access the request queue?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/NodeToControllerChannelManager.scala",
+      "line": 290
+    }
+  },
+  {
+    "id": "L005-Q1",
+    "question": "The configuration update failed to process properly, leading to potential issues with the Kafka setup. What might be causing this error?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/ConfigAdminManager.scala",
+      "line": 255
+    }
+  },
+  {
+    "id": "L005-Q2",
+    "question": "Hey, it seems like there was a hiccup while trying to change the configuration settings. Any idea what\u2019s going on?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/ConfigAdminManager.scala",
+      "line": 255
+    }
+  },
+  {
+    "id": "L005-Q3",
+    "question": "Can we investigate why the alterConfigs request is throwing an error on the specified configuration resource?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/ConfigAdminManager.scala",
+      "line": 255
+    }
+  },
+  {
+    "id": "L006-Q1",
+    "question": "We're encountering a severe issue where messages are not being processed for the specified topic, causing delays in data flow.",
+    "expected": {
+      "file": "core/src/main/scala/kafka/log/LogManager.scala",
+      "line": 1488
+    }
+  },
+  {
+    "id": "L006-Q2",
+    "question": "It seems we're having trouble with sending data to the named topic, leaving some messages stuck and unreleased.",
+    "expected": {
+      "file": "core/src/main/scala/kafka/log/LogManager.scala",
+      "line": 1488
+    }
+  },
+  {
+    "id": "L006-Q3",
+    "question": "Can we investigate why the flushing operation for the specified topic partition is failing, potentially impacting throughput?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/log/LogManager.scala",
+      "line": 1488
+    }
+  },
+  {
+    "id": "L007-Q1",
+    "question": "The system is failing to establish communication with the broker, leading to repeated retry attempts when sending the heartbeat from node $nodeId.",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+      "line": 493
+    }
+  },
+  {
+    "id": "L007-Q2",
+    "question": "Hey, we've noticed that node $nodeId isn't sending its heartbeat to the broker. It keeps trying, but nothing seems to connect.",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+      "line": 493
+    }
+  },
+  {
+    "id": "L007-Q3",
+    "question": "Investigate why the broker heartbeat is not being sent from node $nodeId\u2014could there be a network issue or a configuration problem?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+      "line": 493
+    }
+  },
+  {
+    "id": "L008-Q1",
+    "question": "The system encountered an issue while trying to create new topics automatically, resulting in the inability to process the response properly.",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala",
+      "line": 272
+    }
+  },
+  {
+    "id": "L008-Q2",
+    "question": "Why can't we create new topics automatically? The response parsing is failing.",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala",
+      "line": 272
+    }
+  },
+  {
+    "id": "L008-Q3",
+    "question": "What diagnostics can we run to determine why the envelope response is not being parsed for auto topic creation?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala",
+      "line": 272
+    }
+  },
+  {
+    "id": "L009-Q1",
+    "question": "Why is the leader not closing properly after the replica fetcher thread shuts down, and what impact is this having on our message consumption?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/ReplicaFetcherThread.scala",
+      "line": 91
+    }
+  },
+  {
+    "id": "L009-Q2",
+    "question": "Dude, why does it feel like the leader is stuck and won't shut down the fetcher? What's going on?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/ReplicaFetcherThread.scala",
+      "line": 91
+    }
+  },
+  {
+    "id": "L009-Q3",
+    "question": "Can we investigate the issue with the leader's inability to close after the fetcher thread termination? What are the implications for our data consistency?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/ReplicaFetcherThread.scala",
+      "line": 91
+    }
+  },
+  {
+    "id": "L010-Q1",
+    "question": "We are experiencing issues with the registration process, as the backend is returning an unexpected response type. Could this be affecting user sign-ups?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/ControllerRegistrationManager.scala",
+      "line": 252
+    }
+  },
+  {
+    "id": "L010-Q2",
+    "question": "Looks like something's off with the registration responses! Users are getting errors when trying to complete their registrations. What could be causing this?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/ControllerRegistrationManager.scala",
+      "line": 252
+    }
+  },
+  {
+    "id": "L010-Q3",
+    "question": "Can we investigate the registration response handling? The system seems to be failing to process certain response types correctly, which might indicate a configuration or compatibility issue.",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/ControllerRegistrationManager.scala",
+      "line": 252
+    }
+  },
+  {
+    "id": "L011-Q1",
+    "question": "The system encountered an unexpected error while attempting to complete a controlled shutdown, resulting in an incomplete process.",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/BrokerServer.scala",
+      "line": 785
+    }
+  },
+  {
+    "id": "L011-Q2",
+    "question": "Hey, we tried to shut things down cleanly, but something went wrong and caused a hiccup. Any idea what happened?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/BrokerServer.scala",
+      "line": 785
+    }
+  },
+  {
+    "id": "L011-Q3",
+    "question": "What specific factors might have led to an exception during the controlled shutdown process?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/BrokerServer.scala",
+      "line": 785
+    }
+  },
+  {
+    "id": "L012-Q1",
+    "question": "Why are we experiencing connectivity issues with channel $channelId, leading to socket closures?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/network/SocketServer.scala",
+      "line": 945
+    }
+  },
+  {
+    "id": "L012-Q2",
+    "question": "Hey, has anyone noticed if channel $channelId keeps dropping connections unexpectedly?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/network/SocketServer.scala",
+      "line": 945
+    }
+  },
+  {
+    "id": "L012-Q3",
+    "question": "What underlying issues might be causing the frequent socket closures for channel $channelId?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/network/SocketServer.scala",
+      "line": 945
+    }
+  },
+  {
+    "id": "L013-Q1",
+    "question": "The application is failing to process incoming data for the specified partition, leading to delays in message consumption.",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+      "line": 415
+    }
+  },
+  {
+    "id": "L013-Q2",
+    "question": "We're experiencing an issue where data processing seems to just stop for a particular partition. What could be going wrong?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+      "line": 415
+    }
+  },
+  {
+    "id": "L013-Q3",
+    "question": "Can you investigate why there's an unexpected error occurring during data handling for partition $topicPartition?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+      "line": 415
+    }
+  },
+  {
+    "id": "L014-Q1",
+    "question": "The application is failing to start due to configuration errors; can we confirm if any required properties are missing or misconfigured?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/DynamicBrokerConfig.scala",
+      "line": 497
+    }
+  },
+  {
+    "id": "L014-Q2",
+    "question": "Hey, it seems like some settings in our config aren't valid. Could that be causing the system to behave unexpectedly?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/DynamicBrokerConfig.scala",
+      "line": 497
+    }
+  },
+  {
+    "id": "L014-Q3",
+    "question": "Can we investigate the impact of the invalid configurations on service performance and identify which properties specifically need correction?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/DynamicBrokerConfig.scala",
+      "line": 497
+    }
+  },
+  {
+    "id": "L015-Q1",
+    "question": "The application is experiencing message delivery failures due to a partition issue.",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+      "line": 501
+    }
+  },
+  {
+    "id": "L015-Q2",
+    "question": "We've noticed that the messages aren't being processed as expected; could it be related to a specific partition failure?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+      "line": 501
+    }
+  },
+  {
+    "id": "L015-Q3",
+    "question": "Can we investigate the impact on the system's performance after a partition was marked as failed?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+      "line": 501
+    }
+  },
+  {
+    "id": "L016-Q1",
+    "question": "The broker is exhibiting an unexpected state, leading to potential disruptions in message processing.",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+      "line": 550
+    }
+  },
+  {
+    "id": "L016-Q2",
+    "question": "We noticed the Kafka broker seems to be acting up and isn't responding as expected. What's going on?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+      "line": 550
+    }
+  },
+  {
+    "id": "L016-Q3",
+    "question": "Could the unexpected broker state be affecting our message throughput or availability?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+      "line": 550
+    }
+  },
+  {
+    "id": "L017-Q1",
+    "question": "The system is experiencing unexpected behavior as the controller is not providing enough results, causing delays in processing.",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/ConfigAdminManager.scala",
+      "line": 368
+    }
+  },
+  {
+    "id": "L017-Q2",
+    "question": "Hey, why does it seem like we're missing some data? The controller's output is lower than what we expected!",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/ConfigAdminManager.scala",
+      "line": 368
+    }
+  },
+  {
+    "id": "L017-Q3",
+    "question": "Could the reduced number of results from the controller indicate an underlying issue with data fetching or connectivity?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/ConfigAdminManager.scala",
+      "line": 368
+    }
+  },
+  {
+    "id": "L018-Q1",
+    "question": "The application is failing to install metadata publishers, leading to disruptions in service availability. Have there been any recent changes or updates that could have impacted this process?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/SharedServer.scala",
+      "line": 347
+    }
+  },
+  {
+    "id": "L018-Q2",
+    "question": "We can't seem to get the metadata publishers installed. Is anyone else experiencing this issue, or is it just me?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/SharedServer.scala",
+      "line": 347
+    }
+  },
+  {
+    "id": "L018-Q3",
+    "question": "Investigate the installation failure of metadata publishers to determine if there are any underlying configuration issues or missing dependencies.",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/SharedServer.scala",
+      "line": 347
+    }
+  },
+  {
+    "id": "L019-Q1",
+    "question": "The system encounters an exception during the processing of requests, causing interruptions in service.",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/KafkaRequestHandler.scala",
+      "line": 149
+    }
+  },
+  {
+    "id": "L019-Q2",
+    "question": "We noticed that there's an error popping up every time a request gets handled; could this be related to our service stability?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/KafkaRequestHandler.scala",
+      "line": 149
+    }
+  },
+  {
+    "id": "L019-Q3",
+    "question": "What specific conditions trigger the exception during request handling, and how might this affect overall system performance?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/KafkaRequestHandler.scala",
+      "line": 149
+    }
+  },
+  {
+    "id": "L020-Q1",
+    "question": "The system is failing to communicate with the controller, causing heartbeats to be undeliverable for a specific node. What could be the root cause of this connectivity issue?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+      "line": 496
+    }
+  },
+  {
+    "id": "L020-Q2",
+    "question": "I'm noticing that one of our nodes seems to be having trouble keeping its heartbeat alive with the controller. Has anyone else experienced this?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+      "line": 496
+    }
+  },
+  {
+    "id": "L020-Q3",
+    "question": "What issues might arise if a node is unable to maintain its heartbeat with the controller in a Kafka cluster?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+      "line": 496
+    }
+  },
+  {
+    "id": "L021-Q1",
+    "question": "The broker with ID $nodeId seems to be failing to complete its registration process. What might be causing this issue?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+      "line": 421
+    }
+  },
+  {
+    "id": "L021-Q2",
+    "question": "Hey, I noticed that the broker with ID $nodeId isn't showing up as registered. Any idea what's going on?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+      "line": 421
+    }
+  },
+  {
+    "id": "L021-Q3",
+    "question": "Investigate why the broker identified as $nodeId cannot successfully register. Are there network or configuration issues at play?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/BrokerLifecycleManager.scala",
+      "line": 421
+    }
+  },
+  {
+    "id": "L022-Q1",
+    "question": "We've encountered an issue where the system is repeatedly detecting and loading stray logs from the specified directory, causing potential data inconsistencies.",
+    "expected": {
+      "file": "core/src/main/scala/kafka/log/LogManager.scala",
+      "line": 357
+    }
+  },
+  {
+    "id": "L022-Q2",
+    "question": "Is anyone else seeing unexpected stray logs being loaded from the log directory? It seems to be happening intermittently.",
+    "expected": {
+      "file": "core/src/main/scala/kafka/log/LogManager.scala",
+      "line": 357
+    }
+  },
+  {
+    "id": "L022-Q3",
+    "question": "Could you investigate why stray logs are being loaded from the specified directory? This might be impacting our log processing pipeline.",
+    "expected": {
+      "file": "core/src/main/scala/kafka/log/LogManager.scala",
+      "line": 357
+    }
+  },
+  {
+    "id": "L023-Q1",
+    "question": "The system is failing to identify the specified persister, resulting in data not being saved as expected. What configurations were modified recently?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/BrokerServer.scala",
+      "line": 729
+    }
+  },
+  {
+    "id": "L023-Q2",
+    "question": "Hey, has anyone noticed that the application isn\u2019t storing data? It seems like there\u2019s an issue with the persister setup.",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/BrokerServer.scala",
+      "line": 729
+    }
+  },
+  {
+    "id": "L023-Q3",
+    "question": "Can we determine if the persister factory settings were altered? This might lead us to the root cause of the data persistence problem.",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/BrokerServer.scala",
+      "line": 729
+    }
+  },
+  {
+    "id": "L024-Q1",
+    "question": "The application fails to process registration responses, leading to user sign-up issues. What API versions are currently supported?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/ControllerRegistrationManager.scala",
+      "line": 246
+    }
+  },
+  {
+    "id": "L024-Q2",
+    "question": "Users are getting stuck during registration because the application doesn't recognize the API version. What could be causing this?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/ControllerRegistrationManager.scala",
+      "line": 246
+    }
+  },
+  {
+    "id": "L024-Q3",
+    "question": "Investigate why the registration handler may be rejecting responses due to unsupported API version. Is the server up-to-date with the latest specifications?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/ControllerRegistrationManager.scala",
+      "line": 246
+    }
+  },
+  {
+    "id": "L025-Q1",
+    "question": "Why did the system reset the fetch offset for the specified partition, and what impact could this have on data processing?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+      "line": 677
+    }
+  },
+  {
+    "id": "L025-Q2",
+    "question": "Hey, why's our consumer suddenly acting weird? I think the offset just reset for one of the partitions.",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+      "line": 677
+    }
+  },
+  {
+    "id": "L025-Q3",
+    "question": "Can we investigate the conditions that led to the fetch offset reset for the partition, and whether this is affecting message consumption?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+      "line": 677
+    }
+  },
+  {
+    "id": "L026-Q1",
+    "question": "The cluster seems to be rejecting partition alteration requests, potentially affecting topic management. What might be causing this behavior?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 1300
+    }
+  },
+  {
+    "id": "L026-Q2",
+    "question": "Hey, has anyone else noticed that we're unable to change partitions for some topics? It's been pretty frustrating.",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 1300
+    }
+  },
+  {
+    "id": "L026-Q3",
+    "question": "Could there be a network issue or misconfiguration with the nodes that is preventing AlterPartition requests from being processed?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 1300
+    }
+  },
+  {
+    "id": "L027-Q1",
+    "question": "User reports an unexpected server error when attempting to modify configuration settings.",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ConfigurationControlManager.java",
+      "line": 374
+    }
+  },
+  {
+    "id": "L027-Q2",
+    "question": "The application crashes intermittently when users try to alter server configurations, leading to disruptions.",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ConfigurationControlManager.java",
+      "line": 374
+    }
+  },
+  {
+    "id": "L027-Q3",
+    "question": "What could be causing the failure in validation during the configuration alteration process?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ConfigurationControlManager.java",
+      "line": 374
+    }
+  },
+  {
+    "id": "L028-Q1",
+    "question": "The system is failing to create new topics, resulting in a critical error message.",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 878
+    }
+  },
+  {
+    "id": "L028-Q2",
+    "question": "Hey, has anyone else noticed that we can't create topics right now? Something's definitely up.",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 878
+    }
+  },
+  {
+    "id": "L028-Q3",
+    "question": "What steps can we take to identify the root cause of the server error occurring during topic creation?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 878
+    }
+  },
+  {
+    "id": "L029-Q1",
+    "question": "The application is frequently experiencing issues where it can't process messages due to an unknown partition imbalance. What could be causing this downtime?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 1744
+    }
+  },
+  {
+    "id": "L029-Q2",
+    "question": "It seems like we're missing messages lately because something is off with partition handling. Any ideas on what might be happening?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 1744
+    }
+  },
+  {
+    "id": "L029-Q3",
+    "question": "We should investigate why the system is skipping over certain partitions that it can't recognize as imbalanced. What diagnostic steps should we take?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 1744
+    }
+  },
+  {
+    "id": "L030-Q1",
+    "question": "We've encountered an issue where the AlterPartition request is being denied from a specific node, affecting the partition reassignment process.",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 1292
+    }
+  },
+  {
+    "id": "L030-Q2",
+    "question": "It looks like there's a problem with one of the nodes rejecting partition alterations; could this impact our data distribution?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 1292
+    }
+  },
+  {
+    "id": "L030-Q3",
+    "question": "Can we investigate why the AlterPartition requests are being rejected by node {} for the topic-partition pair {}-{}?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 1292
+    }
+  },
+  {
+    "id": "L031-Q1",
+    "question": "The application has been intermittently failing to process messages from the Kafka topic, leading to delays in data availability.",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ResultOrError.java",
+      "line": 89
+    }
+  },
+  {
+    "id": "L031-Q2",
+    "question": "Hey team, I've noticed that we're running into issues where some messages aren't being consumed at all. Has anyone else seen this?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ResultOrError.java",
+      "line": 89
+    }
+  },
+  {
+    "id": "L031-Q3",
+    "question": "Investigating the source of the error; could the message processing rate exceed the consumer capacity, causing a bottleneck?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ResultOrError.java",
+      "line": 89
+    }
+  },
+  {
+    "id": "L032-Q1",
+    "question": "We've noticed a situation where the in-sync replica set is overlapping with the end log position, which might lead to data inconsistencies. What could be the root cause?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 2411
+    }
+  },
+  {
+    "id": "L032-Q2",
+    "question": "Hey team, it seems like our ISR is larger than our ELR, and I'm worried this might affect our data flow. Any ideas on what\u2019s going on?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 2411
+    }
+  },
+  {
+    "id": "L032-Q3",
+    "question": "Could the overlapping ISR and ELR indicate an issue with our replica synchronization process? What checks should we perform to diagnose this further?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 2411
+    }
+  },
+  {
+    "id": "L033-Q1",
+    "question": "The system seems to be skipping messages due to an unrecognized imbalanced topic. What could be causing this issue?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 1738
+    }
+  },
+  {
+    "id": "L033-Q2",
+    "question": "I've noticed that some messages aren't being processed because of a weird topic imbalance. What should we check?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 1738
+    }
+  },
+  {
+    "id": "L033-Q3",
+    "question": "Can we diagnose why the Kafka consumer is not handling the imbalanced topic effectively?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 1738
+    }
+  },
+  {
+    "id": "L034-Q1",
+    "question": "The system is unable to produce messages to the specified Kafka topic, resulting in delayed processing times.",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ResultOrError.java",
+      "line": 87
+    }
+  },
+  {
+    "id": "L034-Q2",
+    "question": "Why is it that the messages we expect to see in the log aren't showing up as they should? Is there a hiccup in our message flow?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ResultOrError.java",
+      "line": 87
+    }
+  },
+  {
+    "id": "L034-Q3",
+    "question": "What could be causing the Kafka producers to fail in sending messages, leading to a noticeable backlog in processing?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ResultOrError.java",
+      "line": 87
+    }
+  },
+  {
+    "id": "L035-Q1",
+    "question": "A broker has marked several directories offline; could this lead to data unavailability for consumers?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 1498
+    }
+  },
+  {
+    "id": "L035-Q2",
+    "question": "Hey, I noticed that some directories are offline on one of our brokers\u2014has anyone checked the impact on message processing?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 1498
+    }
+  },
+  {
+    "id": "L035-Q3",
+    "question": "Can we investigate the broker's directory status to determine if the offline directories are affecting our replication or load balancing?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 1498
+    }
+  },
+  {
+    "id": "L036-Q1",
+    "question": "We're encountering an issue where attempts to delete certain topics result in an unexpected error. Has anyone identified the root cause?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 995
+    }
+  },
+  {
+    "id": "L036-Q2",
+    "question": "Does anyone know why we're suddenly unable to delete topics? It seems like there's an error popping up every time we try.",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 995
+    }
+  },
+  {
+    "id": "L036-Q3",
+    "question": "Could this unexpected deleteTopics error be linked to permission settings or current broker configurations?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 995
+    }
+  },
+  {
+    "id": "L037-Q1",
+    "question": "The system is failing to initiate a leader election for a partition that appears to be offline, causing potential data availability issues.",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 1799
+    }
+  },
+  {
+    "id": "L037-Q2",
+    "question": "Why can't we get a leader for that partition? It seems like it's stuck in an offline state.",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 1799
+    }
+  },
+  {
+    "id": "L037-Q3",
+    "question": "Investigate the root cause of the offline partition, as it is preventing an unclean leader election from occurring.",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 1799
+    }
+  },
+  {
+    "id": "L038-Q1",
+    "question": "We're experiencing issues with adding new partitions, as it seems the createPartitions request is failing unexpectedly.",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 1823
+    }
+  },
+  {
+    "id": "L038-Q2",
+    "question": "Has anyone else noticed problems when trying to increase the number of partitions for a topic lately?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 1823
+    }
+  },
+  {
+    "id": "L038-Q3",
+    "question": "Could the failed createPartitions operation indicate a misconfiguration or resource issue in our Kafka setup?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 1823
+    }
+  },
+  {
+    "id": "L039-Q1",
+    "question": "The system is experiencing delays in processing broker heartbeats, leading to potential inconsistencies in cluster state.",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 1660
+    }
+  },
+  {
+    "id": "L039-Q2",
+    "question": "Hey, it seems like our Kafka controller is getting overwhelmed; the heartbeat checks are taking too long to respond.",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 1660
+    }
+  },
+  {
+    "id": "L039-Q3",
+    "question": "Could the recent overload in the event queue be causing connection issues with our brokers?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 1660
+    }
+  },
+  {
+    "id": "L040-Q1",
+    "question": "A broker is attempting to assign replicas, but it seems there are partitions that have not yet been assigned. What's going on?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 2285
+    }
+  },
+  {
+    "id": "L040-Q2",
+    "question": "Hey team, has anyone noticed issues with replica assignments for certain partitions? They don\u2019t seem to be getting assigned properly.",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 2285
+    }
+  },
+  {
+    "id": "L040-Q3",
+    "question": "Investigate why the assignment request is being made for a partition that has no existing assignments.",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 2285
+    }
+  },
+  {
+    "id": "L041-Q1",
+    "question": "The system appears to be consistently reporting leadership status for the same epoch; could this indicate a failure in leader election processes?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/QuorumController.java",
+      "line": 1067
+    }
+  },
+  {
+    "id": "L041-Q2",
+    "question": "Hey, why does it seem like we're stuck in the same leader epoch forever?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/QuorumController.java",
+      "line": 1067
+    }
+  },
+  {
+    "id": "L041-Q3",
+    "question": "Can we check if there are any underlying issues affecting the leader's ability to transition between epochs?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/QuorumController.java",
+      "line": 1067
+    }
+  },
+  {
+    "id": "L042-Q1",
+    "question": "The application is failing to process messages, resulting in significant delays in data delivery.",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/EventPerformanceMonitor.java",
+      "line": 142
+    }
+  },
+  {
+    "id": "L042-Q2",
+    "question": "Hey, why are we seeing a lot of consumers lagging behind on message processing lately?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/EventPerformanceMonitor.java",
+      "line": 142
+    }
+  },
+  {
+    "id": "L042-Q3",
+    "question": "Could you investigate if there are any issues with the message offset commits or consumer group states?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/EventPerformanceMonitor.java",
+      "line": 142
+    }
+  },
+  {
+    "id": "L043-Q1",
+    "question": "The system appears to be experiencing a rollback in metadata versioning; could this impact data consistency?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/FeatureControlManager.java",
+      "line": 403
+    }
+  },
+  {
+    "id": "L043-Q2",
+    "question": "Hey, I've noticed that our metadata version has dropped unexpectedly. Any idea what might be going on?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/FeatureControlManager.java",
+      "line": 403
+    }
+  },
+  {
+    "id": "L043-Q3",
+    "question": "Is there a correlation between the downgrade in metadata.version and any recent operational changes or performance issues?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/FeatureControlManager.java",
+      "line": 403
+    }
+  },
+  {
+    "id": "L044-Q1",
+    "question": "The broker is attempting to assign replicas, but it is unable to find the specified topic ID in the system. What could be causing this issue?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 2271
+    }
+  },
+  {
+    "id": "L044-Q2",
+    "question": "Hey team, has anyone else noticed that the broker can't find the topic ID when trying to assign replicas? This might be messing with our data flow.",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 2271
+    }
+  },
+  {
+    "id": "L044-Q3",
+    "question": "Investigate whether the topic ID mentioned in the allocation request is valid and properly configured in the system's metadata.",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 2271
+    }
+  },
+  {
+    "id": "L045-Q1",
+    "question": "The broker appears to be encountering an issue where it's referencing a partition that it doesn't recognize, leading to potential data replication failures.",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 2282
+    }
+  },
+  {
+    "id": "L045-Q2",
+    "question": "Hey, has anyone noticed that the broker is trying to assign replicas to partitions that don't seem to exist? This could really mess with our data flow.",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 2282
+    }
+  },
+  {
+    "id": "L045-Q3",
+    "question": "We should investigate why the broker is receiving requests for unknown partitions, as this may indicate a configuration issue or a synchronization problem in the cluster.",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "line": 2282
+    }
+  },
+  {
+    "id": "L046-Q1",
+    "question": "The Kafka cluster experienced unexpected leader elections; could this impact message delivery and processing?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/QuorumController.java",
+      "line": 1071
+    }
+  },
+  {
+    "id": "L046-Q2",
+    "question": "I've noticed that the brokers are switching leaders more often than usual; is this causing any downtime?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/QuorumController.java",
+      "line": 1071
+    }
+  },
+  {
+    "id": "L046-Q3",
+    "question": "Can we investigate the reasons behind the leadership changes in the Kafka cluster to ensure stability?",
+    "expected": {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/QuorumController.java",
+      "line": 1071
+    }
+  },
+  {
+    "id": "L047-Q1",
+    "question": "The Kafka delete-logs thread is unable to schedule the next deletion, leading to potential build-up of obsolete log data. What impact is this having on system performance?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/log/LogManager.scala",
+      "line": 1167
+    }
+  },
+  {
+    "id": "L047-Q2",
+    "question": "I've noticed that old log files are piling up in Kafka. Is there a reason why the delete-logs thread isn't working like it should?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/log/LogManager.scala",
+      "line": 1167
+    }
+  },
+  {
+    "id": "L047-Q3",
+    "question": "Could the failure to schedule the next delete in the kafka-delete-logs thread be causing delays in log retention and management?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/log/LogManager.scala",
+      "line": 1167
+    }
+  },
+  {
+    "id": "L048-Q1",
+    "question": "The system is unable to retrieve data efficiently, indicating a possible configuration issue with the maximum fetch size.",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+      "line": 1871
+    }
+  },
+  {
+    "id": "L048-Q2",
+    "question": "Hey, I've noticed that we're having problems fetching data lately\u2014could this be related to the max size settings?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+      "line": 1871
+    }
+  },
+  {
+    "id": "L048-Q3",
+    "question": "Could this error signify that the fetch source is receiving inadequate data due to a misconfigured maximum byte limit?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+      "line": 1871
+    }
+  },
+  {
+    "id": "L049-Q1",
+    "question": "The system is unable to recognize the defined configuration, resulting in failures during process initialization. What could be causing this issue?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/KafkaConfig.scala",
+      "line": 554
+    }
+  },
+  {
+    "id": "L049-Q2",
+    "question": "Hey, I noticed that the application isn\u2019t starting correctly. It keeps mentioning something about the configuration settings. Any ideas on what\u2019s going wrong?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/KafkaConfig.scala",
+      "line": 554
+    }
+  },
+  {
+    "id": "L049-Q3",
+    "question": "Investigate whether the configuration name is properly assigned and check if there are missing roles that may hinder process execution.",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/KafkaConfig.scala",
+      "line": 554
+    }
+  },
+  {
+    "id": "L050-Q1",
+    "question": "Is there a scenario where the system is trying to reset a partition status despite having no active requests?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/AlterPartitionManager.scala",
+      "line": 144
+    }
+  },
+  {
+    "id": "L050-Q2",
+    "question": "Why is the application trying to clear a flag for a partition that seems to be idle?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/AlterPartitionManager.scala",
+      "line": 144
+    }
+  },
+  {
+    "id": "L050-Q3",
+    "question": "What could be causing an attempt to modify partition states when there are no ongoing processes?",
+    "expected": {
+      "file": "core/src/main/scala/kafka/server/AlterPartitionManager.scala",
+      "line": 144
+    }
+  }
+]

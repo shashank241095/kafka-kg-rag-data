@@ -1,0 +1,103 @@
+{
+  "status": "authoritative_corrected_metrics",
+  "metric_definition": "Recall@K is 1 iff 1 <= gold_rank <= K; reciprocal rank is 1/gold_rank under the same condition and 0 otherwise.",
+  "k": 20,
+  "retrieval_rerun": false,
+  "source_per_query_artifacts": [
+    {
+      "method": "Vector-only",
+      "path": "scripts/results_ast_315_paper_config/per_query/vector_only.json",
+      "sha256": "60f7404038c7944ada71741678ebde6467dfd9736d58435438988a450da615b7"
+    },
+    {
+      "method": "Vector+CrossEncoder",
+      "path": "scripts/results_ast_315_paper_config/per_query/vector_crossencoder.json",
+      "sha256": "9fd0b4eda09599fea5b8aeca0f10a06f1c013033a6cd605db2b0ee37aed13c91"
+    },
+    {
+      "method": "KG+CrossEncoder(static-K)",
+      "path": "scripts/results_ast_315_paper_config/per_query/kg_crossencoder_static_k.json",
+      "sha256": "8df27bc0337a4cb248f37afb74fddcbe6633ce10ea3a9ab26ef8ac0ef98936ef"
+    },
+    {
+      "method": "KG+CrossEncoder+StagedConfidence",
+      "path": "scripts/results_ast_315_paper_config/per_query/kg_crossencoder_stagedconfidence.json",
+      "sha256": "4b0d04da840207989b1433317cd01e156e34624a997fc4c6ff6c9af05c3691db"
+    }
+  ],
+  "supersedes": {
+    "path": "scripts/results_ast_315_paper_config/results_summary.json",
+    "sha256": "ff9db7ffcbec6356f457f6d34dc97b63f28c7d464723e8fa29a16319de0c492b",
+    "reason": "The historical static-K aggregate counted gold presence beyond K in raw KG pools when reranking was skipped above rerank_kg_max."
+  },
+  "rows": [
+    {
+      "Method": "Vector-only",
+      "Hits@20": 301,
+      "Queries": 315,
+      "Recall@20": 0.9555555555555556,
+      "MRR@20": 0.7511943140374513,
+      "PairSavings%": 0.0,
+      "CETimeSavings%": 0.0
+    },
+    {
+      "Method": "Vector+CrossEncoder",
+      "Hits@20": 301,
+      "Queries": 315,
+      "Recall@20": 0.9555555555555556,
+      "MRR@20": 0.6974876669679855,
+      "PairSavings%": 0.0,
+      "CETimeSavings%": 0.0
+    },
+    {
+      "Method": "KG+CrossEncoder(static-K)",
+      "Hits@20": 298,
+      "Queries": 315,
+      "Recall@20": 0.946031746031746,
+      "MRR@20": 0.7045628855012609,
+      "PairSavings%": 0.0,
+      "CETimeSavings%": 0.0
+    },
+    {
+      "Method": "KG+CrossEncoder+StagedConfidence",
+      "Hits@20": 301,
+      "Queries": 315,
+      "Recall@20": 0.9555555555555556,
+      "MRR@20": 0.6971882281723061,
+      "PairSavings%": 51.8,
+      "CETimeSavings%": 51.4
+    }
+  ],
+  "accounting_corrections": [
+    {
+      "method": "KG+CrossEncoder(static-K)",
+      "query_id": "L024-Q3",
+      "question": "Could this issue with the partition be linked to a misconfiguration or a lack of topic registration in our Kafka setup?",
+      "expected": {
+        "file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+        "line": 450
+      },
+      "gold_rank": 81,
+      "raw_pool_size": 234,
+      "historical_hit": true,
+      "corrected_hit_at_k": false,
+      "historical_reciprocal_rank": 0.012345679012345678,
+      "corrected_reciprocal_rank_at_k": 0.0
+    },
+    {
+      "method": "KG+CrossEncoder(static-K)",
+      "query_id": "L076-Q2",
+      "question": "Hey, has anyone else noticed that we're unable to change partitions for some topics? It's been pretty frustrating.",
+      "expected": {
+        "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+        "line": 1300
+      },
+      "gold_rank": 87,
+      "raw_pool_size": 227,
+      "historical_hit": true,
+      "corrected_hit_at_k": false,
+      "historical_reciprocal_rank": 0.011494252873563218,
+      "corrected_reciprocal_rank_at_k": 0.0
+    }
+  ]
+}

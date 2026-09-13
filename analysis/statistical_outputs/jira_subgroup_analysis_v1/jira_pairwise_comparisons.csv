@@ -1,0 +1,7 @@
+comparison,method_a,method_b,n,recall_diff,mrr_diff,a_only_wins,b_only_wins,both_hit,both_miss,discordant_pairs,exact_two_sided_p,note
+AST-KG static - Vector-only,Vector-only,AST-KG static,21,-0.23809523809523808,-0.001485088985088984,5,0,16,0,5,0.0625,"EXPLORATORY, severely underpowered at n=21"
+AST-KG staged - Vector-only,Vector-only,AST-KG staged,21,0.0,0.007013281123188243,0,0,21,0,0,,no discordant pairs; no test performed
+AST-KG staged - AST-KG static,AST-KG static,AST-KG staged,21,0.23809523809523808,0.008498370108277229,0,5,16,0,5,0.0625,"EXPLORATORY, severely underpowered at n=21"
+HippoRAG (ensemble off) - ColBERTv2-only,ColBERTv2-only,HippoRAG (ensemble off),21,-0.5238095238095238,-0.5890733013853315,11,0,5,5,11,0.0009765625,"EXPLORATORY, severely underpowered at n=21"
+HippoRAG + doc ensemble [POST-HOC] - ColBERTv2-only,ColBERTv2-only,HippoRAG + doc ensemble [POST-HOC],21,-0.38095238095238093,-0.5570220193340495,8,0,8,5,8,0.0078125,"EXPLORATORY, severely underpowered at n=21"
+Vector + CE - Vector-only (MRR only),Vector-only,Vector + CE,21,N/A (identical candidate set by construction),0.007013281123188243,,,,,,,Recall@K identical by construction; no Recall test reported

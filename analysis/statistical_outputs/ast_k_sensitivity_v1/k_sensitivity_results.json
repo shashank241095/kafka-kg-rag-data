@@ -1,0 +1,301 @@
+{
+  "status": "complete",
+  "experiment": "AST K-sensitivity retrieval robustness analysis",
+  "primary_k_remains": 20,
+  "tested_k": [
+    5,
+    10,
+    15,
+    20
+  ],
+  "results": [
+    {
+      "k": 5,
+      "method": "Vector-only",
+      "hits_at_k": 271,
+      "queries": 315,
+      "recall_at_k": 0.8603174603174604,
+      "mrr_at_k": 0.7416931216931216,
+      "avg_candidate_pool_size": null,
+      "total_ce_pair_count": null,
+      "avg_ce_pair_count": null,
+      "pair_savings_percent_vs_static_same_k": 0.0,
+      "ce_time_savings_percent_vs_static_same_k": 0.0
+    },
+    {
+      "k": 5,
+      "method": "Vector + Cross-Encoder",
+      "hits_at_k": 271,
+      "queries": 315,
+      "recall_at_k": 0.8603174603174604,
+      "mrr_at_k": 0.7084656084656085,
+      "avg_candidate_pool_size": null,
+      "total_ce_pair_count": 1575,
+      "avg_ce_pair_count": 5.0,
+      "pair_savings_percent_vs_static_same_k": 0.0,
+      "ce_time_savings_percent_vs_static_same_k": 0.0
+    },
+    {
+      "k": 5,
+      "method": "AST-KG + Cross-Encoder static-K",
+      "hits_at_k": 263,
+      "queries": 315,
+      "recall_at_k": 0.834920634920635,
+      "mrr_at_k": 0.6874603174603175,
+      "avg_candidate_pool_size": 59.49523809523809,
+      "total_ce_pair_count": 20316,
+      "avg_ce_pair_count": 64.4952380952381,
+      "pair_savings_percent_vs_static_same_k": 0.0,
+      "ce_time_savings_percent_vs_static_same_k": 0.0
+    },
+    {
+      "k": 5,
+      "method": "AST-KG + Staged Confidence",
+      "hits_at_k": 264,
+      "queries": 315,
+      "recall_at_k": 0.8380952380952381,
+      "mrr_at_k": 0.6941798941798941,
+      "avg_candidate_pool_size": 21.434920634920633,
+      "total_ce_pair_count": 8327,
+      "avg_ce_pair_count": 26.434920634920633,
+      "pair_savings_percent_vs_static_same_k": 59.01260090569009,
+      "ce_time_savings_percent_vs_static_same_k": 58.3
+    },
+    {
+      "k": 10,
+      "method": "Vector-only",
+      "hits_at_k": 286,
+      "queries": 315,
+      "recall_at_k": 0.9079365079365079,
+      "mrr_at_k": 0.7477500629881582,
+      "avg_candidate_pool_size": null,
+      "total_ce_pair_count": null,
+      "avg_ce_pair_count": null,
+      "pair_savings_percent_vs_static_same_k": 0.0,
+      "ce_time_savings_percent_vs_static_same_k": 0.0
+    },
+    {
+      "k": 10,
+      "method": "Vector + Cross-Encoder",
+      "hits_at_k": 286,
+      "queries": 315,
+      "recall_at_k": 0.9079365079365079,
+      "mrr_at_k": 0.7054106827916352,
+      "avg_candidate_pool_size": null,
+      "total_ce_pair_count": 3150,
+      "avg_ce_pair_count": 10.0,
+      "pair_savings_percent_vs_static_same_k": 0.0,
+      "ce_time_savings_percent_vs_static_same_k": 0.0
+    },
+    {
+      "k": 10,
+      "method": "AST-KG + Cross-Encoder static-K",
+      "hits_at_k": 284,
+      "queries": 315,
+      "recall_at_k": 0.9015873015873016,
+      "mrr_at_k": 0.6965444696397077,
+      "avg_candidate_pool_size": 92.15873015873017,
+      "total_ce_pair_count": 29913,
+      "avg_ce_pair_count": 94.96190476190476,
+      "pair_savings_percent_vs_static_same_k": 0.0,
+      "ce_time_savings_percent_vs_static_same_k": 0.0
+    },
+    {
+      "k": 10,
+      "method": "AST-KG + Staged Confidence",
+      "hits_at_k": 286,
+      "queries": 315,
+      "recall_at_k": 0.9079365079365079,
+      "mrr_at_k": 0.7035336356764929,
+      "avg_candidate_pool_size": 26.11111111111111,
+      "total_ce_pair_count": 11375,
+      "avg_ce_pair_count": 36.111111111111114,
+      "pair_savings_percent_vs_static_same_k": 61.973055193394174,
+      "ce_time_savings_percent_vs_static_same_k": 62.7
+    },
+    {
+      "k": 15,
+      "method": "Vector-only",
+      "hits_at_k": 296,
+      "queries": 315,
+      "recall_at_k": 0.9396825396825397,
+      "mrr_at_k": 0.7502932869599536,
+      "avg_candidate_pool_size": null,
+      "total_ce_pair_count": null,
+      "avg_ce_pair_count": null,
+      "pair_savings_percent_vs_static_same_k": 0.0,
+      "ce_time_savings_percent_vs_static_same_k": 0.0
+    },
+    {
+      "k": 15,
+      "method": "Vector + Cross-Encoder",
+      "hits_at_k": 296,
+      "queries": 315,
+      "recall_at_k": 0.9396825396825397,
+      "mrr_at_k": 0.7026214085737895,
+      "avg_candidate_pool_size": null,
+      "total_ce_pair_count": 4725,
+      "avg_ce_pair_count": 15.0,
+      "pair_savings_percent_vs_static_same_k": 0.0,
+      "ce_time_savings_percent_vs_static_same_k": 0.0
+    },
+    {
+      "k": 15,
+      "method": "AST-KG + Cross-Encoder static-K",
+      "hits_at_k": 291,
+      "queries": 315,
+      "recall_at_k": 0.9238095238095239,
+      "mrr_at_k": 0.7017041864660912,
+      "avg_candidate_pool_size": 122.79047619047618,
+      "total_ce_pair_count": 33817,
+      "avg_ce_pair_count": 107.35555555555555,
+      "pair_savings_percent_vs_static_same_k": 0.0,
+      "ce_time_savings_percent_vs_static_same_k": 0.0
+    },
+    {
+      "k": 15,
+      "method": "AST-KG + Staged Confidence",
+      "hits_at_k": 294,
+      "queries": 315,
+      "recall_at_k": 0.9333333333333333,
+      "mrr_at_k": 0.701230859088002,
+      "avg_candidate_pool_size": 29.295238095238094,
+      "total_ce_pair_count": 13953,
+      "avg_ce_pair_count": 44.2952380952381,
+      "pair_savings_percent_vs_static_same_k": 58.739687139604335,
+      "ce_time_savings_percent_vs_static_same_k": 56.3
+    },
+    {
+      "k": 20,
+      "method": "Vector-only",
+      "hits_at_k": 301,
+      "queries": 315,
+      "recall_at_k": 0.9555555555555556,
+      "mrr_at_k": 0.7511943140374513,
+      "avg_candidate_pool_size": null,
+      "total_ce_pair_count": null,
+      "avg_ce_pair_count": null,
+      "pair_savings_percent_vs_static_same_k": 0.0,
+      "ce_time_savings_percent_vs_static_same_k": 0.0
+    },
+    {
+      "k": 20,
+      "method": "Vector + Cross-Encoder",
+      "hits_at_k": 301,
+      "queries": 315,
+      "recall_at_k": 0.9555555555555556,
+      "mrr_at_k": 0.6974876669679855,
+      "avg_candidate_pool_size": null,
+      "total_ce_pair_count": 6300,
+      "avg_ce_pair_count": 20.0,
+      "pair_savings_percent_vs_static_same_k": 0.0,
+      "ce_time_savings_percent_vs_static_same_k": 0.0
+    },
+    {
+      "k": 20,
+      "method": "AST-KG + Cross-Encoder static-K",
+      "hits_at_k": 298,
+      "queries": 315,
+      "recall_at_k": 0.946031746031746,
+      "mrr_at_k": 0.7045628855012609,
+      "avg_candidate_pool_size": 154.73333333333332,
+      "total_ce_pair_count": 34135,
+      "avg_ce_pair_count": 108.36507936507937,
+      "pair_savings_percent_vs_static_same_k": 0.0,
+      "ce_time_savings_percent_vs_static_same_k": 0.0
+    },
+    {
+      "k": 20,
+      "method": "AST-KG + Staged Confidence",
+      "hits_at_k": 301,
+      "queries": 315,
+      "recall_at_k": 0.9555555555555556,
+      "mrr_at_k": 0.6971882281723061,
+      "avg_candidate_pool_size": 32.19047619047619,
+      "total_ce_pair_count": 16440,
+      "avg_ce_pair_count": 52.19047619047619,
+      "pair_savings_percent_vs_static_same_k": 51.83828914603779,
+      "ce_time_savings_percent_vs_static_same_k": 53.4
+    }
+  ],
+  "k20_primary_cross_check": {
+    "authoritative_primary_k": 20,
+    "sensitivity_k20_note": "The recovered sensitivity protocol fixes dynamic_k_min=5. The authoritative primary staged K=20 run uses dynamic_k_min=10 and remains unchanged.",
+    "aggregate_comparison": {
+      "Vector-only": {
+        "sensitivity_dynamic_k_min": null,
+        "primary_dynamic_k_min": null,
+        "sensitivity_hits": 301,
+        "primary_hits": 301,
+        "sensitivity_recall": 0.9555555555555556,
+        "primary_recall": 0.9555555555555556,
+        "sensitivity_mrr": 0.7511943140374513,
+        "primary_mrr": 0.7511943140374513,
+        "recall_matches_primary": true,
+        "mrr_matches_primary": true
+      },
+      "Vector + Cross-Encoder": {
+        "sensitivity_dynamic_k_min": null,
+        "primary_dynamic_k_min": null,
+        "sensitivity_hits": 301,
+        "primary_hits": 301,
+        "sensitivity_recall": 0.9555555555555556,
+        "primary_recall": 0.9555555555555556,
+        "sensitivity_mrr": 0.6974876669679855,
+        "primary_mrr": 0.6974876669679855,
+        "recall_matches_primary": true,
+        "mrr_matches_primary": true
+      },
+      "AST-KG + Cross-Encoder static-K": {
+        "sensitivity_dynamic_k_min": null,
+        "primary_dynamic_k_min": null,
+        "sensitivity_hits": 298,
+        "primary_hits": 298,
+        "sensitivity_recall": 0.946031746031746,
+        "primary_recall": 0.946031746031746,
+        "sensitivity_mrr": 0.7045628855012609,
+        "primary_mrr": 0.7045628855012609,
+        "recall_matches_primary": true,
+        "mrr_matches_primary": true
+      },
+      "AST-KG + Staged Confidence": {
+        "sensitivity_dynamic_k_min": 5,
+        "primary_dynamic_k_min": 10,
+        "sensitivity_hits": 301,
+        "primary_hits": 301,
+        "sensitivity_recall": 0.9555555555555556,
+        "primary_recall": 0.9555555555555556,
+        "sensitivity_mrr": 0.6971882281723061,
+        "primary_mrr": 0.6971882281723061,
+        "recall_matches_primary": true,
+        "mrr_matches_primary": true
+      }
+    },
+    "per_query_comparison": {
+      "Vector-only": {
+        "changed_gold_rank_query_count": 0,
+        "changed_hit_query_count": 0,
+        "changed_gold_rank_query_ids": [],
+        "changed_hit_query_ids": []
+      },
+      "Vector + Cross-Encoder": {
+        "changed_gold_rank_query_count": 0,
+        "changed_hit_query_count": 0,
+        "changed_gold_rank_query_ids": [],
+        "changed_hit_query_ids": []
+      },
+      "AST-KG + Cross-Encoder static-K": {
+        "changed_gold_rank_query_count": 0,
+        "changed_hit_query_count": 0,
+        "changed_gold_rank_query_ids": [],
+        "changed_hit_query_ids": []
+      },
+      "AST-KG + Staged Confidence": {
+        "changed_gold_rank_query_count": 0,
+        "changed_hit_query_count": 0,
+        "changed_gold_rank_query_ids": [],
+        "changed_hit_query_ids": []
+      }
+    }
+  }
+}

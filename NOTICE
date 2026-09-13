@@ -1,0 +1,31 @@
+NOTICE
+======
+
+This repository contains material extracted from Apache Kafka source code.
+
+    Apache Kafka
+    Copyright 2021 The Apache Software Foundation
+    https://kafka.apache.org/
+    Licensed under the Apache License, Version 2.0
+    https://www.apache.org/licenses/LICENSE-2.0
+
+Specifically, the following contain short extracts of, or identifiers derived
+from, Apache-2.0-licensed Apache Kafka source:
+
+  - corpus/frozen_corpus_1600.jsonl
+        log-template strings, logger names, class and method identifiers, and
+        (file, line) source locations for 1,600 log statements
+  - benchmarks/**/*.json
+        expected (file, line) targets and, where present, the log-template text
+        that motivated each question
+
+The Apache Kafka source tree itself is NOT redistributed in this repository.
+No modification was made to any extracted string; extraction was performed by a
+Tree-sitter-based AST parser and the strings are reproduced verbatim.
+
+All other original content in this repository is licensed under MIT (code, see
+LICENSE) or CC BY 4.0 (data, see LICENSE-DATA).
+
+HippoRAG (https://github.com/OSU-NLP-Group/HippoRAG) is referenced by tag
+v1.0.0, commit b144c46df14cabe5f5822d8caded4bec5f709461, and is NOT
+redistributed here. It remains under its own license.

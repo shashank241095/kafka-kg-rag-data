@@ -1,0 +1,95 @@
+[
+  {
+    "timestamp": "2026-08-10T18:29:41",
+    "params": {
+      "run_label": "ast_k_sensitivity_v1_k20",
+      "python_executable": ".venv/bin/python",
+      "neo4j_uri": "bolt://127.0.0.1:7688",
+      "neo4j_user": "neo4j",
+      "repo_name": "kafka",
+      "qdrant_url": "http://127.0.0.1:6333",
+      "collection_name": "kafka_log_templates_ast",
+      "output_dir": "results/ast_k_sensitivity_v1/raw_runs/k_20",
+      "per_query_dir": "results/ast_k_sensitivity_v1/per_query_results/k_20",
+      "dataset_file": "scripts/benchMarkScript/benchmark_incident_v2_plus_v3_plus_jira_flat_ast_cleaned_proposed.json",
+      "k": 20,
+      "limit": null,
+      "dynamic_k_enabled": false,
+      "dynamic_k_min": 5,
+      "dynamic_k_drop": 0.15,
+      "dynamic_k_max": 40,
+      "staged_batch_size": 20,
+      "confidence_high": 0.6,
+      "confidence_low": 0.25,
+      "staged_big_step": null,
+      "staged_small_step": null,
+      "embed_cache_db": ".cache/embeddings.sqlite",
+      "cache_stats": true,
+      "rerank_model": "BAAI/bge-reranker-v2-m3",
+      "experiments": [
+        {
+          "name": "Vector-only",
+          "kind": "vector",
+          "args": []
+        },
+        {
+          "name": "Vector+CrossEncoder",
+          "kind": "vector",
+          "args": [
+            "--rerank-model",
+            "BAAI/bge-reranker-v2-m3"
+          ]
+        },
+        {
+          "name": "KG+CrossEncoder(static-K)",
+          "kind": "kg",
+          "args": [
+            "--rerank-model",
+            "BAAI/bge-reranker-v2-m3",
+            "--rerank-kg"
+          ]
+        },
+        {
+          "name": "KG+CrossEncoder+StagedConfidence",
+          "kind": "kg",
+          "args": [
+            "--rerank-model",
+            "BAAI/bge-reranker-v2-m3",
+            "--rerank-kg",
+            "--staged-confidence"
+          ]
+        }
+      ]
+    },
+    "rows": [
+      {
+        "Method": "Vector-only",
+        "Recall@K": 0.9555555555555556,
+        "MRR": 0.751,
+        "PairSavings%": 0.0,
+        "CETimeSavings%": 0.0
+      },
+      {
+        "Method": "Vector+CrossEncoder",
+        "Recall@K": 0.9555555555555556,
+        "MRR": 0.697,
+        "PairSavings%": 0.0,
+        "CETimeSavings%": 0.0
+      },
+      {
+        "Method": "KG+CrossEncoder(static-K)",
+        "Recall@K": 0.946031746031746,
+        "MRR": 0.705,
+        "PairSavings%": 0.0,
+        "CETimeSavings%": 0.0
+      },
+      {
+        "Method": "KG+CrossEncoder+StagedConfidence",
+        "Recall@K": 0.9555555555555556,
+        "MRR": 0.697,
+        "PairSavings%": 51.8,
+        "CETimeSavings%": 53.4
+      }
+    ]
+  }
+]

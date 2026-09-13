@@ -1,0 +1,21 @@
+% Exploratory JIRA-seeded subgroup (n=21). NOT a primary result.
+\begin{table}[htbp]
+\caption{Exploratory JIRA-seeded subgroup results (\(n=21\) queries over only 5 unique targets). Query-weighted and target-balanced Recall@20 are both shown because the subgroup is strongly target-concentrated. \(\dagger\) Post-hoc sensitivity configuration.}
+\label{tab:jira-subgroup}
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrr}
+\toprule
+Method & Hits@20 & Recall@20 & tb-Recall@20 & MRR@20 \\
+\midrule
+Vector-only & 21/21 & 1.000 & 1.000 & 0.630 \\
+Vector + CE & 21/21 & 1.000 & 1.000 & 0.637 \\
+AST-KG static & 16/21 & 0.762 & 0.857 & 0.629 \\
+AST-KG staged & 21/21 & 1.000 & 1.000 & 0.637 \\
+ColBERTv2-only & 16/21 & 0.762 & 0.857 & 0.605 \\
+HippoRAG (ensemble off) & 5/21 & 0.238 & 0.329 & 0.016 \\
+HippoRAG + doc ens. \(^{\dagger}\) & 8/21 & 0.381 & 0.490 & 0.048 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}

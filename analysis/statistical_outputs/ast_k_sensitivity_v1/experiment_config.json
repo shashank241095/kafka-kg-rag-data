@@ -1,0 +1,164 @@
+{
+  "status": "complete",
+  "experiment_type": "sensitivity/robustness only; not parameter tuning",
+  "primary_k": 20,
+  "tested_k": [
+    5,
+    10,
+    15,
+    20
+  ],
+  "optional_k40_run": false,
+  "optional_k40_reason": "Optional and unnecessary for the main sweep; K=40 coincides with dynamic_k_max=40.",
+  "benchmark": {
+    "path": "scripts/benchMarkScript/benchmark_incident_v2_plus_v3_plus_jira_flat_ast_cleaned_proposed.json",
+    "sha256": "21c9c668a34711e311a30ec38b57d2ca5b78c829fbcb3743ee69d30f3d49a543",
+    "queries": 315,
+    "unique_targets": 103
+  },
+  "stores": {
+    "neo4j_uri": "bolt://localhost:7688",
+    "qdrant_url": "http://localhost:6333",
+    "qdrant_collection": "kafka_log_templates_ast",
+    "log_template_count_verified": 1600
+  },
+  "retrieval": {
+    "embedding_model": "text-embedding-3-large",
+    "cross_encoder": "BAAI/bge-reranker-v2-m3",
+    "reranker_device": null,
+    "reranker_batch_size": 16,
+    "rerank_kg_max": 200,
+    "candidate_deduplication": "unchanged existing implementation",
+    "kg_expansion_logic": "unchanged existing implementation",
+    "metric_definition": "Recall@K iff 1 <= final gold rank <= K; MRR@K=1/rank under the same cutoff, else 0."
+  },
+  "staged_sensitivity_configuration": {
+    "dynamic_k_min": 5,
+    "dynamic_k_max": 40,
+    "dynamic_k_drop": 0.15,
+    "staged_batch_size": 20,
+    "confidence_high": 0.6,
+    "confidence_low": 0.25,
+    "staged_big_step": null,
+    "staged_small_step": null,
+    "source": [
+      "paper/kafkaops_kg_paper_draft.md",
+      "paper/access.tex"
+    ],
+    "k5_compatibility": "The implementation accepts min=10 but would expand the initial staged pool to at least 10 at K=5. The recovered original sensitivity protocol fixes min=5 across the sweep."
+  },
+  "authoritative_primary_staged_configuration": {
+    "k": 20,
+    "dynamic_k_min": 10,
+    "dynamic_k_max": 40,
+    "dynamic_k_drop": 0.15,
+    "staged_batch_size": 20,
+    "confidence_high": 0.6,
+    "confidence_low": 0.25,
+    "preserved": true
+  },
+  "execution": {
+    "all_query_embeddings_from_cache": true,
+    "embedding_api_calls_for_sweep": 0,
+    "sequential_methods_for_timing": true,
+    "raw_runs_dir": "results/ast_k_sensitivity_v1/raw_runs",
+    "per_query_results_dir": "results/ast_k_sensitivity_v1/per_query_results",
+    "absolute_ce_time_note": "The existing ladder retained same-run CE-time savings but discarded absolute CE seconds from its final schema."
+  },
+  "validation": {
+    "all_16_method_k_artifacts_present": true,
+    "rows_per_artifact": 315,
+    "corrected_metric_accounting_verified_per_query": true,
+    "query_ids_and_signatures_match_benchmark": true,
+    "unique_targets_verified": 103,
+    "k20_cross_check": {
+      "authoritative_primary_k": 20,
+      "sensitivity_k20_note": "The recovered sensitivity protocol fixes dynamic_k_min=5. The authoritative primary staged K=20 run uses dynamic_k_min=10 and remains unchanged.",
+      "aggregate_comparison": {
+        "Vector-only": {
+          "sensitivity_dynamic_k_min": null,
+          "primary_dynamic_k_min": null,
+          "sensitivity_hits": 301,
+          "primary_hits": 301,
+          "sensitivity_recall": 0.9555555555555556,
+          "primary_recall": 0.9555555555555556,
+          "sensitivity_mrr": 0.7511943140374513,
+          "primary_mrr": 0.7511943140374513,
+          "recall_matches_primary": true,
+          "mrr_matches_primary": true
+        },
+        "Vector + Cross-Encoder": {
+          "sensitivity_dynamic_k_min": null,
+          "primary_dynamic_k_min": null,
+          "sensitivity_hits": 301,
+          "primary_hits": 301,
+          "sensitivity_recall": 0.9555555555555556,
+          "primary_recall": 0.9555555555555556,
+          "sensitivity_mrr": 0.6974876669679855,
+          "primary_mrr": 0.6974876669679855,
+          "recall_matches_primary": true,
+          "mrr_matches_primary": true
+        },
+        "AST-KG + Cross-Encoder static-K": {
+          "sensitivity_dynamic_k_min": null,
+          "primary_dynamic_k_min": null,
+          "sensitivity_hits": 298,
+          "primary_hits": 298,
+          "sensitivity_recall": 0.946031746031746,
+          "primary_recall": 0.946031746031746,
+          "sensitivity_mrr": 0.7045628855012609,
+          "primary_mrr": 0.7045628855012609,
+          "recall_matches_primary": true,
+          "mrr_matches_primary": true
+        },
+        "AST-KG + Staged Confidence": {
+          "sensitivity_dynamic_k_min": 5,
+          "primary_dynamic_k_min": 10,
+          "sensitivity_hits": 301,
+          "primary_hits": 301,
+          "sensitivity_recall": 0.9555555555555556,
+          "primary_recall": 0.9555555555555556,
+          "sensitivity_mrr": 0.6971882281723061,
+          "primary_mrr": 0.6971882281723061,
+          "recall_matches_primary": true,
+          "mrr_matches_primary": true
+        }
+      },
+      "per_query_comparison": {
+        "Vector-only": {
+          "changed_gold_rank_query_count": 0,
+          "changed_hit_query_count": 0,
+          "changed_gold_rank_query_ids": [],
+          "changed_hit_query_ids": []
+        },
+        "Vector + Cross-Encoder": {
+          "changed_gold_rank_query_count": 0,
+          "changed_hit_query_count": 0,
+          "changed_gold_rank_query_ids": [],
+          "changed_hit_query_ids": []
+        },
+        "AST-KG + Cross-Encoder static-K": {
+          "changed_gold_rank_query_count": 0,
+          "changed_hit_query_count": 0,
+          "changed_gold_rank_query_ids": [],
+          "changed_hit_query_ids": []
+        },
+        "AST-KG + Staged Confidence": {
+          "changed_gold_rank_query_count": 0,
+          "changed_hit_query_count": 0,
+          "changed_gold_rank_query_ids": [],
+          "changed_hit_query_ids": []
+        }
+      }
+    },
+    "frozen_source_hashes_before": {
+      "scripts/benchMarkScript/benchmark_incident_v2_plus_v3_plus_jira_flat_ast_cleaned_proposed.json": "21c9c668a34711e311a30ec38b57d2ca5b78c829fbcb3743ee69d30f3d49a543",
+      "scripts/results_ast_315_paper_config/corrected_metrics/results_summary.json": "6e8b33c739b8cbaac9e58d1b3d32e5519d4492923f15f760650c4bded2a0c5da",
+      "scripts/results_ast_315_paper_config/per_query/vector_only.json": "60f7404038c7944ada71741678ebde6467dfd9736d58435438988a450da615b7",
+      "scripts/results_ast_315_paper_config/per_query/vector_crossencoder.json": "9fd0b4eda09599fea5b8aeca0f10a06f1c013033a6cd605db2b0ee37aed13c91",
+      "scripts/results_ast_315_paper_config/per_query/kg_crossencoder_static_k.json": "8df27bc0337a4cb248f37afb74fddcbe6633ce10ea3a9ab26ef8ac0ef98936ef",
+      "scripts/results_ast_315_paper_config/per_query/kg_crossencoder_stagedconfidence.json": "4b0d04da840207989b1433317cd01e156e34624a997fc4c6ff6c9af05c3691db",
+      "results/ast_downstream_gpt41mini_v1/scoring_blinded_completed.csv": "a57fd8e1a7fbf23060b151257c9d3ccea229ba45a7178b7e9ca9c8a81e6cafe6"
+    }
+  }
+}

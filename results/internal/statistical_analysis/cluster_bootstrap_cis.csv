@@ -1,0 +1,11 @@
+method_a,method_b,difference,metric,point_estimate_query_weighted,ci_95_lower,ci_95_upper,bootstrap_seed,bootstrap_replicates,resampling_unit
+Vector-only,Vector+CrossEncoder,Vector+CrossEncoder - Vector-only,Recall@20,0.0,0.0,0.0,42,10000,"expected (file,line) target cluster"
+Vector-only,Vector+CrossEncoder,Vector+CrossEncoder - Vector-only,MRR@20,-0.05370664706946582,-0.09916285699797833,-0.00923107332806535,42,10000,"expected (file,line) target cluster"
+Vector-only,AST-KG+CrossEncoder(static-K),AST-KG+CrossEncoder(static-K) - Vector-only,Recall@20,-0.009523809523809601,-0.05167173252279635,0.025396825396825397,42,10000,"expected (file,line) target cluster"
+Vector-only,AST-KG+CrossEncoder(static-K),AST-KG+CrossEncoder(static-K) - Vector-only,MRR@20,-0.0466314285361904,-0.08715141170104404,-0.00624401757123365,42,10000,"expected (file,line) target cluster"
+Vector-only,AST-KG+CrossEncoder+StagedConfidence,AST-KG+CrossEncoder+StagedConfidence - Vector-only,Recall@20,0.0,-0.009523809523809525,0.009523809523809525,42,10000,"expected (file,line) target cluster"
+Vector-only,AST-KG+CrossEncoder+StagedConfidence,AST-KG+CrossEncoder+StagedConfidence - Vector-only,MRR@20,-0.054006085865145215,-0.1001421460528833,-0.007849657412369267,42,10000,"expected (file,line) target cluster"
+Vector+CrossEncoder,AST-KG+CrossEncoder(static-K),AST-KG+CrossEncoder(static-K) - Vector+CrossEncoder,Recall@20,-0.009523809523809601,-0.05063291139240506,0.025725547142412583,42,10000,"expected (file,line) target cluster"
+Vector+CrossEncoder,AST-KG+CrossEncoder(static-K),AST-KG+CrossEncoder(static-K) - Vector+CrossEncoder,MRR@20,0.007075218533275418,-0.011438192670038469,0.02695443855387502,42,10000,"expected (file,line) target cluster"
+AST-KG+CrossEncoder(static-K),AST-KG+CrossEncoder+StagedConfidence,AST-KG+CrossEncoder+StagedConfidence - AST-KG+CrossEncoder(static-K),Recall@20,0.009523809523809601,-0.025559105431309903,0.05095780493869662,42,10000,"expected (file,line) target cluster"
+AST-KG+CrossEncoder(static-K),AST-KG+CrossEncoder+StagedConfidence,AST-KG+CrossEncoder+StagedConfidence - AST-KG+CrossEncoder(static-K),MRR@20,-0.0073746573289548145,-0.027390278996536305,0.011342504903369646,42,10000,"expected (file,line) target cluster"

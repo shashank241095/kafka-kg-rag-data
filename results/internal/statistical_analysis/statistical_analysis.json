@@ -1,0 +1,1022 @@
+{
+  "analysis_configuration": {
+    "benchmark": "scripts/benchMarkScript/benchmark_incident_v2_plus_v3_plus_jira_flat_ast_cleaned_proposed.json",
+    "query_count": 315,
+    "unique_target_count": 103,
+    "k": 20,
+    "bootstrap_seed": 42,
+    "bootstrap_replicates": 10000,
+    "bootstrap_estimand": "query-weighted metric difference with target-cluster resampling"
+  },
+  "query_and_target_balanced_metrics": {
+    "Vector-only": {
+      "query_count": 315,
+      "hits_at_20": 301,
+      "query_recall_at_20": 0.9555555555555556,
+      "query_mrr_at_20": 0.7511943140374513,
+      "unique_target_count": 103,
+      "target_balanced_recall_at_20": 0.9546925566343042,
+      "target_balanced_mrr_at_20": 0.7575899437407146
+    },
+    "Vector+CrossEncoder": {
+      "query_count": 315,
+      "hits_at_20": 301,
+      "query_recall_at_20": 0.9555555555555556,
+      "query_mrr_at_20": 0.6974876669679855,
+      "unique_target_count": 103,
+      "target_balanced_recall_at_20": 0.9546925566343042,
+      "target_balanced_mrr_at_20": 0.7030149988790164
+    },
+    "AST-KG+CrossEncoder(static-K)": {
+      "query_count": 315,
+      "hits_at_20": 298,
+      "query_recall_at_20": 0.946031746031746,
+      "query_mrr_at_20": 0.7045628855012609,
+      "unique_target_count": 103,
+      "target_balanced_recall_at_20": 0.9542302357836339,
+      "target_balanced_mrr_at_20": 0.7105576340870459
+    },
+    "AST-KG+CrossEncoder+StagedConfidence": {
+      "query_count": 315,
+      "hits_at_20": 301,
+      "query_recall_at_20": 0.9555555555555556,
+      "query_mrr_at_20": 0.6971882281723061,
+      "unique_target_count": 103,
+      "target_balanced_recall_at_20": 0.9546925566343042,
+      "target_balanced_mrr_at_20": 0.7027097457377899
+    }
+  },
+  "paired_mcnemar": [
+    {
+      "method_a": "Vector-only",
+      "method_b": "Vector+CrossEncoder",
+      "both_hit": 301,
+      "n10_a_only": 0,
+      "n01_b_only": 0,
+      "both_miss": 14,
+      "exact_mcnemar_two_sided_p": 1.0
+    },
+    {
+      "method_a": "Vector-only",
+      "method_b": "AST-KG+CrossEncoder(static-K)",
+      "both_hit": 294,
+      "n10_a_only": 7,
+      "n01_b_only": 4,
+      "both_miss": 10,
+      "exact_mcnemar_two_sided_p": 0.548828125
+    },
+    {
+      "method_a": "Vector-only",
+      "method_b": "AST-KG+CrossEncoder+StagedConfidence",
+      "both_hit": 300,
+      "n10_a_only": 1,
+      "n01_b_only": 1,
+      "both_miss": 13,
+      "exact_mcnemar_two_sided_p": 1.0
+    },
+    {
+      "method_a": "Vector+CrossEncoder",
+      "method_b": "AST-KG+CrossEncoder(static-K)",
+      "both_hit": 294,
+      "n10_a_only": 7,
+      "n01_b_only": 4,
+      "both_miss": 10,
+      "exact_mcnemar_two_sided_p": 0.548828125
+    },
+    {
+      "method_a": "AST-KG+CrossEncoder(static-K)",
+      "method_b": "AST-KG+CrossEncoder+StagedConfidence",
+      "both_hit": 294,
+      "n10_a_only": 4,
+      "n01_b_only": 7,
+      "both_miss": 10,
+      "exact_mcnemar_two_sided_p": 0.548828125
+    }
+  ],
+  "cluster_bootstrap": [
+    {
+      "method_a": "Vector-only",
+      "method_b": "Vector+CrossEncoder",
+      "difference": "Vector+CrossEncoder - Vector-only",
+      "metric": "Recall@20",
+      "point_estimate_query_weighted": 0.0,
+      "ci_95_lower": 0.0,
+      "ci_95_upper": 0.0,
+      "bootstrap_seed": 42,
+      "bootstrap_replicates": 10000,
+      "resampling_unit": "expected (file,line) target cluster"
+    },
+    {
+      "method_a": "Vector-only",
+      "method_b": "Vector+CrossEncoder",
+      "difference": "Vector+CrossEncoder - Vector-only",
+      "metric": "MRR@20",
+      "point_estimate_query_weighted": -0.05370664706946582,
+      "ci_95_lower": -0.09916285699797833,
+      "ci_95_upper": -0.00923107332806535,
+      "bootstrap_seed": 42,
+      "bootstrap_replicates": 10000,
+      "resampling_unit": "expected (file,line) target cluster"
+    },
+    {
+      "method_a": "Vector-only",
+      "method_b": "AST-KG+CrossEncoder(static-K)",
+      "difference": "AST-KG+CrossEncoder(static-K) - Vector-only",
+      "metric": "Recall@20",
+      "point_estimate_query_weighted": -0.009523809523809601,
+      "ci_95_lower": -0.05167173252279635,
+      "ci_95_upper": 0.025396825396825397,
+      "bootstrap_seed": 42,
+      "bootstrap_replicates": 10000,
+      "resampling_unit": "expected (file,line) target cluster"
+    },
+    {
+      "method_a": "Vector-only",
+      "method_b": "AST-KG+CrossEncoder(static-K)",
+      "difference": "AST-KG+CrossEncoder(static-K) - Vector-only",
+      "metric": "MRR@20",
+      "point_estimate_query_weighted": -0.0466314285361904,
+      "ci_95_lower": -0.08715141170104404,
+      "ci_95_upper": -0.00624401757123365,
+      "bootstrap_seed": 42,
+      "bootstrap_replicates": 10000,
+      "resampling_unit": "expected (file,line) target cluster"
+    },
+    {
+      "method_a": "Vector-only",
+      "method_b": "AST-KG+CrossEncoder+StagedConfidence",
+      "difference": "AST-KG+CrossEncoder+StagedConfidence - Vector-only",
+      "metric": "Recall@20",
+      "point_estimate_query_weighted": 0.0,
+      "ci_95_lower": -0.009523809523809525,
+      "ci_95_upper": 0.009523809523809525,
+      "bootstrap_seed": 42,
+      "bootstrap_replicates": 10000,
+      "resampling_unit": "expected (file,line) target cluster"
+    },
+    {
+      "method_a": "Vector-only",
+      "method_b": "AST-KG+CrossEncoder+StagedConfidence",
+      "difference": "AST-KG+CrossEncoder+StagedConfidence - Vector-only",
+      "metric": "MRR@20",
+      "point_estimate_query_weighted": -0.054006085865145215,
+      "ci_95_lower": -0.1001421460528833,
+      "ci_95_upper": -0.007849657412369267,
+      "bootstrap_seed": 42,
+      "bootstrap_replicates": 10000,
+      "resampling_unit": "expected (file,line) target cluster"
+    },
+    {
+      "method_a": "Vector+CrossEncoder",
+      "method_b": "AST-KG+CrossEncoder(static-K)",
+      "difference": "AST-KG+CrossEncoder(static-K) - Vector+CrossEncoder",
+      "metric": "Recall@20",
+      "point_estimate_query_weighted": -0.009523809523809601,
+      "ci_95_lower": -0.05063291139240506,
+      "ci_95_upper": 0.025725547142412583,
+      "bootstrap_seed": 42,
+      "bootstrap_replicates": 10000,
+      "resampling_unit": "expected (file,line) target cluster"
+    },
+    {
+      "method_a": "Vector+CrossEncoder",
+      "method_b": "AST-KG+CrossEncoder(static-K)",
+      "difference": "AST-KG+CrossEncoder(static-K) - Vector+CrossEncoder",
+      "metric": "MRR@20",
+      "point_estimate_query_weighted": 0.007075218533275418,
+      "ci_95_lower": -0.011438192670038469,
+      "ci_95_upper": 0.02695443855387502,
+      "bootstrap_seed": 42,
+      "bootstrap_replicates": 10000,
+      "resampling_unit": "expected (file,line) target cluster"
+    },
+    {
+      "method_a": "AST-KG+CrossEncoder(static-K)",
+      "method_b": "AST-KG+CrossEncoder+StagedConfidence",
+      "difference": "AST-KG+CrossEncoder+StagedConfidence - AST-KG+CrossEncoder(static-K)",
+      "metric": "Recall@20",
+      "point_estimate_query_weighted": 0.009523809523809601,
+      "ci_95_lower": -0.025559105431309903,
+      "ci_95_upper": 0.05095780493869662,
+      "bootstrap_seed": 42,
+      "bootstrap_replicates": 10000,
+      "resampling_unit": "expected (file,line) target cluster"
+    },
+    {
+      "method_a": "AST-KG+CrossEncoder(static-K)",
+      "method_b": "AST-KG+CrossEncoder+StagedConfidence",
+      "difference": "AST-KG+CrossEncoder+StagedConfidence - AST-KG+CrossEncoder(static-K)",
+      "metric": "MRR@20",
+      "point_estimate_query_weighted": -0.0073746573289548145,
+      "ci_95_lower": -0.027390278996536305,
+      "ci_95_upper": 0.011342504903369646,
+      "bootstrap_seed": 42,
+      "bootstrap_replicates": 10000,
+      "resampling_unit": "expected (file,line) target cluster"
+    }
+  ],
+  "kg_wins_losses": [
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) vs Vector-only",
+      "outcome": "rescued_by_kg",
+      "query_id": "L026-Q1",
+      "question": "The application is failing to initiate data retrieval for the specified topic partition. How do we troubleshoot this issue?",
+      "expected_file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+      "expected_line": 2508,
+      "vector_rank": null,
+      "static_kg_rank": 16,
+      "staged_kg_rank": null,
+      "kg_candidate_pool_contains_gold_before_rerank": true,
+      "kg_rank_before_rerank": 49,
+      "kg_rank_after_rerank_full": 16,
+      "kg_pool_size": 145,
+      "diagnosis": "gold was in expanded pool and retained in top-K"
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) vs Vector-only",
+      "outcome": "rescued_by_kg",
+      "query_id": "L026-Q2",
+      "question": "It looks like we're running into a problem where the fetch process isn't starting for one of our topic partitions. What could be causing this?",
+      "expected_file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+      "expected_line": 2508,
+      "vector_rank": null,
+      "static_kg_rank": 3,
+      "staged_kg_rank": null,
+      "kg_candidate_pool_contains_gold_before_rerank": true,
+      "kg_rank_before_rerank": 51,
+      "kg_rank_after_rerank_full": 3,
+      "kg_pool_size": 117,
+      "diagnosis": "gold was in expanded pool and retained in top-K"
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) vs Vector-only",
+      "outcome": "rescued_by_kg",
+      "query_id": "L026-Q3",
+      "question": "What diagnostic steps can we take to identify why the fetching process for the specified topic partition isn't starting up correctly?",
+      "expected_file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+      "expected_line": 2508,
+      "vector_rank": null,
+      "static_kg_rank": 5,
+      "staged_kg_rank": null,
+      "kg_candidate_pool_contains_gold_before_rerank": true,
+      "kg_rank_before_rerank": 49,
+      "kg_rank_after_rerank_full": 5,
+      "kg_pool_size": 125,
+      "diagnosis": "gold was in expanded pool and retained in top-K"
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) vs Vector-only",
+      "outcome": "rescued_by_kg",
+      "query_id": "L035-Q3",
+      "question": "Could this issue indicate a problem with the topic deletion permissions or configuration settings in our Kafka setup?",
+      "expected_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "expected_line": 1014,
+      "vector_rank": null,
+      "static_kg_rank": 8,
+      "staged_kg_rank": 6,
+      "kg_candidate_pool_contains_gold_before_rerank": true,
+      "kg_rank_before_rerank": 21,
+      "kg_rank_after_rerank_full": 8,
+      "kg_pool_size": 152,
+      "diagnosis": "gold was in expanded pool and retained in top-K"
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) vs Vector-only",
+      "outcome": "lost_by_kg",
+      "query_id": "L038-Q2",
+      "question": "Hey, has anyone noticed that a scheduled task seems to be missing from our system?",
+      "expected_file": "metadata/src/main/java/org/apache/kafka/controller/PeriodicTaskControlManager.java",
+      "expected_line": 175,
+      "vector_rank": 11,
+      "static_kg_rank": null,
+      "staged_kg_rank": 13,
+      "kg_candidate_pool_contains_gold_before_rerank": true,
+      "kg_rank_before_rerank": 11,
+      "kg_rank_after_rerank_full": 24,
+      "kg_pool_size": 88,
+      "diagnosis": "gold was in pool but reranking placed it outside top-K"
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) vs Vector-only",
+      "outcome": "lost_by_kg",
+      "query_id": "L055-Q1",
+      "question": "The configuration update failed to process properly, leading to potential issues with the Kafka setup. What might be causing this error?",
+      "expected_file": "core/src/main/scala/kafka/server/ConfigAdminManager.scala",
+      "expected_line": 255,
+      "vector_rank": 10,
+      "static_kg_rank": null,
+      "staged_kg_rank": 14,
+      "kg_candidate_pool_contains_gold_before_rerank": true,
+      "kg_rank_before_rerank": 10,
+      "kg_rank_after_rerank_full": 26,
+      "kg_pool_size": 114,
+      "diagnosis": "gold was in pool but reranking placed it outside top-K"
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) vs Vector-only",
+      "outcome": "lost_by_kg",
+      "query_id": "KAFKA-9357-Q1",
+      "question": "Why are replica fetch requests being disconnected before the response is read?",
+      "expected_file": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+      "expected_line": 618,
+      "vector_rank": 20,
+      "static_kg_rank": null,
+      "staged_kg_rank": 18,
+      "kg_candidate_pool_contains_gold_before_rerank": true,
+      "kg_rank_before_rerank": 20,
+      "kg_rank_after_rerank_full": 50,
+      "kg_pool_size": 188,
+      "diagnosis": "gold was in pool but reranking placed it outside top-K"
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) vs Vector-only",
+      "outcome": "lost_by_kg",
+      "query_id": "KAFKA-13317-Q1",
+      "question": "Why are brokers repeatedly logging that fetch requests to another broker were disconnected before a response was read?",
+      "expected_file": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+      "expected_line": 618,
+      "vector_rank": 11,
+      "static_kg_rank": null,
+      "staged_kg_rank": 19,
+      "kg_candidate_pool_contains_gold_before_rerank": true,
+      "kg_rank_before_rerank": 11,
+      "kg_rank_after_rerank_full": 50,
+      "kg_pool_size": 167,
+      "diagnosis": "gold was in pool but reranking placed it outside top-K"
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) vs Vector-only",
+      "outcome": "lost_by_kg",
+      "query_id": "KAFKA-13317-Q2",
+      "question": "What Kafka log explains inter-broker fetch traffic failing with 'connection disconnected before the response was read'?",
+      "expected_file": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+      "expected_line": 618,
+      "vector_rank": 4,
+      "static_kg_rank": null,
+      "staged_kg_rank": 15,
+      "kg_candidate_pool_contains_gold_before_rerank": true,
+      "kg_rank_before_rerank": 4,
+      "kg_rank_after_rerank_full": 34,
+      "kg_pool_size": 200,
+      "diagnosis": "gold was in pool but reranking placed it outside top-K"
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) vs Vector-only",
+      "outcome": "lost_by_kg",
+      "query_id": "KAFKA-13317-Q3",
+      "question": "Could broken broker-to-broker connectivity be the cause of repeated fetch request disconnects?",
+      "expected_file": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+      "expected_line": 618,
+      "vector_rank": 9,
+      "static_kg_rank": null,
+      "staged_kg_rank": 17,
+      "kg_candidate_pool_contains_gold_before_rerank": true,
+      "kg_rank_before_rerank": 9,
+      "kg_rank_after_rerank_full": 38,
+      "kg_pool_size": 180,
+      "diagnosis": "gold was in pool but reranking placed it outside top-K"
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) vs Vector-only",
+      "outcome": "lost_by_kg",
+      "query_id": "KAFKA-7802-Q2",
+      "question": "Which Kafka log explains replica fetchers losing the response path to another broker?",
+      "expected_file": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+      "expected_line": 618,
+      "vector_rank": 16,
+      "static_kg_rank": null,
+      "staged_kg_rank": 19,
+      "kg_candidate_pool_contains_gold_before_rerank": true,
+      "kg_rank_before_rerank": 16,
+      "kg_rank_after_rerank_full": 97,
+      "kg_pool_size": 125,
+      "diagnosis": "gold was in pool but reranking placed it outside top-K"
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder+StagedConfidence vs Vector-only",
+      "outcome": "rescued_by_kg",
+      "query_id": "L035-Q3",
+      "question": "Could this issue indicate a problem with the topic deletion permissions or configuration settings in our Kafka setup?",
+      "expected_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "expected_line": 1014,
+      "vector_rank": null,
+      "static_kg_rank": 8,
+      "staged_kg_rank": 6,
+      "kg_candidate_pool_contains_gold_before_rerank": true,
+      "kg_rank_before_rerank": 21,
+      "kg_rank_after_rerank_full": 6,
+      "kg_pool_size": 40,
+      "diagnosis": "gold was in expanded pool and retained in top-K"
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder+StagedConfidence vs Vector-only",
+      "outcome": "lost_by_kg",
+      "query_id": "L088-Q2",
+      "question": "Has anyone else noticed problems when trying to increase the number of partitions for a topic lately?",
+      "expected_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "expected_line": 1823,
+      "vector_rank": 14,
+      "static_kg_rank": 14,
+      "staged_kg_rank": null,
+      "kg_candidate_pool_contains_gold_before_rerank": true,
+      "kg_rank_before_rerank": 14,
+      "kg_rank_after_rerank_full": 26,
+      "kg_pool_size": 40,
+      "diagnosis": "gold was in pool but reranking placed it outside top-K"
+    }
+  ],
+  "rank_change_summary": [
+    {
+      "method_a": "Vector-only",
+      "method_b": "Vector+CrossEncoder",
+      "rank_comparison_definition": "Misses or ranks > 20 are assigned effective rank 21.",
+      "improved": 48,
+      "worsened": 79,
+      "unchanged": 188,
+      "both_hit_count_for_mean_median": 301,
+      "mean_rank_change_b_minus_a_among_both_hits": 0.3588039867109635,
+      "median_rank_change_b_minus_a_among_both_hits": 0
+    },
+    {
+      "method_a": "Vector-only",
+      "method_b": "AST-KG+CrossEncoder(static-K)",
+      "rank_comparison_definition": "Misses or ranks > 20 are assigned effective rank 21.",
+      "improved": 38,
+      "worsened": 61,
+      "unchanged": 216,
+      "both_hit_count_for_mean_median": 294,
+      "mean_rank_change_b_minus_a_among_both_hits": 0.23809523809523808,
+      "median_rank_change_b_minus_a_among_both_hits": 0.0
+    }
+  ],
+  "rank_change_examples": [
+    {
+      "comparison": "Vector+CrossEncoder minus Vector-only",
+      "direction": "improved",
+      "query_id": "L001-Q3",
+      "question": "Could the alteration in partition assignments for our Kafka messages be linked to recent scaling operations or configuration changes?",
+      "expected_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "expected_line": 2055,
+      "rank_a": 17,
+      "rank_b": 4,
+      "effective_rank_change_b_minus_a": -13
+    },
+    {
+      "comparison": "Vector+CrossEncoder minus Vector-only",
+      "direction": "improved",
+      "query_id": "L003-Q2",
+      "question": "I noticed that node X couldn't handle the AlterPartition request for topic Y-partition Z—could this be causing issues with data replication?",
+      "expected_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "expected_line": 1266,
+      "rank_a": 14,
+      "rank_b": 2,
+      "effective_rank_change_b_minus_a": -12
+    },
+    {
+      "comparison": "Vector+CrossEncoder minus Vector-only",
+      "direction": "improved",
+      "query_id": "L052-Q2",
+      "question": "Hey, have you noticed that we're getting errors when trying to access the end offset for a topic? It seems like it's throwing a critical issue.",
+      "expected_file": "core/src/main/scala/kafka/server/LocalLeaderEndPoint.scala",
+      "expected_line": 155,
+      "rank_a": 13,
+      "rank_b": 1,
+      "effective_rank_change_b_minus_a": -12
+    },
+    {
+      "comparison": "Vector+CrossEncoder minus Vector-only",
+      "direction": "improved",
+      "query_id": "L075-Q2",
+      "question": "Hey, why's our consumer suddenly acting weird? I think the offset just reset for one of the partitions.",
+      "expected_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+      "expected_line": 677,
+      "rank_a": 20,
+      "rank_b": 10,
+      "effective_rank_change_b_minus_a": -10
+    },
+    {
+      "comparison": "Vector+CrossEncoder minus Vector-only",
+      "direction": "improved",
+      "query_id": "L001-Q1",
+      "question": "We've observed a sudden change in the partitions being used by our Kafka topic. Can anyone explain what triggered this adjustment?",
+      "expected_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "expected_line": 2055,
+      "rank_a": 13,
+      "rank_b": 4,
+      "effective_rank_change_b_minus_a": -9
+    },
+    {
+      "comparison": "Vector+CrossEncoder minus Vector-only",
+      "direction": "improved",
+      "query_id": "L003-Q1",
+      "question": "Why is the AlterPartition request from node X failing for topic Y-partition Z, and what impact is this having on message processing?",
+      "expected_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "expected_line": 1266,
+      "rank_a": 11,
+      "rank_b": 2,
+      "effective_rank_change_b_minus_a": -9
+    },
+    {
+      "comparison": "Vector+CrossEncoder minus Vector-only",
+      "direction": "improved",
+      "query_id": "L012-Q1",
+      "question": "It seems that a broker in our Kafka cluster has unexpectedly fenced itself. What impact has this had on message processing and consumer behavior?",
+      "expected_file": "metadata/src/main/java/org/apache/kafka/controller/BrokerHeartbeatManager.java",
+      "expected_line": 408,
+      "rank_a": 10,
+      "rank_b": 1,
+      "effective_rank_change_b_minus_a": -9
+    },
+    {
+      "comparison": "Vector+CrossEncoder minus Vector-only",
+      "direction": "improved",
+      "query_id": "L067-Q1",
+      "question": "The system is experiencing unexpected behavior as the controller is not providing enough results, causing delays in processing.",
+      "expected_file": "core/src/main/scala/kafka/server/ConfigAdminManager.scala",
+      "expected_line": 368,
+      "rank_a": 10,
+      "rank_b": 2,
+      "effective_rank_change_b_minus_a": -8
+    },
+    {
+      "comparison": "Vector+CrossEncoder minus Vector-only",
+      "direction": "improved",
+      "query_id": "L036-Q2",
+      "question": "Hey team, we're getting an unknown topic error when trying to access certain partitions. Has anyone else seen this or know what's going on?",
+      "expected_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+      "expected_line": 444,
+      "rank_a": 10,
+      "rank_b": 3,
+      "effective_rank_change_b_minus_a": -7
+    },
+    {
+      "comparison": "Vector+CrossEncoder minus Vector-only",
+      "direction": "improved",
+      "query_id": "L036-Q3",
+      "question": "Could the absence of the expected topic or partition from the leader's perspective indicate a potential configuration error or a problem with our topic registrations?",
+      "expected_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+      "expected_line": 444,
+      "rank_a": 8,
+      "rank_b": 1,
+      "effective_rank_change_b_minus_a": -7
+    },
+    {
+      "comparison": "Vector+CrossEncoder minus Vector-only",
+      "direction": "worsened",
+      "query_id": "L078-Q2",
+      "question": "Hey, has anyone else noticed that we can't create topics right now? Something's definitely up.",
+      "expected_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "expected_line": 878,
+      "rank_a": 1,
+      "rank_b": 16,
+      "effective_rank_change_b_minus_a": 15
+    },
+    {
+      "comparison": "Vector+CrossEncoder minus Vector-only",
+      "direction": "worsened",
+      "query_id": "L056-Q2",
+      "question": "It seems we're having trouble with sending data to the named topic, leaving some messages stuck and unreleased.",
+      "expected_file": "core/src/main/scala/kafka/log/LogManager.scala",
+      "expected_line": 1488,
+      "rank_a": 3,
+      "rank_b": 17,
+      "effective_rank_change_b_minus_a": 14
+    },
+    {
+      "comparison": "Vector+CrossEncoder minus Vector-only",
+      "direction": "worsened",
+      "query_id": "L065-Q1",
+      "question": "The application is experiencing message delivery failures due to a partition issue.",
+      "expected_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+      "expected_line": 501,
+      "rank_a": 1,
+      "rank_b": 12,
+      "effective_rank_change_b_minus_a": 11
+    },
+    {
+      "comparison": "Vector+CrossEncoder minus Vector-only",
+      "direction": "worsened",
+      "query_id": "L078-Q1",
+      "question": "The system is failing to create new topics, resulting in a critical error message.",
+      "expected_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "expected_line": 878,
+      "rank_a": 3,
+      "rank_b": 14,
+      "effective_rank_change_b_minus_a": 11
+    },
+    {
+      "comparison": "Vector+CrossEncoder minus Vector-only",
+      "direction": "worsened",
+      "query_id": "KAFKA-9357-Q3",
+      "question": "Could inter-broker communication failure be causing fetch requests to drop before a response is read?",
+      "expected_file": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+      "expected_line": 618,
+      "rank_a": 6,
+      "rank_b": 17,
+      "effective_rank_change_b_minus_a": 11
+    },
+    {
+      "comparison": "Vector+CrossEncoder minus Vector-only",
+      "direction": "worsened",
+      "query_id": "KAFKA-13317-Q2",
+      "question": "What Kafka log explains inter-broker fetch traffic failing with 'connection disconnected before the response was read'?",
+      "expected_file": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+      "expected_line": 618,
+      "rank_a": 4,
+      "rank_b": 15,
+      "effective_rank_change_b_minus_a": 11
+    },
+    {
+      "comparison": "Vector+CrossEncoder minus Vector-only",
+      "direction": "worsened",
+      "query_id": "L055-Q2",
+      "question": "Hey, it seems like there was a hiccup while trying to change the configuration settings. Any idea what’s going on?",
+      "expected_file": "core/src/main/scala/kafka/server/ConfigAdminManager.scala",
+      "expected_line": 255,
+      "rank_a": 1,
+      "rank_b": 11,
+      "effective_rank_change_b_minus_a": 10
+    },
+    {
+      "comparison": "Vector+CrossEncoder minus Vector-only",
+      "direction": "worsened",
+      "query_id": "L076-Q1",
+      "question": "The cluster seems to be rejecting partition alteration requests, potentially affecting topic management. What might be causing this behavior?",
+      "expected_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "expected_line": 1300,
+      "rank_a": 1,
+      "rank_b": 11,
+      "effective_rank_change_b_minus_a": 10
+    },
+    {
+      "comparison": "Vector+CrossEncoder minus Vector-only",
+      "direction": "worsened",
+      "query_id": "L027-Q1",
+      "question": "We've initiated an auto-creation request for topics, but the controller isn't responding as expected. What could be causing this delay?",
+      "expected_file": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala",
+      "expected_line": 311,
+      "rank_a": 4,
+      "rank_b": 13,
+      "effective_rank_change_b_minus_a": 9
+    },
+    {
+      "comparison": "Vector+CrossEncoder minus Vector-only",
+      "direction": "worsened",
+      "query_id": "L076-Q3",
+      "question": "Could there be a network issue or misconfiguration with the nodes that is preventing AlterPartition requests from being processed?",
+      "expected_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "expected_line": 1300,
+      "rank_a": 1,
+      "rank_b": 10,
+      "effective_rank_change_b_minus_a": 9
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) minus Vector-only",
+      "direction": "improved",
+      "query_id": "L026-Q2",
+      "question": "It looks like we're running into a problem where the fetch process isn't starting for one of our topic partitions. What could be causing this?",
+      "expected_file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+      "expected_line": 2508,
+      "rank_a": null,
+      "rank_b": 3,
+      "effective_rank_change_b_minus_a": -18
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) minus Vector-only",
+      "direction": "improved",
+      "query_id": "L026-Q3",
+      "question": "What diagnostic steps can we take to identify why the fetching process for the specified topic partition isn't starting up correctly?",
+      "expected_file": "core/src/main/scala/kafka/server/ReplicaManager.scala",
+      "expected_line": 2508,
+      "rank_a": null,
+      "rank_b": 5,
+      "effective_rank_change_b_minus_a": -16
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) minus Vector-only",
+      "direction": "improved",
+      "query_id": "L001-Q3",
+      "question": "Could the alteration in partition assignments for our Kafka messages be linked to recent scaling operations or configuration changes?",
+      "expected_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "expected_line": 2055,
+      "rank_a": 17,
+      "rank_b": 4,
+      "effective_rank_change_b_minus_a": -13
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) minus Vector-only",
+      "direction": "improved",
+      "query_id": "L035-Q3",
+      "question": "Could this issue indicate a problem with the topic deletion permissions or configuration settings in our Kafka setup?",
+      "expected_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "expected_line": 1014,
+      "rank_a": null,
+      "rank_b": 8,
+      "effective_rank_change_b_minus_a": -13
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) minus Vector-only",
+      "direction": "improved",
+      "query_id": "L003-Q2",
+      "question": "I noticed that node X couldn't handle the AlterPartition request for topic Y-partition Z—could this be causing issues with data replication?",
+      "expected_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "expected_line": 1266,
+      "rank_a": 14,
+      "rank_b": 2,
+      "effective_rank_change_b_minus_a": -12
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) minus Vector-only",
+      "direction": "improved",
+      "query_id": "L052-Q2",
+      "question": "Hey, have you noticed that we're getting errors when trying to access the end offset for a topic? It seems like it's throwing a critical issue.",
+      "expected_file": "core/src/main/scala/kafka/server/LocalLeaderEndPoint.scala",
+      "expected_line": 155,
+      "rank_a": 13,
+      "rank_b": 1,
+      "effective_rank_change_b_minus_a": -12
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) minus Vector-only",
+      "direction": "improved",
+      "query_id": "L075-Q2",
+      "question": "Hey, why's our consumer suddenly acting weird? I think the offset just reset for one of the partitions.",
+      "expected_file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+      "expected_line": 677,
+      "rank_a": 20,
+      "rank_b": 10,
+      "effective_rank_change_b_minus_a": -10
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) minus Vector-only",
+      "direction": "improved",
+      "query_id": "L003-Q1",
+      "question": "Why is the AlterPartition request from node X failing for topic Y-partition Z, and what impact is this having on message processing?",
+      "expected_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "expected_line": 1266,
+      "rank_a": 11,
+      "rank_b": 2,
+      "effective_rank_change_b_minus_a": -9
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) minus Vector-only",
+      "direction": "improved",
+      "query_id": "L012-Q1",
+      "question": "It seems that a broker in our Kafka cluster has unexpectedly fenced itself. What impact has this had on message processing and consumer behavior?",
+      "expected_file": "metadata/src/main/java/org/apache/kafka/controller/BrokerHeartbeatManager.java",
+      "expected_line": 408,
+      "rank_a": 10,
+      "rank_b": 1,
+      "effective_rank_change_b_minus_a": -9
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) minus Vector-only",
+      "direction": "improved",
+      "query_id": "L067-Q1",
+      "question": "The system is experiencing unexpected behavior as the controller is not providing enough results, causing delays in processing.",
+      "expected_file": "core/src/main/scala/kafka/server/ConfigAdminManager.scala",
+      "expected_line": 368,
+      "rank_a": 10,
+      "rank_b": 2,
+      "effective_rank_change_b_minus_a": -8
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) minus Vector-only",
+      "direction": "worsened",
+      "query_id": "L078-Q2",
+      "question": "Hey, has anyone else noticed that we can't create topics right now? Something's definitely up.",
+      "expected_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "expected_line": 878,
+      "rank_a": 1,
+      "rank_b": 20,
+      "effective_rank_change_b_minus_a": 19
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) minus Vector-only",
+      "direction": "worsened",
+      "query_id": "KAFKA-13317-Q2",
+      "question": "What Kafka log explains inter-broker fetch traffic failing with 'connection disconnected before the response was read'?",
+      "expected_file": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+      "expected_line": 618,
+      "rank_a": 4,
+      "rank_b": null,
+      "effective_rank_change_b_minus_a": 17
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) minus Vector-only",
+      "direction": "worsened",
+      "query_id": "L055-Q2",
+      "question": "Hey, it seems like there was a hiccup while trying to change the configuration settings. Any idea what’s going on?",
+      "expected_file": "core/src/main/scala/kafka/server/ConfigAdminManager.scala",
+      "expected_line": 255,
+      "rank_a": 1,
+      "rank_b": 13,
+      "effective_rank_change_b_minus_a": 12
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) minus Vector-only",
+      "direction": "worsened",
+      "query_id": "L078-Q1",
+      "question": "The system is failing to create new topics, resulting in a critical error message.",
+      "expected_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "expected_line": 878,
+      "rank_a": 3,
+      "rank_b": 15,
+      "effective_rank_change_b_minus_a": 12
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) minus Vector-only",
+      "direction": "worsened",
+      "query_id": "KAFKA-13317-Q3",
+      "question": "Could broken broker-to-broker connectivity be the cause of repeated fetch request disconnects?",
+      "expected_file": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+      "expected_line": 618,
+      "rank_a": 9,
+      "rank_b": null,
+      "effective_rank_change_b_minus_a": 12
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) minus Vector-only",
+      "direction": "worsened",
+      "query_id": "L055-Q1",
+      "question": "The configuration update failed to process properly, leading to potential issues with the Kafka setup. What might be causing this error?",
+      "expected_file": "core/src/main/scala/kafka/server/ConfigAdminManager.scala",
+      "expected_line": 255,
+      "rank_a": 10,
+      "rank_b": null,
+      "effective_rank_change_b_minus_a": 11
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) minus Vector-only",
+      "direction": "worsened",
+      "query_id": "L038-Q2",
+      "question": "Hey, has anyone noticed that a scheduled task seems to be missing from our system?",
+      "expected_file": "metadata/src/main/java/org/apache/kafka/controller/PeriodicTaskControlManager.java",
+      "expected_line": 175,
+      "rank_a": 11,
+      "rank_b": null,
+      "effective_rank_change_b_minus_a": 10
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) minus Vector-only",
+      "direction": "worsened",
+      "query_id": "L076-Q1",
+      "question": "The cluster seems to be rejecting partition alteration requests, potentially affecting topic management. What might be causing this behavior?",
+      "expected_file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      "expected_line": 1300,
+      "rank_a": 1,
+      "rank_b": 11,
+      "effective_rank_change_b_minus_a": 10
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) minus Vector-only",
+      "direction": "worsened",
+      "query_id": "KAFKA-13317-Q1",
+      "question": "Why are brokers repeatedly logging that fetch requests to another broker were disconnected before a response was read?",
+      "expected_file": "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+      "expected_line": 618,
+      "rank_a": 11,
+      "rank_b": null,
+      "effective_rank_change_b_minus_a": 10
+    },
+    {
+      "comparison": "AST-KG+CrossEncoder(static-K) minus Vector-only",
+      "direction": "worsened",
+      "query_id": "L027-Q1",
+      "question": "We've initiated an auto-creation request for topics, but the controller isn't responding as expected. What could be causing this delay?",
+      "expected_file": "core/src/main/scala/kafka/server/AutoTopicCreationManager.scala",
+      "expected_line": 311,
+      "rank_a": 4,
+      "rank_b": 13,
+      "effective_rank_change_b_minus_a": 9
+    }
+  ],
+  "subset_metrics": [
+    {
+      "subset": "v2",
+      "method": "Vector-only",
+      "query_count": 150,
+      "hits_at_20": 142,
+      "recall_at_20": 0.9466666666666667,
+      "mrr_at_20": 0.738812458783047
+    },
+    {
+      "subset": "v2",
+      "method": "Vector+CrossEncoder",
+      "query_count": 150,
+      "hits_at_20": 142,
+      "recall_at_20": 0.9466666666666667,
+      "mrr_at_20": 0.7177299672005555
+    },
+    {
+      "subset": "v2",
+      "method": "AST-KG+CrossEncoder(static-K)",
+      "query_count": 150,
+      "hits_at_20": 145,
+      "recall_at_20": 0.9666666666666667,
+      "mrr_at_20": 0.7182184694390576
+    },
+    {
+      "subset": "v2",
+      "method": "AST-KG+CrossEncoder+StagedConfidence",
+      "query_count": 150,
+      "hits_at_20": 143,
+      "recall_at_20": 0.9533333333333334,
+      "mrr_at_20": 0.7177670042375925
+    },
+    {
+      "subset": "v3",
+      "method": "Vector-only",
+      "query_count": 144,
+      "hits_at_20": 138,
+      "recall_at_20": 0.9583333333333334,
+      "mrr_at_20": 0.7817580085809253
+    },
+    {
+      "subset": "v3",
+      "method": "Vector+CrossEncoder",
+      "query_count": 144,
+      "hits_at_20": 138,
+      "recall_at_20": 0.9583333333333334,
+      "mrr_at_20": 0.6852128766844324
+    },
+    {
+      "subset": "v3",
+      "method": "AST-KG+CrossEncoder(static-K)",
+      "query_count": 144,
+      "hits_at_20": 137,
+      "recall_at_20": 0.9513888888888888,
+      "mrr_at_20": 0.701420406368323
+    },
+    {
+      "subset": "v3",
+      "method": "AST-KG+CrossEncoder+StagedConfidence",
+      "query_count": 144,
+      "hits_at_20": 137,
+      "recall_at_20": 0.9513888888888888,
+      "mrr_at_20": 0.6845192740719701
+    },
+    {
+      "subset": "JIRA",
+      "method": "Vector-only",
+      "query_count": 21,
+      "hits_at_20": 21,
+      "recall_at_20": 1.0,
+      "mrr_at_20": 0.6300565175565176
+    },
+    {
+      "subset": "JIRA",
+      "method": "Vector+CrossEncoder",
+      "query_count": 21,
+      "hits_at_20": 21,
+      "recall_at_20": 1.0,
+      "mrr_at_20": 0.6370697986797058
+    },
+    {
+      "subset": "JIRA",
+      "method": "AST-KG+CrossEncoder(static-K)",
+      "query_count": 21,
+      "hits_at_20": 16,
+      "recall_at_20": 0.7619047619047619,
+      "mrr_at_20": 0.6285714285714286
+    },
+    {
+      "subset": "JIRA",
+      "method": "AST-KG+CrossEncoder+StagedConfidence",
+      "query_count": 21,
+      "hits_at_20": 21,
+      "recall_at_20": 1.0,
+      "mrr_at_20": 0.6370697986797058
+    }
+  ],
+  "static_k_accounting_diagnostic": {
+    "runner_reported_static_hits": 300,
+    "literal_static_hits_at_20": 298,
+    "runner_reported_static_mrr": 0.7046385678247081,
+    "literal_static_mrr_at_20": 0.7045628855012609,
+    "cause": "When KG pool size exceeds rerank_kg_max=200, reranking/truncation is skipped and the evaluator counts any raw-pool gold rank as a hit.",
+    "gold_ranks_beyond_20": [
+      {
+        "query_id": "L024-Q3",
+        "question": "Could this issue with the partition be linked to a misconfiguration or a lack of topic registration in our Kafka setup?",
+        "expected": {
+          "file": "core/src/main/scala/kafka/server/AbstractFetcherThread.scala",
+          "line": 450
+        },
+        "raw_gold_rank": 81,
+        "kg_pool_size": 234
+      },
+      {
+        "query_id": "L076-Q2",
+        "question": "Hey, has anyone else noticed that we're unable to change partitions for some topics? It's been pretty frustrating.",
+        "expected": {
+          "file": "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+          "line": 1300
+        },
+        "raw_gold_rank": 87,
+        "kg_pool_size": 227
+      }
+    ],
+    "queries_with_pool_above_rerank_cap": 84
+  }
+}

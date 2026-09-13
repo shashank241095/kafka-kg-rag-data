@@ -1,0 +1,277 @@
+{
+  "benchmark": "/Users/shashankmishra/kafka-kg-rag/scripts/benchMarkScript/benchmark_incident_v2_plus_v3_plus_jira_flat.json",
+  "benchmark_sha256_before": "91a1bbd4601451c1b584a4a3a4edbbf2528aea7de6fe89fbaf4c70b2501e0f1f",
+  "benchmark_sha256_after": "91a1bbd4601451c1b584a4a3a4edbbf2528aea7de6fe89fbaf4c70b2501e0f1f",
+  "neo4j_uri": "bolt://localhost:7688",
+  "qdrant_collection": "kafka_log_templates_ast",
+  "summary": {
+    "total_queries": 321,
+    "total_unique_gold_targets": 105,
+    "queries_target_exists_in_neo4j": 309,
+    "unique_targets_existing_in_neo4j": 102,
+    "queries_target_exists_in_qdrant": 309,
+    "unique_targets_existing_in_qdrant": 102,
+    "queries_verified_by_source_ast": 309,
+    "unique_targets_verified_by_source_ast": 102,
+    "queries_target_exists_in_ast": 309,
+    "unique_targets_existing_in_ast": 102,
+    "queries_target_missing_in_ast": 12,
+    "unique_targets_missing_in_ast": 3,
+    "missing_classifications_by_query": {
+      "legacy regex false positive": 6,
+      "unsupported level such as fatal": 6
+    },
+    "missing_classifications_by_unique_target": {
+      "legacy regex false positive": 2,
+      "unsupported level such as fatal": 1
+    }
+  },
+  "composition_before": {
+    "query_count": 321,
+    "unique_target_count": 105,
+    "v2_count": 150,
+    "v3_count": 150,
+    "jira_seeded_count": 21,
+    "unknown_count": 0
+  },
+  "composition_after_proposed_false_positive_cleaning": {
+    "query_count": 315,
+    "unique_target_count": 103,
+    "v2_count": 150,
+    "v3_count": 144,
+    "jira_seeded_count": 21,
+    "unknown_count": 0
+  },
+  "proposed_cleaning": {
+    "policy": "Remove only confirmed legacy-regex false-positive labels.",
+    "removed_query_ids": [
+      "L081-Q1",
+      "L081-Q2",
+      "L081-Q3",
+      "L084-Q1",
+      "L084-Q2",
+      "L084-Q3"
+    ],
+    "removed_query_count": 6,
+    "retained_valid_but_unsupported_query_ids": [
+      "KAFKA-13960-Q1",
+      "KAFKA-13960-Q2",
+      "KAFKA-8046-Q1",
+      "KAFKA-8046-Q2",
+      "KAFKA-9877-LM-Q1",
+      "KAFKA-9877-LM-Q2"
+    ]
+  },
+  "missing_queries": [
+    {
+      "id": "L081-Q1",
+      "question": "The application has been intermittently failing to process messages from the Kafka topic, leading to delays in data availability.",
+      "expected": {
+        "file": "metadata/src/main/java/org/apache/kafka/controller/ResultOrError.java",
+        "line": 89
+      },
+      "source_part": "v3",
+      "classification": "legacy regex false positive",
+      "detail": "Legacy regex produced a LogTemplate, but no logger invocation exists at this AST line.",
+      "exists_neo4j": false,
+      "exists_qdrant": false,
+      "exists_source_ast": false
+    },
+    {
+      "id": "L081-Q2",
+      "question": "Hey team, I've noticed that we're running into issues where some messages aren't being consumed at all. Has anyone else seen this?",
+      "expected": {
+        "file": "metadata/src/main/java/org/apache/kafka/controller/ResultOrError.java",
+        "line": 89
+      },
+      "source_part": "v3",
+      "classification": "legacy regex false positive",
+      "detail": "Legacy regex produced a LogTemplate, but no logger invocation exists at this AST line.",
+      "exists_neo4j": false,
+      "exists_qdrant": false,
+      "exists_source_ast": false
+    },
+    {
+      "id": "L081-Q3",
+      "question": "Investigating the source of the error; could the message processing rate exceed the consumer capacity, causing a bottleneck?",
+      "expected": {
+        "file": "metadata/src/main/java/org/apache/kafka/controller/ResultOrError.java",
+        "line": 89
+      },
+      "source_part": "v3",
+      "classification": "legacy regex false positive",
+      "detail": "Legacy regex produced a LogTemplate, but no logger invocation exists at this AST line.",
+      "exists_neo4j": false,
+      "exists_qdrant": false,
+      "exists_source_ast": false
+    },
+    {
+      "id": "L084-Q1",
+      "question": "The system is unable to produce messages to the specified Kafka topic, resulting in delayed processing times.",
+      "expected": {
+        "file": "metadata/src/main/java/org/apache/kafka/controller/ResultOrError.java",
+        "line": 87
+      },
+      "source_part": "v3",
+      "classification": "legacy regex false positive",
+      "detail": "Legacy regex produced a LogTemplate, but no logger invocation exists at this AST line.",
+      "exists_neo4j": false,
+      "exists_qdrant": false,
+      "exists_source_ast": false
+    },
+    {
+      "id": "L084-Q2",
+      "question": "Why is it that the messages we expect to see in the log aren't showing up as they should? Is there a hiccup in our message flow?",
+      "expected": {
+        "file": "metadata/src/main/java/org/apache/kafka/controller/ResultOrError.java",
+        "line": 87
+      },
+      "source_part": "v3",
+      "classification": "legacy regex false positive",
+      "detail": "Legacy regex produced a LogTemplate, but no logger invocation exists at this AST line.",
+      "exists_neo4j": false,
+      "exists_qdrant": false,
+      "exists_source_ast": false
+    },
+    {
+      "id": "L084-Q3",
+      "question": "What could be causing the Kafka producers to fail in sending messages, leading to a noticeable backlog in processing?",
+      "expected": {
+        "file": "metadata/src/main/java/org/apache/kafka/controller/ResultOrError.java",
+        "line": 87
+      },
+      "source_part": "v3",
+      "classification": "legacy regex false positive",
+      "detail": "Legacy regex produced a LogTemplate, but no logger invocation exists at this AST line.",
+      "exists_neo4j": false,
+      "exists_qdrant": false,
+      "exists_source_ast": false
+    },
+    {
+      "id": "KAFKA-9877-LM-Q1",
+      "question": "Why did the broker shut down after every log directory failed?",
+      "expected": {
+        "file": "core/src/main/scala/kafka/log/LogManager.scala",
+        "line": 228
+      },
+      "source_part": "jira",
+      "classification": "unsupported level such as fatal",
+      "detail": "Genuine log.fatal(...) call; level is outside the configured ['debug', 'error', 'info', 'trace', 'warn'] set.",
+      "exists_neo4j": false,
+      "exists_qdrant": false,
+      "exists_source_ast": false
+    },
+    {
+      "id": "KAFKA-9877-LM-Q2",
+      "question": "What Kafka log indicates the broker is exiting because all log dirs are unusable?",
+      "expected": {
+        "file": "core/src/main/scala/kafka/log/LogManager.scala",
+        "line": 228
+      },
+      "source_part": "jira",
+      "classification": "unsupported level such as fatal",
+      "detail": "Genuine log.fatal(...) call; level is outside the configured ['debug', 'error', 'info', 'trace', 'warn'] set.",
+      "exists_neo4j": false,
+      "exists_qdrant": false,
+      "exists_source_ast": false
+    },
+    {
+      "id": "KAFKA-8046-Q1",
+      "question": "Why did the broker shut down because every Kafka log directory was marked failed?",
+      "expected": {
+        "file": "core/src/main/scala/kafka/log/LogManager.scala",
+        "line": 228
+      },
+      "source_part": "jira",
+      "classification": "unsupported level such as fatal",
+      "detail": "Genuine log.fatal(...) call; level is outside the configured ['debug', 'error', 'info', 'trace', 'warn'] set.",
+      "exists_neo4j": false,
+      "exists_qdrant": false,
+      "exists_source_ast": false
+    },
+    {
+      "id": "KAFKA-8046-Q2",
+      "question": "Which Kafka log explains a broker exiting after all log dirs become unavailable?",
+      "expected": {
+        "file": "core/src/main/scala/kafka/log/LogManager.scala",
+        "line": 228
+      },
+      "source_part": "jira",
+      "classification": "unsupported level such as fatal",
+      "detail": "Genuine log.fatal(...) call; level is outside the configured ['debug', 'error', 'info', 'trace', 'warn'] set.",
+      "exists_neo4j": false,
+      "exists_qdrant": false,
+      "exists_source_ast": false
+    },
+    {
+      "id": "KAFKA-13960-Q1",
+      "question": "Why is Kafka refusing to start because all log directories are already considered failed?",
+      "expected": {
+        "file": "core/src/main/scala/kafka/log/LogManager.scala",
+        "line": 228
+      },
+      "source_part": "jira",
+      "classification": "unsupported level such as fatal",
+      "detail": "Genuine log.fatal(...) call; level is outside the configured ['debug', 'error', 'info', 'trace', 'warn'] set.",
+      "exists_neo4j": false,
+      "exists_qdrant": false,
+      "exists_source_ast": false
+    },
+    {
+      "id": "KAFKA-13960-Q2",
+      "question": "Which Kafka log explains a broker aborting startup because every log dir has failed?",
+      "expected": {
+        "file": "core/src/main/scala/kafka/log/LogManager.scala",
+        "line": 228
+      },
+      "source_part": "jira",
+      "classification": "unsupported level such as fatal",
+      "detail": "Genuine log.fatal(...) call; level is outside the configured ['debug', 'error', 'info', 'trace', 'warn'] set.",
+      "exists_neo4j": false,
+      "exists_qdrant": false,
+      "exists_source_ast": false
+    }
+  ],
+  "missing_unique_targets": [
+    {
+      "file": "core/src/main/scala/kafka/log/LogManager.scala",
+      "line": 228,
+      "exists_neo4j": false,
+      "exists_qdrant": false,
+      "exists_source_ast": false,
+      "present_in_all_ast_checks": false,
+      "classification": "unsupported level such as fatal",
+      "detail": "Genuine log.fatal(...) call; level is outside the configured ['debug', 'error', 'info', 'trace', 'warn'] set."
+    },
+    {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ResultOrError.java",
+      "line": 87,
+      "exists_neo4j": false,
+      "exists_qdrant": false,
+      "exists_source_ast": false,
+      "present_in_all_ast_checks": false,
+      "classification": "legacy regex false positive",
+      "detail": "Legacy regex produced a LogTemplate, but no logger invocation exists at this AST line."
+    },
+    {
+      "file": "metadata/src/main/java/org/apache/kafka/controller/ResultOrError.java",
+      "line": 89,
+      "exists_neo4j": false,
+      "exists_qdrant": false,
+      "exists_source_ast": false,
+      "present_in_all_ast_checks": false,
+      "classification": "legacy regex false positive",
+      "detail": "Legacy regex produced a LogTemplate, but no logger invocation exists at this AST line."
+    }
+  ],
+  "store_consistency": {
+    "gold_neo4j_only": [],
+    "gold_qdrant_only": []
+  },
+  "errors": {
+    "source_files_with_ast_parser_errors": [],
+    "indexing_errors": [],
+    "neo4j_errors": [],
+    "qdrant_errors": []
+  }
+}

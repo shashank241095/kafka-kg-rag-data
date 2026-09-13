@@ -1,0 +1,110 @@
+{
+  "documents": 1600,
+  "entities": {
+    "total_extracted": 10522,
+    "unique_extracted": 2787,
+    "graph_phrase_nodes": 3603,
+    "per_document": {
+      "total": 10522,
+      "mean": 6.57625,
+      "median": 6.0,
+      "p25": 4.0,
+      "p75": 9.0,
+      "min": 0,
+      "max": 24
+    }
+  },
+  "relations": {
+    "total_triples": 9941,
+    "unique_facts": 8785,
+    "per_document": {
+      "total": 9941,
+      "mean": 6.213125,
+      "median": 6.0,
+      "p25": 4.0,
+      "p75": 8.0,
+      "min": 0,
+      "max": 26
+    }
+  },
+  "extraction_coverage": {
+    "zero_entity_documents": 82,
+    "zero_entity_document_pct": 5.125,
+    "zero_relation_documents": 95,
+    "zero_relation_document_pct": 5.9375
+  },
+  "graph": {
+    "nodes": 3603,
+    "edges": 118870,
+    "density": 0.01831868470395221,
+    "mean_degree": 65.98390230363586,
+    "median_degree": 15,
+    "connected_components_weak": 2,
+    "largest_component_size": 3602,
+    "largest_component_pct": 99.9722453510963,
+    "component_size_top10": [
+      3602,
+      1
+    ],
+    "singleton_nodes_degree_zero": 1,
+    "singleton_node_pct": 0.027754648903691368
+  },
+  "document_graph_linkage": {
+    "documents_with_zero_graph_phrases": 95,
+    "documents_with_zero_graph_phrases_pct": 5.9375,
+    "phrases_per_document": {
+      "total": 11309,
+      "mean": 7.068125,
+      "median": 7.0,
+      "p25": 5.0,
+      "p75": 9.0,
+      "min": 0,
+      "max": 24
+    },
+    "docs_to_facts_mat_shape": [
+      1600,
+      9917
+    ],
+    "facts_to_phrases_mat_shape": [
+      9917,
+      3603
+    ]
+  },
+  "config": {
+    "sim_threshold": 0.8,
+    "damping": 0.5,
+    "graph_alg": "ppr",
+    "doc_ensemble": false,
+    "dpr_only": false,
+    "node_specificity": true,
+    "recognition_threshold": 0.9,
+    "extraction_model": "gpt-3.5-turbo-1106",
+    "retriever": "colbertv2"
+  },
+  "load_seconds": 97.66112327575684,
+  "retrieval_time_statistics": {
+    "hipporag_internal_counters": {},
+    "hipporag_internal_counters_note": "Empty by construction: hipporag.py:236 guards every counter behind `doc_ensemble or dpr_only`, both False in the paper's main configuration.",
+    "queries_total": 315,
+    "queries_with_extracted_entities": 311,
+    "queries_with_zero_extracted_entities": 4,
+    "queries_with_zero_extracted_entities_pct": 1.2698412698412698,
+    "ppr_path_queries": 311,
+    "uniform_fallback_path_queries": 4,
+    "degenerate_uniform_ranking_confirmed": 4,
+    "degenerate_ranking_note": "A query counted here produced no entities AND returned exactly descending document indices, confirming the uniform-tie fallback at hipporag.py:232-233 rather than a content-based ranking.",
+    "hit_at_20_among_zero_entity_queries": 0,
+    "hit_at_20_among_entity_queries": 97,
+    "query_entities_per_query": {
+      "total": 692,
+      "mean": 2.196825396825397,
+      "median": 2,
+      "p25": 1.0,
+      "p75": 3.0,
+      "min": 0,
+      "max": 5
+    }
+  },
+  "retrieval_seconds": 102.15658593177795,
+  "queries_with_zero_extracted_entities": 4
+}

@@ -1,0 +1,57 @@
+{
+  "benchmark": "/Users/shashankmishra/kafka-kg-rag/scripts/benchMarkScript/benchmark_incident_v2_plus_v3_plus_jira_flat_ast_cleaned_proposed.json",
+  "benchmark_sha256_before": "21c9c668a34711e311a30ec38b57d2ca5b78c829fbcb3743ee69d30f3d49a543",
+  "benchmark_sha256_after": "21c9c668a34711e311a30ec38b57d2ca5b78c829fbcb3743ee69d30f3d49a543",
+  "neo4j_uri": "bolt://localhost:7688",
+  "qdrant_collection": "kafka_log_templates_ast",
+  "summary": {
+    "total_queries": 315,
+    "total_unique_gold_targets": 103,
+    "queries_target_exists_in_neo4j": 315,
+    "unique_targets_existing_in_neo4j": 103,
+    "queries_target_exists_in_qdrant": 315,
+    "unique_targets_existing_in_qdrant": 103,
+    "queries_verified_by_source_ast": 315,
+    "unique_targets_verified_by_source_ast": 103,
+    "queries_target_exists_in_ast": 315,
+    "unique_targets_existing_in_ast": 103,
+    "queries_target_missing_in_ast": 0,
+    "unique_targets_missing_in_ast": 0,
+    "missing_classifications_by_query": {},
+    "missing_classifications_by_unique_target": {}
+  },
+  "composition_before": {
+    "query_count": 315,
+    "unique_target_count": 103,
+    "v2_count": 150,
+    "v3_count": 144,
+    "jira_seeded_count": 21,
+    "unknown_count": 0
+  },
+  "composition_after_proposed_false_positive_cleaning": {
+    "query_count": 315,
+    "unique_target_count": 103,
+    "v2_count": 150,
+    "v3_count": 144,
+    "jira_seeded_count": 21,
+    "unknown_count": 0
+  },
+  "proposed_cleaning": {
+    "policy": "Remove only confirmed legacy-regex false-positive labels.",
+    "removed_query_ids": [],
+    "removed_query_count": 0,
+    "retained_valid_but_unsupported_query_ids": []
+  },
+  "missing_queries": [],
+  "missing_unique_targets": [],
+  "store_consistency": {
+    "gold_neo4j_only": [],
+    "gold_qdrant_only": []
+  },
+  "errors": {
+    "source_files_with_ast_parser_errors": [],
+    "indexing_errors": [],
+    "neo4j_errors": [],
+    "qdrant_errors": []
+  }
+}

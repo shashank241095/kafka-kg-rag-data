@@ -1,0 +1,10 @@
+\begin{tabular}{lrrrr}
+\toprule
+Method & Hits@20 & Recall@20 & MRR@20 & Pair savings (\%) \\
+\midrule
+Vector-only & 301 & 0.955556 & 0.751194 & 0.0 \\
+Vector\texttt{+}CrossEncoder & 301 & 0.955556 & 0.697488 & 0.0 \\
+KG\texttt{+}CrossEncoder(static-K) & 298 & 0.946032 & 0.704563 & 0.0 \\
+KG\texttt{+}CrossEncoder\texttt{+}StagedConfidence & 301 & 0.955556 & 0.697188 & 51.8 \\
+\bottomrule
+\end{tabular}

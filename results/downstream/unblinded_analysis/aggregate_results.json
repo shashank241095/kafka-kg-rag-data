@@ -1,0 +1,134 @@
+{
+  "analysis": "unblinded downstream AST experiment",
+  "validation": {
+    "status": "passed",
+    "total_answers": 300,
+    "unique_query_ids": 100,
+    "answers_per_query": 3,
+    "method_assignments_per_query": [
+      "Vector-only",
+      "AST-KG + Cross-Encoder static-K",
+      "AST-KG + Cross-Encoder + Staged Confidence"
+    ],
+    "missing_mappings": 0,
+    "duplicate_method_assignments_within_query": 0,
+    "invalid_or_missing_scores": 0,
+    "score_values_unchanged": true,
+    "score_value_fingerprint_sha256_before": "12bd88dbb02a5403b8f6e8fd938e529857336e338386d2ae57e66d4090f69fc2",
+    "score_value_fingerprint_sha256_after": "12bd88dbb02a5403b8f6e8fd938e529857336e338386d2ae57e66d4090f69fc2",
+    "blinded_scoring_artifact_sha256": "a57fd8e1a7fbf23060b151257c9d3ccea229ba45a7178b7e9ca9c8a81e6cafe6",
+    "private_mapping_artifact_sha256": "4b09910c284784eb0cea3a80b0e7efd2d9af2b1ed9da559d21b2b77c98acd565"
+  },
+  "new_ast_results": {
+    "Vector-only": {
+      "n": 100,
+      "metrics": {
+        "root_cause_correctness": {
+          "count": 58,
+          "denominator": 100,
+          "rate": 0.58,
+          "percentage": 58.0
+        },
+        "evidence_grounding": {
+          "count": 65,
+          "denominator": 100,
+          "rate": 0.65,
+          "percentage": 65.0
+        },
+        "hallucination": {
+          "count": 54,
+          "denominator": 100,
+          "rate": 0.54,
+          "percentage": 54.0
+        }
+      }
+    },
+    "AST-KG + Cross-Encoder static-K": {
+      "n": 100,
+      "metrics": {
+        "root_cause_correctness": {
+          "count": 57,
+          "denominator": 100,
+          "rate": 0.57,
+          "percentage": 57.0
+        },
+        "evidence_grounding": {
+          "count": 69,
+          "denominator": 100,
+          "rate": 0.69,
+          "percentage": 69.0
+        },
+        "hallucination": {
+          "count": 57,
+          "denominator": 100,
+          "rate": 0.57,
+          "percentage": 57.0
+        }
+      }
+    },
+    "AST-KG + Cross-Encoder + Staged Confidence": {
+      "n": 100,
+      "metrics": {
+        "root_cause_correctness": {
+          "count": 52,
+          "denominator": 100,
+          "rate": 0.52,
+          "percentage": 52.0
+        },
+        "evidence_grounding": {
+          "count": 63,
+          "denominator": 100,
+          "rate": 0.63,
+          "percentage": 63.0
+        },
+        "hallucination": {
+          "count": 54,
+          "denominator": 100,
+          "rate": 0.54,
+          "percentage": 54.0
+        }
+      }
+    }
+  },
+  "legacy_results_for_orientation_only": {
+    "Vector-only": {
+      "root_cause_correctness_percentage": 50.0,
+      "evidence_grounding_percentage": 96.0,
+      "hallucination_percentage": 4.0
+    },
+    "AST-KG + Cross-Encoder static-K": {
+      "legacy_label": "KG + CrossEncoder",
+      "root_cause_correctness_percentage": 62.0,
+      "evidence_grounding_percentage": 100.0,
+      "hallucination_percentage": 0.0
+    },
+    "AST-KG + Cross-Encoder + Staged Confidence": {
+      "legacy_label": "KG + StagedConfidence",
+      "root_cause_correctness_percentage": 61.0,
+      "evidence_grounding_percentage": 98.0,
+      "hallucination_percentage": 2.0
+    }
+  },
+  "legacy_comparison_warning": {
+    "strictly_comparable": false,
+    "do_not_treat_changes_as_statistical_evidence": true,
+    "reasons": [
+      "graph construction changed from regex to AST",
+      "the indexed corpus changed",
+      "the benchmark changed from 321 to an audited 315 queries",
+      "the new 100-query sample is derived from the revised 103-target benchmark",
+      "the new scoring is blinded"
+    ]
+  },
+  "scoring_provenance": "AI-assisted blinded adjudication per AI_SCORING_NOTICE.md; not human annotation.",
+  "source_artifact_hashes": {
+    "blinded_scoring_artifact_sha256": "a57fd8e1a7fbf23060b151257c9d3ccea229ba45a7178b7e9ca9c8a81e6cafe6",
+    "private_mapping_artifact_sha256": "4b09910c284784eb0cea3a80b0e7efd2d9af2b1ed9da559d21b2b77c98acd565",
+    "raw_generations_artifact_sha256": "4cc9ac2193913328ea09c9607326e8fb314650a385a4a74b3fb86347286ed2aa",
+    "retrieval_artifact_sha256": {
+      "Vector-only": "60f7404038c7944ada71741678ebde6467dfd9736d58435438988a450da615b7",
+      "AST-KG + Cross-Encoder static-K": "8df27bc0337a4cb248f37afb74fddcbe6633ce10ea3a9ab26ef8ac0ef98936ef",
+      "AST-KG + Cross-Encoder + Staged Confidence": "4b0d04da840207989b1433317cd01e156e34624a997fc4c6ff6c9af05c3691db"
+    }
+  }
+}

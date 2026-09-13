@@ -1,0 +1,6 @@
+method_a,method_b,both_hit,n10_a_only,n01_b_only,both_miss,exact_mcnemar_two_sided_p
+Vector-only,Vector+CrossEncoder,301,0,0,14,1.0
+Vector-only,AST-KG+CrossEncoder(static-K),294,7,4,10,0.548828125
+Vector-only,AST-KG+CrossEncoder+StagedConfidence,300,1,1,13,1.0
+Vector+CrossEncoder,AST-KG+CrossEncoder(static-K),294,7,4,10,0.548828125
+AST-KG+CrossEncoder(static-K),AST-KG+CrossEncoder+StagedConfidence,294,4,7,10,0.548828125

@@ -1,0 +1,8 @@
+{
+  "expected_generations": 300,
+  "completed_rows": 300,
+  "successful_generations": 300,
+  "failed_generations": 0,
+  "generations_retried": 0,
+  "total_retry_attempts": 0
+}

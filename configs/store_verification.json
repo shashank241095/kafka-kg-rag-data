@@ -1,0 +1,77 @@
+{
+  "neo4j_uri": "bolt://localhost:7688",
+  "neo4j_container": "neo4j-ast (host 7688 -> container 7687)",
+  "port_7687_vs_7688_resolution": "Two Neo4j containers exist. 'neo4j' (compose) binds host 7687 and is NOT the frozen store. 'neo4j-ast' binds host 7688 (volume kafka_kg_rag_neo4j_ast_data) and is the store recorded in results/ast_k_sensitivity_v1/experiment_config.json. Verified 7688.",
+  "qdrant_url": "http://localhost:6333",
+  "qdrant_collection": "kafka_log_templates_ast",
+  "graph_counts": {
+    "Class": 1096,
+    "Method": 7527,
+    "LogTemplate": 1600,
+    "DECLARES": 7527,
+    "EMITS": 1600
+  },
+  "checks": [
+    {
+      "check": "qdrant_points_equals_1600",
+      "pass": true,
+      "detail": "points_count=1600"
+    },
+    {
+      "check": "qdrant_scrolled_rows_equals_1600",
+      "pass": true,
+      "detail": "scrolled=1600"
+    },
+    {
+      "check": "neo4j_logtemplate_nodes_equals_1600",
+      "pass": true,
+      "detail": "count(LogTemplate)=1600"
+    },
+    {
+      "check": "neo4j_repo_scoped_equals_1600",
+      "pass": true,
+      "detail": "repo='kafka' count=1600"
+    },
+    {
+      "check": "neo4j_declares_emits_path_rows_equals_1600",
+      "pass": true,
+      "detail": "Class-DECLARES->Method-EMITS->LogTemplate rows=1600"
+    },
+    {
+      "check": "neo4j_unique_file_line_equals_1600",
+      "pass": true,
+      "detail": "unique (file,line)=1600"
+    },
+    {
+      "check": "qdrant_unique_file_line_equals_1600",
+      "pass": true,
+      "detail": "unique (file,line)=1600"
+    },
+    {
+      "check": "store_document_sets_identical",
+      "pass": true,
+      "detail": "neo4j_only=0 qdrant_only=0"
+    },
+    {
+      "check": "all_315_golds_in_neo4j",
+      "pass": true,
+      "detail": "missing=0"
+    },
+    {
+      "check": "all_315_golds_in_qdrant",
+      "pass": true,
+      "detail": "missing=0"
+    },
+    {
+      "check": "all_103_unique_targets_present",
+      "pass": true,
+      "detail": "unique_targets=103 missing=0"
+    },
+    {
+      "check": "frozen_graph_node_edge_counts_match_manuscript",
+      "pass": true,
+      "detail": "{\"Class\": 1096, \"Method\": 7527, \"LogTemplate\": 1600, \"DECLARES\": 7527, \"EMITS\": 1600}"
+    }
+  ],
+  "all_passed": true
+}

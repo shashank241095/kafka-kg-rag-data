@@ -1,0 +1,268 @@
+{
+  "analysis": "exploratory JIRA-seeded subgroup robustness check",
+  "n_queries": 21,
+  "n_unique_targets": 5,
+  "jira_query_ids": [
+    "KAFKA-13317-Q1",
+    "KAFKA-13317-Q2",
+    "KAFKA-13317-Q3",
+    "KAFKA-13960-Q1",
+    "KAFKA-13960-Q2",
+    "KAFKA-19586-Q1",
+    "KAFKA-19586-Q2",
+    "KAFKA-19586-Q3",
+    "KAFKA-7802-Q2",
+    "KAFKA-8046-Q1",
+    "KAFKA-8046-Q2",
+    "KAFKA-9016-Q3",
+    "KAFKA-9357-Q1",
+    "KAFKA-9357-Q2",
+    "KAFKA-9357-Q3",
+    "KAFKA-9877-AF-Q2",
+    "KAFKA-9877-LM-Q1",
+    "KAFKA-9877-LM-Q2",
+    "KAFKA-9877-RM-Q1",
+    "KAFKA-9877-RM-Q2",
+    "KAFKA-9877-RM-Q3"
+  ],
+  "jira_gold": {
+    "KAFKA-13317-Q1": [
+      "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+      618
+    ],
+    "KAFKA-13317-Q2": [
+      "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+      618
+    ],
+    "KAFKA-13317-Q3": [
+      "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+      618
+    ],
+    "KAFKA-13960-Q1": [
+      "core/src/main/scala/kafka/log/LogManager.scala",
+      228
+    ],
+    "KAFKA-13960-Q2": [
+      "core/src/main/scala/kafka/log/LogManager.scala",
+      228
+    ],
+    "KAFKA-19586-Q1": [
+      "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      1698
+    ],
+    "KAFKA-19586-Q2": [
+      "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      1698
+    ],
+    "KAFKA-19586-Q3": [
+      "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java",
+      1698
+    ],
+    "KAFKA-7802-Q2": [
+      "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+      618
+    ],
+    "KAFKA-8046-Q1": [
+      "core/src/main/scala/kafka/log/LogManager.scala",
+      228
+    ],
+    "KAFKA-8046-Q2": [
+      "core/src/main/scala/kafka/log/LogManager.scala",
+      228
+    ],
+    "KAFKA-9016-Q3": [
+      "core/src/main/scala/kafka/server/ReplicaManager.scala",
+      2172
+    ],
+    "KAFKA-9357-Q1": [
+      "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+      618
+    ],
+    "KAFKA-9357-Q2": [
+      "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+      618
+    ],
+    "KAFKA-9357-Q3": [
+      "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java",
+      618
+    ],
+    "KAFKA-9877-AF-Q2": [
+      "core/src/main/scala/kafka/server/AbstractFetcherManager.scala",
+      203
+    ],
+    "KAFKA-9877-LM-Q1": [
+      "core/src/main/scala/kafka/log/LogManager.scala",
+      228
+    ],
+    "KAFKA-9877-LM-Q2": [
+      "core/src/main/scala/kafka/log/LogManager.scala",
+      228
+    ],
+    "KAFKA-9877-RM-Q1": [
+      "core/src/main/scala/kafka/server/ReplicaManager.scala",
+      2172
+    ],
+    "KAFKA-9877-RM-Q2": [
+      "core/src/main/scala/kafka/server/ReplicaManager.scala",
+      2172
+    ],
+    "KAFKA-9877-RM-Q3": [
+      "core/src/main/scala/kafka/server/ReplicaManager.scala",
+      2172
+    ]
+  },
+  "queries_per_target": {
+    "clients/src/main/java/org/apache/kafka/clients/FetchSessionHandler.java:618": 7,
+    "core/src/main/scala/kafka/log/LogManager.scala:228": 6,
+    "metadata/src/main/java/org/apache/kafka/controller/ReplicationControlManager.java:1698": 3,
+    "core/src/main/scala/kafka/server/ReplicaManager.scala:2172": 4,
+    "core/src/main/scala/kafka/server/AbstractFetcherManager.scala:203": 1
+  },
+  "membership_derivation": "intersection of (a) benchmark_incident_jira_seed_flat.json matched on (question, file, line) and (b) the frozen statistical_analysis subset=JIRA label; both agreed exactly",
+  "sources": {
+    "Vector-only @K=5": {
+      "path": "results/ast_k_sensitivity_v1/per_query_results/k_5/vector_only.json",
+      "sha256": "cf4008fa1297b55216c8bad52c3a39239c0bbf8d8637a49b46edc20d4431a664"
+    },
+    "Vector-only @K=10": {
+      "path": "results/ast_k_sensitivity_v1/per_query_results/k_10/vector_only.json",
+      "sha256": "86191f482f8014ba0a48803732a557f7323593f4014a18062879a7d577b10674"
+    },
+    "Vector-only @K=15": {
+      "path": "results/ast_k_sensitivity_v1/per_query_results/k_15/vector_only.json",
+      "sha256": "f0b56f2b4b3b0447e427f3aaa8b6507bf39a8766c1b79caec9c614f57c9823eb"
+    },
+    "Vector-only @K=20": {
+      "path": "results/ast_k_sensitivity_v1/per_query_results/k_20/vector_only.json",
+      "sha256": "c4410d3e7cced62956e3c42e4060f32969f84224be6c6f827f46df996c7e77cf"
+    },
+    "Vector + CE @K=5": {
+      "path": "results/ast_k_sensitivity_v1/per_query_results/k_5/vector_crossencoder.json",
+      "sha256": "0ee6289e9b0f3d1ebe35d64c81acea891ec4ba0ea9839b8c37d67ef84b0b2e25"
+    },
+    "Vector + CE @K=10": {
+      "path": "results/ast_k_sensitivity_v1/per_query_results/k_10/vector_crossencoder.json",
+      "sha256": "8f3972836314a641fe3789dbfb164c835fc89928f619ed182d652a70ca499f51"
+    },
+    "Vector + CE @K=15": {
+      "path": "results/ast_k_sensitivity_v1/per_query_results/k_15/vector_crossencoder.json",
+      "sha256": "097fcb424a1e7ac3f1f202e43e770fb293a2ccfadf3386a96060f70f346889d4"
+    },
+    "Vector + CE @K=20": {
+      "path": "results/ast_k_sensitivity_v1/per_query_results/k_20/vector_crossencoder.json",
+      "sha256": "42dd1f05dc125571b119de3552c15f99b3ee717e6321a1e69d0063c25c58ae42"
+    },
+    "AST-KG static @K=5": {
+      "path": "results/ast_k_sensitivity_v1/per_query_results/k_5/kg_crossencoder_static_k.json",
+      "sha256": "3d80bbffe3199810d7582e0ac209eb70d6fda959e781d082afc6e5c9a70797c1"
+    },
+    "AST-KG static @K=10": {
+      "path": "results/ast_k_sensitivity_v1/per_query_results/k_10/kg_crossencoder_static_k.json",
+      "sha256": "7aab192e6d9d1005506d9fe0a6b69e51473be1a98a79dec7b56db1fb27cca3df"
+    },
+    "AST-KG static @K=15": {
+      "path": "results/ast_k_sensitivity_v1/per_query_results/k_15/kg_crossencoder_static_k.json",
+      "sha256": "a5e81d225afb598c8e94c6cbab5cf31671e56c40f3e0fcf9abc00c1a6005d7d7"
+    },
+    "AST-KG static @K=20": {
+      "path": "results/ast_k_sensitivity_v1/per_query_results/k_20/kg_crossencoder_static_k.json",
+      "sha256": "cdb5fa32b021a014422b16df5ab836c5e009df4687c69b2a14ec3e0e3cea3e51"
+    },
+    "AST-KG staged @K=5": {
+      "path": "results/ast_k_sensitivity_v1/per_query_results/k_5/kg_crossencoder_stagedconfidence.json",
+      "sha256": "cfd96354b5adbab4b6013a7f8877892ea62db66083c90899b83b19d4392905a8"
+    },
+    "AST-KG staged @K=10": {
+      "path": "results/ast_k_sensitivity_v1/per_query_results/k_10/kg_crossencoder_stagedconfidence.json",
+      "sha256": "fc229b0be04c1f31a38ff8373e62765506b55ea030eab1d9f9162d169e0cfce4"
+    },
+    "AST-KG staged @K=15": {
+      "path": "results/ast_k_sensitivity_v1/per_query_results/k_15/kg_crossencoder_stagedconfidence.json",
+      "sha256": "2071c33b8201d7814c52bb41f853bf56b0e671a117e11639a7af46387575b10b"
+    },
+    "AST-KG staged @K=20": {
+      "path": "results/ast_k_sensitivity_v1/per_query_results/k_20/kg_crossencoder_stagedconfidence.json",
+      "sha256": "832a0ee682fde614a3ff15508dbc8ebcb6270955fe23d2a87f1e6b6ec7bd1327"
+    },
+    "ColBERTv2-only": {
+      "path": "artifacts/hipporag/retriever_only_per_query.jsonl",
+      "sha256": "bfa5fd93002425ac30518b7a5da31fe95e6a46fe50ffb32ffe0289dd8948b3a3"
+    },
+    "HippoRAG (ensemble off)": {
+      "path": "artifacts/hipporag/full_per_query.jsonl",
+      "sha256": "705ccc0aec280efe1eddd33ecbb21ce7f60080184a24195ba390943f63b49696"
+    },
+    "HippoRAG + doc ensemble [POST-HOC]": {
+      "path": "artifacts/hipporag/doc_ensemble_true/per_query.jsonl",
+      "sha256": "f430325f0dc797486172d67f323144edb66d5b9779a151e420ee7ed0918c3016"
+    }
+  },
+  "full_benchmark_reconstruction": {
+    "Vector-only": {
+      "hits": 301,
+      "recall": 0.9555555555555556,
+      "mrr": 0.7511943140374513,
+      "frozen_hits": 301,
+      "frozen_recall": 0.955556,
+      "frozen_mrr": 0.751194,
+      "matches": true
+    },
+    "Vector + CE": {
+      "hits": 301,
+      "recall": 0.9555555555555556,
+      "mrr": 0.6974876669679855,
+      "frozen_hits": 301,
+      "frozen_recall": 0.955556,
+      "frozen_mrr": 0.697488,
+      "matches": true
+    },
+    "AST-KG static": {
+      "hits": 298,
+      "recall": 0.946031746031746,
+      "mrr": 0.7045628855012609,
+      "frozen_hits": 298,
+      "frozen_recall": 0.946032,
+      "frozen_mrr": 0.704563,
+      "matches": true
+    },
+    "AST-KG staged": {
+      "hits": 301,
+      "recall": 0.9555555555555556,
+      "mrr": 0.6971882281723061,
+      "frozen_hits": 301,
+      "frozen_recall": 0.955556,
+      "frozen_mrr": 0.697188,
+      "matches": true
+    },
+    "ColBERTv2-only": {
+      "hits": 253,
+      "recall": 0.8031746031746032,
+      "mrr": 0.5519974381879144,
+      "frozen_hits": 253,
+      "frozen_recall": 0.803175,
+      "frozen_mrr": 0.551997,
+      "matches": true
+    },
+    "HippoRAG (ensemble off)": {
+      "hits": 97,
+      "recall": 0.30793650793650795,
+      "mrr": 0.10986158512806013,
+      "frozen_hits": 97,
+      "frozen_recall": 0.307937,
+      "frozen_mrr": 0.109862,
+      "matches": true
+    },
+    "HippoRAG + doc ensemble [POST-HOC]": {
+      "hits": 204,
+      "recall": 0.6476190476190476,
+      "mrr": 0.21901234585629395,
+      "frozen_hits": 204,
+      "frozen_recall": 0.647619,
+      "frozen_mrr": 0.219012,
+      "matches": true
+    }
+  },
+  "retrieval_reexecuted": false,
+  "api_calls": 0,
+  "metric_definition": "Recall@K=1 iff 1<=gold_rank<=K; MRR@K=1/gold_rank else 0"
+}
