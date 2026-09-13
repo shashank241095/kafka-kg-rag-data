@@ -6,8 +6,8 @@ This repository contains material extracted from Apache Kafka source code.
     Apache Kafka
     Copyright 2021 The Apache Software Foundation
     https://kafka.apache.org/
-    Licensed under the Apache License, Version 2.0
-    https://www.apache.org/licenses/LICENSE-2.0
+    Licensed under the Apache License, Version 2.0.
+    See LICENSE-APACHE-2.0 in this repository for the full license text.
 
 Specifically, the following contain short extracts of, or identifiers derived
 from, Apache-2.0-licensed Apache Kafka source:

@@ -7,7 +7,7 @@ authors:
     given-names: Shashank
   - family-names: Mishra
     given-names: Shweta
-version: 1.0.0
+version: 1.0.1
 date-released: 2026-09-13
 license: CC-BY-4.0
 repository-code: "https://github.com/shashank241095/kafka-kg-rag-data"

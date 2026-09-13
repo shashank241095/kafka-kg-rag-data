@@ -134,9 +134,9 @@ Three-part, because the contents have different origins:
 
 | Content | License |
 |---|---|
-| Original code in `analysis/scripts/` | **MIT** — see `LICENSE` |
+| Original code in `analysis/scripts/` | **MIT**, copyright Shashank Mishra — see `LICENSE` |
 | Original research data (benchmarks, results, statistical outputs, downstream records) | **CC BY 4.0** — see `LICENSE-DATA` |
-| Extracts of Apache Kafka source (log-template strings, `(file, line)` targets, class/method identifiers in `corpus/` and the benchmark files) | **Apache License 2.0**, attribution in `NOTICE` |
+| Extracts of Apache Kafka source (log-template strings, `(file, line)` targets, class/method identifiers in `corpus/` and the benchmark files) | **Apache License 2.0** — full text in `LICENSE-APACHE-2.0`, attribution in `NOTICE` |
 
 No license here is applied to third-party code. Apache Kafka and HippoRAG remain
 under their own licenses and are not redistributed.
